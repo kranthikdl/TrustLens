@@ -3,6 +3,9 @@
   "name": "Reddit Post JSON Ingest",
   "version": "0.1.0",
   "description": "Collects current Reddit post (title, body, comments, metadata) and sends JSON to local FastAPI endpoint.",
+  "icons": {
+    "48": "icon48.png"
+  },
   "permissions": [],
   "content_scripts": [
     {
