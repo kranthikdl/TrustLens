@@ -1,0 +1,43 @@
+/* TrustLens - Comment Visual Enhancements */
+
+/* A) Subtle box around comments */
+.tl-comment-wrap {
+  position: relative;
+  border: 2px solid rgba(128, 128, 128, 0.35);
+  border-radius: 12px;
+  padding: 8px 10px;
+  margin: 6px 0;
+  /* Modern color-mix with fallback */
+  background: rgba(127, 127, 127, 0.05);
+  transition: box-shadow 0.15s ease;
+}
+
+@supports (background: color-mix(in oklab, Canvas, CanvasText 3%)) {
+  .tl-comment-wrap {
+    background: color-mix(in oklab, Canvas, CanvasText 3%);
+  }
+}
+
+.tl-comment-wrap:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* B) Sentiment badge in bottom-right corner */
+.tl-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 1;
+  user-select: none;
+  z-index: 10;
+}
+
+.tl-chip {
+  padding: 4px 8px;
+  border-radius: 10px;
+  background: rgba(127, 127, 127, 0.12);
+}
