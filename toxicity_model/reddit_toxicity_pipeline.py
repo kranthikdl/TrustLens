@@ -87,6 +87,21 @@ def print_first_n_lines(path: str, n: int = 5):
     except FileNotFoundError:
         print(f"[warn] File not found: {path}")
 
+def score_to_badge(prob_row, labels):
+    max_idx = max(range(len(prob_row)), key=lambda i: prob_row[i])
+    top_score = float(prob_row[max_idx])
+    top_label = labels[max_idx]
+
+    if any(p >= 0.5 for p in prob_row):
+        badge = "red"
+    elif top_score >= 0.3:
+        badge = "yellow"
+    else:
+        badge = "green"
+
+    return {"badge_color": badge, "top_label": top_label, "top_score": top_score}
+
+
 
 def read_reddit_extraction_json(path: str) -> List[Dict[str, Any]]:
     
@@ -236,17 +251,23 @@ def run_pipeline(
     preds = result["predictions"]
 
     # 3) Save JSONL
+    
     records = []
     for i, t in enumerate(texts):
         meta = items[i].get("meta", {})
+        badge_info = score_to_badge(probs[i], labels)
         records.append({
             "text": t,
             "labels": labels,
             "probabilities": probs[i],
             "predictions": preds[i],
+            "badge_color": badge_info["badge_color"],
+            "top_label": badge_info["top_label"],
+            "top_score": badge_info["top_score"],
             "meta": meta
         })
-    save_jsonl(records, out_path)
+        save_jsonl(records, out_path)
+
 
     # 4) Print first 5 lines for quick validation
     print_first_n_lines(out_path, n=5)
