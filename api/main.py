@@ -6,11 +6,10 @@ from typing import Any, Dict, List
 import sys
 import os
 import re
-import json
 import httpx
+import csv  # built-in CSV writer
 
 # Import your toxicity model's predict for the local /predict mirror
-# Make sure your package/module path is correct.
 from toxicity_model.app import predict as toxicity_predict
 
 # Ensure the filename matches the module below (extract_pure_comments.py)
@@ -44,9 +43,9 @@ class Texts(BaseModel):
     texts: List[str]
 
 
-def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: str = ".json") -> str:
+def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: str = ".csv") -> str:
     """
-    Returns a path like artifacts/toxicity_output_1.json, toxicity_output_2.json, ...
+    Returns a path like artifacts/toxicity_output_1.csv, toxicity_output_2.csv, ...
     Scans existing files to pick the next available number.
     """
     os.makedirs(directory, exist_ok=True)
@@ -61,6 +60,63 @@ def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: s
                 pass
     nxt = (max(nums) + 1) if nums else 1
     return os.path.join(directory, f"{prefix}_{nxt}{ext}")
+
+
+def _flatten_rows_for_csv(comments: List[str], predictions: Dict[str, Any]) -> List[Dict[str, Any]]:
+    """
+    Build flat rows for CSV:
+    columns => text, badge_color, prob_<label>, pred_<label> for each label
+    Uses 'detailed' if available; otherwise falls back to raw arrays.
+    """
+    labels: List[str] = predictions.get("labels", [])
+    detailed = predictions.get("detailed") or []
+    rows: List[Dict[str, Any]] = []
+
+    if detailed:
+        # Preferred path: we already have per-item dicts
+        for item in detailed:
+            row = {"text": item.get("text", ""), "badge_color": item.get("badge_color", "")}
+            scores = item.get("scores", {}) or {}
+            preds = item.get("predictions", {}) or {}
+            # keep label order consistent with predictions["labels"]
+            for lab in labels:
+                row[f"prob_{lab}"] = scores.get(lab, None)
+            for lab in labels:
+                row[f"pred_{lab}"] = preds.get(lab, None)
+            rows.append(row)
+        return rows
+
+    # Fallback: construct from arrays
+    probs = predictions.get("probabilities", []) or []
+    bin_preds = predictions.get("predictions", []) or []
+    badge_colors = predictions.get("badge_colors", []) or []
+
+    n = max(len(comments), len(probs), len(bin_preds), len(badge_colors))
+    for i in range(n):
+        row = {
+            "text": comments[i] if i < len(comments) else "",
+            "badge_color": badge_colors[i] if i < len(badge_colors) else "",
+        }
+        # probabilities
+        prob_row = probs[i] if i < len(probs) else []
+        for j, lab in enumerate(labels):
+            row[f"prob_{lab}"] = prob_row[j] if j < len(prob_row) else None
+        # predictions
+        pred_row = bin_preds[i] if i < len(bin_preds) else []
+        for j, lab in enumerate(labels):
+            row[f"pred_{lab}"] = pred_row[j] if j < len(pred_row) else None
+
+        rows.append(row)
+
+    return rows
+
+
+def _csv_headers(labels: List[str]) -> List[str]:
+    # Stable, readable order: text, badge_color, all probs, then all preds
+    headers = ["text", "badge_color"]
+    headers += [f"prob_{lab}" for lab in labels]
+    headers += [f"pred_{lab}" for lab in labels]
+    return headers
 
 
 @app.post("/ingest")
@@ -79,37 +135,34 @@ async def ingest(payload: IngestPayload):
             resp.raise_for_status()
             predictions = resp.json()
     except httpx.HTTPError as e:
-        # Surface a clear error if the toxicity service isn't reachable
         msg = f"Failed to call /predict: {e}"
         print(msg, file=sys.stderr, flush=True)
         return {"status": "error", "message": msg}
 
-    # 3) Persist results to JSON file (auto-numbered, safe on Windows)
-    out_path = get_next_output_path("artifacts", prefix="toxicity_output", ext=".json")
-    payload_to_save = {
-        "source_filename": payload.filename,  # only stored inside JSON
-        "comments": comments,
-        "toxicity": predictions
-    }
+    # 3) Build flat rows for CSV
+    labels = predictions.get("labels", [])
+    rows = _flatten_rows_for_csv(comments, predictions)
 
-    # Use 'x' to avoid overwriting if called concurrently; fall back to next number if needed
-    try:
-        with open(out_path, "x", encoding="utf-8") as f:
-            json.dump(payload_to_save, f, ensure_ascii=False, indent=2)
-    except FileExistsError:
-        out_path = get_next_output_path("artifacts", prefix="toxicity_output", ext=".json")
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(payload_to_save, f, ensure_ascii=False, indent=2)
+    # 4) Persist results to CSV file (auto-numbered, safe on Windows)
+    out_csv_path = get_next_output_path("artifacts", prefix="toxicity_output", ext=".csv")
+    os.makedirs(os.path.dirname(out_csv_path), exist_ok=True)
 
-    print(f"Saved predictions to: {out_path}", file=sys.stdout, flush=True)
+    with open(out_csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=_csv_headers(labels))
+        writer.writeheader()
+        for r in rows:
+            writer.writerow(r)
+
+    print(f"Saved predictions CSV to: {out_csv_path}", file=sys.stdout, flush=True)
 
     # Return where we saved it, plus quick-access fields for UI convenience
     return {
         "status": "ok",
-        "saved_to": out_path,
+        "saved_to": out_csv_path,
         "counts": {
             "comments": len(comments),
-            "labels": len(predictions.get("labels", []))
+            "labels": len(labels),
+            "rows": len(rows),
         },
         "badge_colors": predictions.get("badge_colors", [])
     }
