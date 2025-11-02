@@ -63,28 +63,53 @@ def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: s
 
 
 def _flatten_rows_for_csv(comments: List[str], predictions: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """
-    Build flat rows for CSV:
-    columns => text, badge_color, prob_<label>, pred_<label> for each label
-    Uses 'detailed' if available; otherwise falls back to raw arrays.
-    """
     labels: List[str] = predictions.get("labels", [])
     detailed = predictions.get("detailed") or []
     rows: List[Dict[str, Any]] = []
 
     if detailed:
-        # Preferred path: we already have per-item dicts
         for item in detailed:
-            row = {"text": item.get("text", ""), "badge_color": item.get("badge_color", "")}
+            row = {
+                "text": item.get("text", ""),
+                "badge_color": item.get("badge_color", ""),
+                "final_score": item.get("final_score", None),
+                "model_cred": item.get("model_cred", None),
+                "heur_score": (item.get("heuristics") or {}).get("score", None),
+                "heur_tips": "; ".join((item.get("heuristics") or {}).get("tips", [])),
+            }
             scores = item.get("scores", {}) or {}
-            preds = item.get("predictions", {}) or {}
-            # keep label order consistent with predictions["labels"]
+            preds  = item.get("predictions", {}) or {}
             for lab in labels:
                 row[f"prob_{lab}"] = scores.get(lab, None)
             for lab in labels:
                 row[f"pred_{lab}"] = preds.get(lab, None)
             rows.append(row)
         return rows
+
+    # Fallback path (rare once detailed is present)
+    # (kept from your original; add default None for new cols)
+    probs = predictions.get("probabilities", []) or []
+    bin_preds = predictions.get("predictions", []) or []
+    badge_colors = predictions.get("badge_colors", []) or []
+    final_scores = predictions.get("final_scores", []) or []
+    n = max(len(comments), len(probs), len(bin_preds), len(badge_colors), len(final_scores))
+    for i in range(n):
+        row = {
+            "text": comments[i] if i < len(comments) else "",
+            "badge_color": badge_colors[i] if i < len(badge_colors) else "",
+            "final_score": final_scores[i] if i < len(final_scores) else None,
+            "model_cred": None,
+            "heur_score": None,
+            "heur_tips": "",
+        }
+        prob_row = probs[i] if i < len(probs) else []
+        for j, lab in enumerate(labels):
+            row[f"prob_{lab}"] = prob_row[j] if j < len(prob_row) else None
+        pred_row = bin_preds[i] if i < len(bin_preds) else []
+        for j, lab in enumerate(labels):
+            row[f"pred_{lab}"] = pred_row[j] if j < len(pred_row) else None
+        rows.append(row)
+    return rows
 
     # Fallback: construct from arrays
     probs = predictions.get("probabilities", []) or []
@@ -112,8 +137,7 @@ def _flatten_rows_for_csv(comments: List[str], predictions: Dict[str, Any]) -> L
 
 
 def _csv_headers(labels: List[str]) -> List[str]:
-    # Stable, readable order: text, badge_color, all probs, then all preds
-    headers = ["text", "badge_color"]
+    headers = ["text", "badge_color", "final_score", "model_cred", "heur_score", "heur_tips"]
     headers += [f"prob_{lab}" for lab in labels]
     headers += [f"pred_{lab}" for lab in labels]
     return headers

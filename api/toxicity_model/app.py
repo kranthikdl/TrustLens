@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
+from heuristics.evidence import compute_heuristics, fuse_with_model, badge_from_final
 
 # Load pretrained model
 MODEL_NAME = "unitary/toxic-bert"
@@ -48,30 +49,49 @@ def predict(data: Texts):
 
     with torch.no_grad():
         logits = model(**enc).logits
-        probs = torch.sigmoid(logits).cpu().numpy()  # shape: [N, len(LABELS)]
+        probs = torch.sigmoid(logits).cpu().numpy()  # [N, 6]
 
-    # Original binary predictions (kept for backward compatibility)
     preds = (probs >= THRESHOLD).astype(int).tolist()
 
-    # New: badge_color per comment
-    badge_colors = [_badge_color_for_row(row) for row in probs]
-
-    # New: detailed per-item objects
     detailed = []
-    for text, row_probs, row_preds, color in zip(data.texts, probs, preds, badge_colors):
+    badge_colors = []
+    final_scores = []
+
+    for text, row_probs, row_preds in zip(data.texts, probs, preds):
+        # model credibility = inverse of "worst" toxicity
+        tox_max = float(np.max(row_probs)) if row_probs.size else 0.0
+        model_cred = 1.0 - tox_max  # 1..0 (higher is better)
+
+        heur = compute_heuristics(text)             # HeuristicsOut
+        final_score = fuse_with_model(model_cred, heur.score)
+        color = badge_from_final(final_score)
+
         scores_dict = {label: float(p) for label, p in zip(LABELS, row_probs)}
-        preds_dict = {label: int(v) for label, v in zip(LABELS, row_preds)}
+        preds_dict  = {label: int(v)   for label, v in zip(LABELS, row_preds)}
+
         detailed.append({
             "text": text,
             "scores": scores_dict,
             "predictions": preds_dict,
+            "model_cred": model_cred,
+            "heuristics": {
+                "score": heur.score,
+                "features": heur.features,
+                "tips": heur.tips,
+                "evidence_hits": heur.evidence_hits,
+                "negative_hits": heur.negative_hits,
+            },
+            "final_score": final_score,
             "badge_color": color,
         })
+        badge_colors.append(color)
+        final_scores.append(final_score)
 
     return {
         "labels": LABELS,
         "probabilities": probs.tolist(),
         "predictions": preds,
-        "badge_colors": badge_colors,     # <— new, array aligned with inputs
-        "detailed": detailed              # <— new, rich per-comment view
+        "badge_colors": badge_colors,
+        "final_scores": final_scores,
+        "detailed": detailed
     }

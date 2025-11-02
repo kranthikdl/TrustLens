@@ -1,0 +1,340 @@
+{
+  "count": 15,
+  "results": [
+    {
+      "text": "According to the meta-analysis (doi:10.1038/abcd1234), p < .01 and n = 120. Source: https://who.int",
+      "heur_score": 1.0,
+      "features": {
+        "capsPct": 0.03636363636363636,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.2
+      },
+      "tips": [
+        "Strong anchors (2).",
+        "1 link(s)."
+      ],
+      "evidence_hits": [
+        "According to the meta-analysis",
+        "Source: ",
+        "doi:10.1038/abcd1234),",
+        "https://who.int",
+        "meta-analysis"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 1,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Here is the press release and fact sheet (pdf): https://www.cdc.gov/somefile.pdf",
+      "heur_score": 0.55,
+      "features": {
+        "capsPct": 0.01639344262295082,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.2
+      },
+      "tips": [
+        "1 link(s)."
+      ],
+      "evidence_hits": [
+        "(pdf)",
+        "fact sheet",
+        "https://www.cdc.gov/somefile.pdf",
+        "press release"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 1,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "The numbers show a decline since 2020; see Figure 3 and the appendix.",
+      "heur_score": 0.2,
+      "features": {
+        "capsPct": 0.04,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "The numbers show",
+        "appendix"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "As reported in Nature, confidence interval was narrow.",
+      "heur_score": 0.2,
+      "features": {
+        "capsPct": 0.044444444444444446,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "As reported in",
+        "confidence interval"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Source: just trust me bro",
+      "heur_score": 0.0,
+      "features": {
+        "capsPct": 0.05,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "Source: "
+      ],
+      "negative_hits": [
+        "Source: just trust me"
+      ],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "I think this is true!!! everyone knows it",
+      "heur_score": 0.0,
+      "features": {
+        "capsPct": 0.03225806451612903,
+        "punctRuns": 0.2,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [
+        "Repeated punctuation."
+      ],
+      "evidence_hits": [],
+      "negative_hits": [
+        "I think",
+        "everyone knows"
+      ],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "arXiv: 2301.12345 suggests a different mechanism per the paper.",
+      "heur_score": 0.55,
+      "features": {
+        "capsPct": 0.023255813953488372,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [
+        "Strong anchors (1)."
+      ],
+      "evidence_hits": [
+        "arXiv: 2301.12345",
+        "per",
+        "per the paper"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Data indicates improvement; sample size n=350; statistically significant.",
+      "heur_score": 0.4,
+      "features": {
+        "capsPct": 0.01694915254237288,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "Data indicates",
+        "n=350",
+        "sample size",
+        "statistically significant"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Guidelines recommend this approach; see methods and protocol sections.",
+      "heur_score": 0.30000000000000004,
+      "features": {
+        "capsPct": 0.016666666666666666,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "Guidelines",
+        "methods",
+        "protocol"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Per the report, hazard ratio decreased; 95% CI excludes 1.",
+      "heur_score": 0.4,
+      "features": {
+        "capsPct": 0.07142857142857142,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [
+        "95% CI",
+        "Per",
+        "Per the report",
+        "hazard ratio"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "LOL you loser, shut up.",
+      "heur_score": 0.0,
+      "features": {
+        "capsPct": 0.17647058823529413,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.4,
+        "urlCount": 0.0
+      },
+      "tips": [
+        "2 profane term(s)."
+      ],
+      "evidence_hits": [],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "Cited by Smith et al. via WHO: https://www.who.int/health-topic",
+      "heur_score": 0.45000000000000007,
+      "features": {
+        "capsPct": 0.10638297872340426,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.2
+      },
+      "tips": [
+        "1 link(s)."
+      ],
+      "evidence_hits": [
+        "Cited by",
+        "https://www.who.int/health-topic",
+        "via WHO"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 1,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "No links or citations here, just a normal discussion.",
+      "heur_score": 0.0,
+      "features": {
+        "capsPct": 0.023255813953488372,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [],
+      "evidence_hits": [],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 0
+      }
+    },
+    {
+      "text": "> \"Quoted passage from the study\"",
+      "heur_score": 0.0,
+      "features": {
+        "capsPct": 0.04,
+        "punctRuns": 0.0,
+        "quotePct": 1.0,
+        "profRate": 0.0,
+        "urlCount": 0.0
+      },
+      "tips": [
+        "Includes quotes/citations."
+      ],
+      "evidence_hits": [],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 0,
+        "quoteChars": 33
+      }
+    },
+    {
+      "text": "Here is a random link: http://example.biz/path?x=1",
+      "heur_score": 0.1,
+      "features": {
+        "capsPct": 0.027777777777777776,
+        "punctRuns": 0.0,
+        "quotePct": 0.0,
+        "profRate": 0.0,
+        "urlCount": 0.2
+      },
+      "tips": [
+        "1 link(s)."
+      ],
+      "evidence_hits": [
+        "http://example.biz/path?x=1"
+      ],
+      "negative_hits": [],
+      "raw": {
+        "linksCount": 1,
+        "quoteChars": 0
+      }
+    }
+  ]
+}
