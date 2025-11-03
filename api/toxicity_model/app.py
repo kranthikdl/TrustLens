@@ -30,11 +30,11 @@ def _badge_color_for_row(row_probs: np.ndarray) -> str:
     # Yellow→ if none ≥ 0.5 but max score ∈ [0.3, 0.5)
     # Green → if all scores < 0.3
     if (row_probs >= 0.5).any():
-        return "red"
+        return "toxic"
     top = float(row_probs.max(initial=0.0))
     if top >= 0.3:
-        return "yellow"
-    return "green"
+        return "mild"
+    return "neutral"
 
 @app.post("/predict")
 def predict(data: Texts):
