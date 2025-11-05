@@ -38,6 +38,7 @@ def _badge_color_for_row(row_probs: np.ndarray) -> str:
 
 @app.post("/predict")
 def predict(data: Texts):
+    print("=== PREDICT FUNCTION CALLED - VERSION WITH BADGE_COLORS ===", flush=True)
     enc = tokenizer(
         data.texts,
         truncation=True,
@@ -55,6 +56,9 @@ def predict(data: Texts):
 
     # New: badge_color per comment
     badge_colors = [_badge_color_for_row(row) for row in probs]
+    
+    # Debug: Ensure badge_colors is calculated
+    print(f"DEBUG: badge_colors calculated: {badge_colors}", flush=True)
 
     # New: detailed per-item objects
     detailed = []
@@ -68,10 +72,16 @@ def predict(data: Texts):
             "badge_color": color,
         })
 
-    return {
+    result = {
         "labels": LABELS,
         "probabilities": probs.tolist(),
         "predictions": preds,
         "badge_colors": badge_colors,     # <— new, array aligned with inputs
         "detailed": detailed              # <— new, rich per-comment view
     }
+    
+    # Debug: Verify badge_colors is in result
+    print(f"DEBUG: result keys: {list(result.keys())}", flush=True)
+    print(f"DEBUG: badge_colors in result: {'badge_colors' in result}", flush=True)
+    
+    return result

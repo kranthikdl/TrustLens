@@ -7,6 +7,18 @@ let resolvedApiBase = null;
 let lastProcessedPostUrl = null;
 let processingPromise = null;
 
+// TrustLens Real-time Analysis Configuration
+const TRUSTLENS_CONFIG = {
+    enableRealTimeBadges: true,
+    enablePostAnalysis: true,
+    badgeThreshold: 0.5,
+    maxConcurrentAnalysis: 5
+};
+
+let trustLensBadgeManager = null;
+let analysisQueue = [];
+let activeAnalysis = 0;
+
 function isPostUrl(url) {
     return POST_URL_PATTERN.test(url);
 }
@@ -178,8 +190,154 @@ function monitorUrlChanges() {
     window.setInterval(checkUrl, URL_CHECK_INTERVAL_MS);
 }
 
+// TrustLens Real-time Analysis Functions
+async function initializeTrustLens() {
+    if (!TRUSTLENS_CONFIG.enableRealTimeBadges) return;
+    
+    try {
+        console.log('TrustLens: Initializing badge system...');
+        
+        // Initialize the badge manager directly (no need to inject script)
+        if (typeof ToxicityBadgeManager !== 'undefined') {
+            window.trustLensBadgeManager = new ToxicityBadgeManager();
+            console.log('TrustLens: Badge manager initialized');
+        } else {
+            console.log('TrustLens: Badge manager class not available, will initialize later');
+        }
+        
+    } catch (error) {
+        console.error('TrustLens: Failed to initialize badge system', error);
+    }
+}
+
+async function analyzeCommentRealTime(commentText, commentId) {
+    if (activeAnalysis >= TRUSTLENS_CONFIG.maxConcurrentAnalysis) {
+        analysisQueue.push({ commentText, commentId });
+        return;
+    }
+    
+    activeAnalysis++;
+    
+    try {
+        const apiBase = await resolveApiBaseOnce();
+        const response = await fetch(`${apiBase}/predict`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ texts: [commentText] })
+        });
+        
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        
+        const result = await response.json();
+        
+        // Send result to badge manager
+        if (window.trustLensBadgeManager) {
+            window.trustLensBadgeManager.handleAnalysisResult(commentId, result);
+        }
+        
+    } catch (error) {
+        console.error('TrustLens: Real-time analysis failed', error);
+        if (window.trustLensBadgeManager) {
+            window.trustLensBadgeManager.handleAnalysisError(commentId, error);
+        }
+    } finally {
+        activeAnalysis--;
+        
+        // Process queued analyses
+        if (analysisQueue.length > 0) {
+            const next = analysisQueue.shift();
+            analyzeCommentRealTime(next.commentText, next.commentId);
+        }
+    }
+}
+
+function setupRealTimeCommentObserver() {
+    if (!TRUSTLENS_CONFIG.enableRealTimeBadges) return;
+    
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+                if (node.nodeType === Node.ELEMENT_NODE) {
+                    processNewCommentsForAnalysis(node);
+                }
+            });
+        });
+    });
+    
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+    
+    // Process existing comments
+    processExistingCommentsForAnalysis();
+}
+
+function processNewCommentsForAnalysis(container) {
+    const comments = container.querySelectorAll('[data-testid="comment"]');
+    comments.forEach(comment => processCommentForAnalysis(comment));
+}
+
+function processExistingCommentsForAnalysis() {
+    const comments = document.querySelectorAll('[data-testid="comment"]');
+    comments.forEach(comment => processCommentForAnalysis(comment));
+}
+
+function processCommentForAnalysis(commentElement) {
+    const commentId = extractCommentIdFromElement(commentElement);
+    if (!commentId) return;
+    
+    const commentText = extractCommentTextFromElement(commentElement);
+    if (!commentText || commentText.length < 10) return;
+    
+    // Check if already analyzed
+    if (window.trustLensBadgeManager && window.trustLensBadgeManager.isAnalyzed(commentId)) {
+        return;
+    }
+    
+    // Queue for analysis
+    analyzeCommentRealTime(commentText, commentId);
+}
+
+function extractCommentIdFromElement(commentElement) {
+    const idAttr = commentElement.getAttribute('id');
+    if (idAttr && idAttr.startsWith('t1_')) return idAttr;
+    
+    const dataId = commentElement.getAttribute('data-permalink');
+    if (dataId) return dataId.split('/').pop();
+    
+    return null;
+}
+
+function extractCommentTextFromElement(commentElement) {
+    const textSelectors = [
+        '[data-testid="comment"] p',
+        '.usertext-body p',
+        '[data-testid="comment"] .md',
+        '.comment .usertext-body'
+    ];
+    
+    for (const selector of textSelectors) {
+        const textElement = commentElement.querySelector(selector);
+        if (textElement) {
+            return textElement.textContent.trim();
+        }
+    }
+    
+    return null;
+}
+
 function init() {
     monitorUrlChanges();
+    
+    // Initialize TrustLens real-time analysis
+    if (TRUSTLENS_CONFIG.enableRealTimeBadges) {
+        // Wait a bit for the badge manager script to load
+        setTimeout(() => {
+            initializeTrustLens();
+            setupRealTimeCommentObserver();
+        }, 1000);
+    }
 }
 
 // Removed Chrome runtime messaging.

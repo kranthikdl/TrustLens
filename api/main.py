@@ -11,9 +11,19 @@ import httpx
 
 # Import your toxicity model's predict for the local /predict mirror
 # Make sure your package/module path is correct.
+# Use explicit relative import to ensure we get the correct module
+import sys
+import os
+# Add api directory to path explicitly to avoid importing wrong module
+_api_dir = os.path.dirname(os.path.abspath(__file__))
+if _api_dir not in sys.path:
+    sys.path.insert(0, _api_dir)
 from toxicity_model.app import predict as toxicity_predict
 
 # Ensure the filename matches the module below (extract_pure_comments.py)
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from extract_pure_comments import extract_comments
 
 
@@ -118,7 +128,11 @@ async def ingest(payload: IngestPayload):
 # Mirror endpoint for direct prediction on arbitrary comments
 @app.post("/predict")
 def predict_output(comments: Texts):
-    return toxicity_predict(comments)
+    result = toxicity_predict(comments)
+    # Debug: Log what we're returning
+    print(f"DEBUG main.py: predict_output result keys: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}", flush=True)
+    print(f"DEBUG main.py: badge_colors in result: {'badge_colors' in result if isinstance(result, dict) else 'N/A'}", flush=True)
+    return result
 
 
 @app.get("/health")
