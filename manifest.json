@@ -1,17 +1,33 @@
 {
   "manifest_version": 3,
-  "name": "Reddit Post JSON Ingest",
-  "version": "0.1.0",
-  "description": "Collects current Reddit post (title, body, comments, metadata) and sends JSON to local FastAPI endpoint.",
+  "name": "TrustLens - Reddit Toxicity Analyzer",
+  "version": "0.2.0",
+  "description": "Real-time toxicity analysis for Reddit comments with visual badges and comprehensive reporting.",
   "icons": {
     "48": "icon48.png"
   },
-  "permissions": [],
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "TrustLens - Reddit Toxicity Analyzer"
+  },
   "content_scripts": [
     {
       "matches": ["*://*.reddit.com/*"],
-      "js": ["content.js"],
+      "js": ["trustlens-badges.js"],
       "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "toxicity-badge-manager.js",
+        "toxicity-badges.css"
+      ],
+      "matches": ["*://*.reddit.com/*"]
     }
   ],
   "host_permissions": ["*://*.reddit.com/*"]
