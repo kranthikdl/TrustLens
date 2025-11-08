@@ -25,6 +25,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from extract_pure_comments import extract_comments
+from evidence import analyze_comments as analyze_evidence
 
 
 app = FastAPI(title="Reddit Ingest API")
@@ -52,6 +53,10 @@ class IngestPayload(BaseModel):
 
 class Texts(BaseModel):
     texts: List[str]
+
+
+class EvidencePayload(BaseModel):
+    comments: List[Dict[str, str]]  # List of {comment_id: str, text: str}
 
 
 def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: str = ".json") -> str:
@@ -94,12 +99,22 @@ async def ingest(payload: IngestPayload):
         print(msg, file=sys.stderr, flush=True)
         return {"status": "error", "message": msg}
 
-    # 3) Persist results to JSON file (auto-numbered, safe on Windows)
+    # 3) Analyze evidence/sources in comments
+    # Format comments for evidence analysis (needs comment_id and text)
+    comments_for_evidence = [
+        {"comment_id": f"comment_{i}", "text": text}
+        for i, text in enumerate(comments)
+    ]
+    evidence_results = analyze_evidence(comments_for_evidence)
+    print(f"Analyzed {len(evidence_results)} comments for evidence", file=sys.stdout, flush=True)
+
+    # 4) Persist results to JSON file (auto-numbered, safe on Windows)
     out_path = get_next_output_path("artifacts", prefix="toxicity_output", ext=".json")
     payload_to_save = {
         "source_filename": payload.filename,  # only stored inside JSON
         "comments": comments,
-        "toxicity": predictions
+        "toxicity": predictions,
+        "evidence": evidence_results
     }
 
     # Use 'x' to avoid overwriting if called concurrently; fall back to next number if needed
@@ -114,6 +129,14 @@ async def ingest(payload: IngestPayload):
     print(f"Saved predictions to: {out_path}", file=sys.stdout, flush=True)
 
     # Return where we saved it, plus quick-access fields for UI convenience
+    # Summarize evidence statistics
+    evidence_stats = {
+        "verified": sum(1 for e in evidence_results if e["status"] == "Verified"),
+        "unverified": sum(1 for e in evidence_results if e["status"] == "Unverified"),
+        "mixed": sum(1 for e in evidence_results if e["status"] == "Mixed"),
+        "none": sum(1 for e in evidence_results if e["status"] == "None")
+    }
+
     return {
         "status": "ok",
         "saved_to": out_path,
@@ -121,7 +144,8 @@ async def ingest(payload: IngestPayload):
             "comments": len(comments),
             "labels": len(predictions.get("labels", []))
         },
-        "badge_colors": predictions.get("badge_colors", [])
+        "badge_colors": predictions.get("badge_colors", []),
+        "evidence_stats": evidence_stats
     }
 
 

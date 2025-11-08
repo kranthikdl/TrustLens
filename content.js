@@ -139,6 +139,7 @@ async function resolveApiBaseOnce() {
 
 async function sendToApi(payload) {
     const base = await resolveApiBaseOnce();
+    console.log("TrustLens: Sending to /ingest at:", base);
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 8000);
     try {
@@ -149,13 +150,15 @@ async function sendToApi(payload) {
             signal: controller.signal,
         });
         if (!res.ok) {
-            console.error("Reddit Ingest: server responded", res.status);
+            console.error("TrustLens: /ingest responded with error:", res.status);
+        } else {
+            console.log("TrustLens: Successfully sent to /ingest!");
         }
     } catch (e) {
         if (e.name === 'AbortError') {
-            console.error("Reddit Ingest: request timed out");
+            console.error("TrustLens: /ingest request timed out");
         } else {
-            console.error("Reddit Ingest: failed to reach API", e);
+            console.error("TrustLens: Failed to reach /ingest API:", e);
         }
     } finally {
         clearTimeout(timeout);
@@ -163,13 +166,22 @@ async function sendToApi(payload) {
 }
 
 async function processPost(postUrl) {
-    if (processingPromise) return processingPromise;
+    if (processingPromise) {
+        console.log("TrustLens: Already processing, skipping...");
+        return processingPromise;
+    }
 
+    console.log("TrustLens: Starting post processing for:", postUrl);
     processingPromise = (async () => {
         const payload = await buildPostPayload(postUrl);
-        if (!payload) return;
+        if (!payload) {
+            console.log("TrustLens: Failed to build payload");
+            return;
+        }
+        console.log("TrustLens: Payload built, sending to API...");
         await sendToApi(payload);
         lastProcessedPostUrl = postUrl;
+        console.log("TrustLens: Post processing complete");
     })().finally(() => { processingPromise = null; });
 
     return processingPromise;
@@ -178,11 +190,21 @@ async function processPost(postUrl) {
 // Vector injection removed per simplification.
 
 function monitorUrlChanges() {
+    console.log("TrustLens: URL monitoring started");
     const checkUrl = () => {
         const postUrl = getCanonicalPostUrl();
+        console.log("TrustLens: Checking URL, found:", postUrl);
 
-        if (!postUrl) { lastProcessedPostUrl = null; return; }
-        if (postUrl === lastProcessedPostUrl) return;
+        if (!postUrl) {
+            console.log("TrustLens: Not a post URL, skipping");
+            lastProcessedPostUrl = null;
+            return;
+        }
+        if (postUrl === lastProcessedPostUrl) {
+            console.log("TrustLens: Already processed this URL");
+            return;
+        }
+        console.log("TrustLens: New post detected, triggering processing");
         void processPost(postUrl);
     };
 
