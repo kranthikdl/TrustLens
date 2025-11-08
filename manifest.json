@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.reddit.com/*"],
-      "js": ["trustlens-badges.js"],
+      "js": ["content.js", "trustlens-badges.js"],
       "run_at": "document_idle"
     }
   ],
