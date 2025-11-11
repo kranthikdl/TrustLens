@@ -1,0 +1,992 @@
+{
+  "source_filename": "Any apps/websites where i can read interesting articles on different topics?",
+  "comments": [
+    "Hacker News is great for tech-adjacent discussion and other interesting things.",
+    "Thank you!!",
+    ">Thank you!!\n\nYou're welcome!",
+    "Longreads.com",
+    "Try app called “lire” reader app for iOS. The app has a built in section that easily adds site to read. The today view is what I browse.",
+    "Maybe Deepstash app ",
+    "Flipboard?",
+    "My dad made a folklore + history map called untamed.earth that shows haunted sites, myths, ancient ruins & strange local legends near you.\n\nHe’s been working so hard on it, and it’s honestly such a cool project.\n\nHis Instagram is @weird_radar—please give it a peek if this is your kind of thing 💚",
+    "The Internet Archive or Gutenberg dot org are terrific sites with little distractions and pretty much every book ever written and published.",
+    "He told he is not looking for any boring textbooks and you are suggesting him to read them ",
+    "The OP asked for any sites to read, those are two of the best..",
+    "Aeon.co",
+    "I'm subscribed to the TL;DR newsletter. I work in tech and it's hard to keep up with everything that's happening. This newsletter replaces my scrolling before I sleep. It's just long enough that I'm already tired after reading a few articles from it",
+    "Refind (website, Android app, iOS app)",
+    "Here’s a solid list of apps, websites, and newsletters perfect for discovering, reading, and saving meaningful articles across all sorts of topics\n\n1 - getPocket (Offers personalized recommendations based on your interests.)\n\n2 - Medium (Deep-dive articles on self-help, tech, science, history, productivity, etc.)\n\n3 - Refind (Curates 5–10 high-quality articles per day based on your interests (tech, mind, future, etc.).\n\n4 - Instapaper (Like Pocket, it's great for saving articles to read without distractions.)\n\n5 - Farnam Street (Great for deep thinkers—topics like mental models, decision-making, psychology)\n\n6 - Longreads (Curated long-form journalism and essays on everything from science to culture.)\n\n7 - Aeon (- Big-picture essays on philosophy, science, history, psychology, Clean and ad-free.)\n\n8 - The Browser ( Daily curated list of the most interesting articles on the web.)\n\nNewsletters Worth Subscribing To\n\nThese drop fresh, deep reads in your inbox (not annoying, actually useful):\n\n\\- Dense Discovery – Weekly picks on design, culture, and mindful living.\n\n\\- Ness Labs – Insights on mental health, productivity, and learning better.\n\n\\- The Morning Paper (for tech nerds) – Research paper summaries in plain English.\n\n\\- Brain Pickings / The Marginalian – Longform thoughts on art, life, and philosophy.",
+    "Substack for the 9th list",
+    "I recomend substack. Its basically like a twitter but for articles and beautiful thoughts. You can even listen to the articles while your drive. Just read this article that I felt called to.\n\nhttps://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+    "I can recommend BeClever app. It has different topics. I like that articles are short and written in a light style"
+  ],
+  "toxicity": {
+    "labels": [
+      "toxic",
+      "severe_toxic",
+      "obscene",
+      "threat",
+      "insult",
+      "identity_hate"
+    ],
+    "probabilities": [
+      [
+        0.0005577389383688569,
+        0.00013229087926447392,
+        0.00018627193639986217,
+        0.00013728013436775655,
+        0.00017681998724583536,
+        0.0001469380222260952
+      ],
+      [
+        0.0007223030552268028,
+        0.00011802427616203204,
+        0.0001841134362621233,
+        0.00013779738219454885,
+        0.0001738201972329989,
+        0.0001401003246428445
+      ],
+      [
+        0.0006868400960229337,
+        0.0001276310795219615,
+        0.00019230505859013647,
+        0.0001651780039537698,
+        0.00017914647469297051,
+        0.00014424158143810928
+      ],
+      [
+        0.0009212031727656722,
+        0.00010404938802821562,
+        0.00017549640324432403,
+        0.0001168991657323204,
+        0.00019049269030801952,
+        0.0001451126008760184
+      ],
+      [
+        0.0007341341115534306,
+        0.00011082327546318993,
+        0.00017581883003003895,
+        0.00011068809544667602,
+        0.00017653410031925887,
+        0.00013694177323486656
+      ],
+      [
+        0.0014305245131254196,
+        9.555221913615242e-05,
+        0.00021289364667609334,
+        9.348175080958754e-05,
+        0.00019946250540670007,
+        0.00014796355389989913
+      ],
+      [
+        0.001152113312855363,
+        9.780797699932009e-05,
+        0.0001950276200659573,
+        9.688740101410076e-05,
+        0.00018475776596460491,
+        0.00013633644266519696
+      ],
+      [
+        0.0012927016941830516,
+        9.975750435842201e-05,
+        0.00020638784917537123,
+        0.00010650216427166015,
+        0.00019782361050602049,
+        0.00014317766181193292
+      ],
+      [
+        0.0009204683592543006,
+        0.00010321573790861294,
+        0.00017938525706995279,
+        0.00011443110270192847,
+        0.00018362463742960244,
+        0.0001338656438747421
+      ],
+      [
+        0.002629163209348917,
+        8.661247557029128e-05,
+        0.00019048269314225763,
+        0.00011263443593634292,
+        0.00025814297259785235,
+        0.00017605301400180906
+      ],
+      [
+        0.0005650895764119923,
+        0.00012896591215394437,
+        0.0001895346213132143,
+        0.00012417537800502032,
+        0.00017527767340652645,
+        0.00014236111019272357
+      ],
+      [
+        0.0010954363970085979,
+        9.892843081615865e-05,
+        0.00018484728934708983,
+        0.00010796295100590214,
+        0.0001934334432007745,
+        0.000136697810376063
+      ],
+      [
+        0.0006131924455985427,
+        0.00012402769061736763,
+        0.00018543902842793614,
+        0.00012642417277675122,
+        0.00017151233623735607,
+        0.00014097339590080082
+      ],
+      [
+        0.0006884706090204418,
+        0.00011238746083108708,
+        0.0001829027896746993,
+        0.00011769239790737629,
+        0.00017721594485919923,
+        0.00013435108121484518
+      ],
+      [
+        0.0005962822469882667,
+        0.0001242362632183358,
+        0.00018164311768487096,
+        0.0001262261503143236,
+        0.00017548637697473168,
+        0.0001402508351020515
+      ],
+      [
+        0.0016351529629901052,
+        9.393631626153365e-05,
+        0.00022134122264105827,
+        9.328672604169697e-05,
+        0.00020802764629479498,
+        0.00014758789620827883
+      ],
+      [
+        0.0008485746220685542,
+        0.00011133275256725028,
+        0.00020422125817276537,
+        0.00011077256931457669,
+        0.00018132435798179358,
+        0.00013491555000655353
+      ],
+      [
+        0.0006017275154590607,
+        0.00012458907440304756,
+        0.00017955416115000844,
+        0.00013551057782024145,
+        0.0001758399448590353,
+        0.00014091868069954216
+      ]
+    ],
+    "predictions": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "badge_colors": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    "detailed": [
+      {
+        "text": "Hacker News is great for tech-adjacent discussion and other interesting things.",
+        "scores": {
+          "toxic": 0.0005577389383688569,
+          "severe_toxic": 0.00013229087926447392,
+          "obscene": 0.00018627193639986217,
+          "threat": 0.00013728013436775655,
+          "insult": 0.00017681998724583536,
+          "identity_hate": 0.0001469380222260952
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Thank you!!",
+        "scores": {
+          "toxic": 0.0007223030552268028,
+          "severe_toxic": 0.00011802427616203204,
+          "obscene": 0.0001841134362621233,
+          "threat": 0.00013779738219454885,
+          "insult": 0.0001738201972329989,
+          "identity_hate": 0.0001401003246428445
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": ">Thank you!!\n\nYou're welcome!",
+        "scores": {
+          "toxic": 0.0006868400960229337,
+          "severe_toxic": 0.0001276310795219615,
+          "obscene": 0.00019230505859013647,
+          "threat": 0.0001651780039537698,
+          "insult": 0.00017914647469297051,
+          "identity_hate": 0.00014424158143810928
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Longreads.com",
+        "scores": {
+          "toxic": 0.0009212031727656722,
+          "severe_toxic": 0.00010404938802821562,
+          "obscene": 0.00017549640324432403,
+          "threat": 0.0001168991657323204,
+          "insult": 0.00019049269030801952,
+          "identity_hate": 0.0001451126008760184
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Try app called “lire” reader app for iOS. The app has a built in section that easily adds site to read. The today view is what I browse.",
+        "scores": {
+          "toxic": 0.0007341341115534306,
+          "severe_toxic": 0.00011082327546318993,
+          "obscene": 0.00017581883003003895,
+          "threat": 0.00011068809544667602,
+          "insult": 0.00017653410031925887,
+          "identity_hate": 0.00013694177323486656
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Maybe Deepstash app ",
+        "scores": {
+          "toxic": 0.0014305245131254196,
+          "severe_toxic": 9.555221913615242e-05,
+          "obscene": 0.00021289364667609334,
+          "threat": 9.348175080958754e-05,
+          "insult": 0.00019946250540670007,
+          "identity_hate": 0.00014796355389989913
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Flipboard?",
+        "scores": {
+          "toxic": 0.001152113312855363,
+          "severe_toxic": 9.780797699932009e-05,
+          "obscene": 0.0001950276200659573,
+          "threat": 9.688740101410076e-05,
+          "insult": 0.00018475776596460491,
+          "identity_hate": 0.00013633644266519696
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "My dad made a folklore + history map called untamed.earth that shows haunted sites, myths, ancient ruins & strange local legends near you.\n\nHe’s been working so hard on it, and it’s honestly such a cool project.\n\nHis Instagram is @weird_radar—please give it a peek if this is your kind of thing 💚",
+        "scores": {
+          "toxic": 0.0012927016941830516,
+          "severe_toxic": 9.975750435842201e-05,
+          "obscene": 0.00020638784917537123,
+          "threat": 0.00010650216427166015,
+          "insult": 0.00019782361050602049,
+          "identity_hate": 0.00014317766181193292
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "The Internet Archive or Gutenberg dot org are terrific sites with little distractions and pretty much every book ever written and published.",
+        "scores": {
+          "toxic": 0.0009204683592543006,
+          "severe_toxic": 0.00010321573790861294,
+          "obscene": 0.00017938525706995279,
+          "threat": 0.00011443110270192847,
+          "insult": 0.00018362463742960244,
+          "identity_hate": 0.0001338656438747421
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "He told he is not looking for any boring textbooks and you are suggesting him to read them ",
+        "scores": {
+          "toxic": 0.002629163209348917,
+          "severe_toxic": 8.661247557029128e-05,
+          "obscene": 0.00019048269314225763,
+          "threat": 0.00011263443593634292,
+          "insult": 0.00025814297259785235,
+          "identity_hate": 0.00017605301400180906
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "The OP asked for any sites to read, those are two of the best..",
+        "scores": {
+          "toxic": 0.0005650895764119923,
+          "severe_toxic": 0.00012896591215394437,
+          "obscene": 0.0001895346213132143,
+          "threat": 0.00012417537800502032,
+          "insult": 0.00017527767340652645,
+          "identity_hate": 0.00014236111019272357
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Aeon.co",
+        "scores": {
+          "toxic": 0.0010954363970085979,
+          "severe_toxic": 9.892843081615865e-05,
+          "obscene": 0.00018484728934708983,
+          "threat": 0.00010796295100590214,
+          "insult": 0.0001934334432007745,
+          "identity_hate": 0.000136697810376063
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "I'm subscribed to the TL;DR newsletter. I work in tech and it's hard to keep up with everything that's happening. This newsletter replaces my scrolling before I sleep. It's just long enough that I'm already tired after reading a few articles from it",
+        "scores": {
+          "toxic": 0.0006131924455985427,
+          "severe_toxic": 0.00012402769061736763,
+          "obscene": 0.00018543902842793614,
+          "threat": 0.00012642417277675122,
+          "insult": 0.00017151233623735607,
+          "identity_hate": 0.00014097339590080082
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Refind (website, Android app, iOS app)",
+        "scores": {
+          "toxic": 0.0006884706090204418,
+          "severe_toxic": 0.00011238746083108708,
+          "obscene": 0.0001829027896746993,
+          "threat": 0.00011769239790737629,
+          "insult": 0.00017721594485919923,
+          "identity_hate": 0.00013435108121484518
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Here’s a solid list of apps, websites, and newsletters perfect for discovering, reading, and saving meaningful articles across all sorts of topics\n\n1 - getPocket (Offers personalized recommendations based on your interests.)\n\n2 - Medium (Deep-dive articles on self-help, tech, science, history, productivity, etc.)\n\n3 - Refind (Curates 5–10 high-quality articles per day based on your interests (tech, mind, future, etc.).\n\n4 - Instapaper (Like Pocket, it's great for saving articles to read without distractions.)\n\n5 - Farnam Street (Great for deep thinkers—topics like mental models, decision-making, psychology)\n\n6 - Longreads (Curated long-form journalism and essays on everything from science to culture.)\n\n7 - Aeon (- Big-picture essays on philosophy, science, history, psychology, Clean and ad-free.)\n\n8 - The Browser ( Daily curated list of the most interesting articles on the web.)\n\nNewsletters Worth Subscribing To\n\nThese drop fresh, deep reads in your inbox (not annoying, actually useful):\n\n\\- Dense Discovery – Weekly picks on design, culture, and mindful living.\n\n\\- Ness Labs – Insights on mental health, productivity, and learning better.\n\n\\- The Morning Paper (for tech nerds) – Research paper summaries in plain English.\n\n\\- Brain Pickings / The Marginalian – Longform thoughts on art, life, and philosophy.",
+        "scores": {
+          "toxic": 0.0005962822469882667,
+          "severe_toxic": 0.0001242362632183358,
+          "obscene": 0.00018164311768487096,
+          "threat": 0.0001262261503143236,
+          "insult": 0.00017548637697473168,
+          "identity_hate": 0.0001402508351020515
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "Substack for the 9th list",
+        "scores": {
+          "toxic": 0.0016351529629901052,
+          "severe_toxic": 9.393631626153365e-05,
+          "obscene": 0.00022134122264105827,
+          "threat": 9.328672604169697e-05,
+          "insult": 0.00020802764629479498,
+          "identity_hate": 0.00014758789620827883
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "I recomend substack. Its basically like a twitter but for articles and beautiful thoughts. You can even listen to the articles while your drive. Just read this article that I felt called to.\n\nhttps://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+        "scores": {
+          "toxic": 0.0008485746220685542,
+          "severe_toxic": 0.00011133275256725028,
+          "obscene": 0.00020422125817276537,
+          "threat": 0.00011077256931457669,
+          "insult": 0.00018132435798179358,
+          "identity_hate": 0.00013491555000655353
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      },
+      {
+        "text": "I can recommend BeClever app. It has different topics. I like that articles are short and written in a light style",
+        "scores": {
+          "toxic": 0.0006017275154590607,
+          "severe_toxic": 0.00012458907440304756,
+          "obscene": 0.00017955416115000844,
+          "threat": 0.00013551057782024145,
+          "insult": 0.0001758399448590353,
+          "identity_hate": 0.00014091868069954216
+        },
+        "predictions": {
+          "toxic": 0,
+          "severe_toxic": 0,
+          "obscene": 0,
+          "threat": 0,
+          "insult": 0,
+          "identity_hate": 0
+        },
+        "badge_color": "green"
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "comment_id": "comment_0",
+      "text": "Hacker News is great for tech-adjacent discussion and other interesting things.",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "Thank you!!",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_2",
+      "text": ">Thank you!!\n\nYou're welcome!",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_3",
+      "text": "Longreads.com",
+      "urls": [
+        "https://Longreads.com"
+      ],
+      "status": "Verified",
+      "results": [
+        {
+          "input_url": "https://Longreads.com",
+          "normalized_url": "https://Longreads.com",
+          "final_url": "https://longreads.com/",
+          "domain": "longreads.com",
+          "ips": [
+            "192.0.79.32",
+            "192.0.79.33"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "TL2_tooltip": "Verified source",
+      "TL3_detail": "Verified: website"
+    },
+    {
+      "comment_id": "comment_4",
+      "text": "Try app called “lire” reader app for iOS. The app has a built in section that easily adds site to read. The today view is what I browse.",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_5",
+      "text": "Maybe Deepstash app ",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_6",
+      "text": "Flipboard?",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_7",
+      "text": "My dad made a folklore + history map called untamed.earth that shows haunted sites, myths, ancient ruins & strange local legends near you.\n\nHe’s been working so hard on it, and it’s honestly such a cool project.\n\nHis Instagram is @weird_radar—please give it a peek if this is your kind of thing 💚",
+      "urls": [
+        "https://untamed.earth"
+      ],
+      "status": "Verified",
+      "results": [
+        {
+          "input_url": "https://untamed.earth",
+          "normalized_url": "https://untamed.earth",
+          "final_url": "https://untamed.earth/",
+          "domain": "untamed.earth",
+          "ips": [
+            "185.199.108.153",
+            "185.199.109.153",
+            "185.199.110.153",
+            "185.199.111.153"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "TL2_tooltip": "Verified source",
+      "TL3_detail": "Verified: website"
+    },
+    {
+      "comment_id": "comment_8",
+      "text": "The Internet Archive or Gutenberg dot org are terrific sites with little distractions and pretty much every book ever written and published.",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_9",
+      "text": "He told he is not looking for any boring textbooks and you are suggesting him to read them ",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_10",
+      "text": "The OP asked for any sites to read, those are two of the best..",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_11",
+      "text": "Aeon.co",
+      "urls": [
+        "https://Aeon.co"
+      ],
+      "status": "Verified",
+      "results": [
+        {
+          "input_url": "https://Aeon.co",
+          "normalized_url": "https://Aeon.co",
+          "final_url": "https://aeon.co/",
+          "domain": "aeon.co",
+          "ips": [
+            "216.150.1.1"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "TL2_tooltip": "Verified source",
+      "TL3_detail": "Verified: website"
+    },
+    {
+      "comment_id": "comment_12",
+      "text": "I'm subscribed to the TL;DR newsletter. I work in tech and it's hard to keep up with everything that's happening. This newsletter replaces my scrolling before I sleep. It's just long enough that I'm already tired after reading a few articles from it",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_13",
+      "text": "Refind (website, Android app, iOS app)",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_14",
+      "text": "Here’s a solid list of apps, websites, and newsletters perfect for discovering, reading, and saving meaningful articles across all sorts of topics\n\n1 - getPocket (Offers personalized recommendations based on your interests.)\n\n2 - Medium (Deep-dive articles on self-help, tech, science, history, productivity, etc.)\n\n3 - Refind (Curates 5–10 high-quality articles per day based on your interests (tech, mind, future, etc.).\n\n4 - Instapaper (Like Pocket, it's great for saving articles to read without distractions.)\n\n5 - Farnam Street (Great for deep thinkers—topics like mental models, decision-making, psychology)\n\n6 - Longreads (Curated long-form journalism and essays on everything from science to culture.)\n\n7 - Aeon (- Big-picture essays on philosophy, science, history, psychology, Clean and ad-free.)\n\n8 - The Browser ( Daily curated list of the most interesting articles on the web.)\n\nNewsletters Worth Subscribing To\n\nThese drop fresh, deep reads in your inbox (not annoying, actually useful):\n\n\\- Dense Discovery – Weekly picks on design, culture, and mindful living.\n\n\\- Ness Labs – Insights on mental health, productivity, and learning better.\n\n\\- The Morning Paper (for tech nerds) – Research paper summaries in plain English.\n\n\\- Brain Pickings / The Marginalian – Longform thoughts on art, life, and philosophy.",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_15",
+      "text": "Substack for the 9th list",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    },
+    {
+      "comment_id": "comment_16",
+      "text": "I recomend substack. Its basically like a twitter but for articles and beautiful thoughts. You can even listen to the articles while your drive. Just read this article that I felt called to.\n\nhttps://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+      "urls": [
+        "https://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e",
+        "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios"
+      ],
+      "status": "Verified",
+      "results": [
+        {
+          "input_url": "https://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e",
+          "normalized_url": "https://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e",
+          "final_url": "https://preview.redd.it/jgpdejpk8wyf1.jpeg?width=800&format=pjpg&auto=webp&s=f33bae257958e981036e1672fadb1a73c9de362e",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        },
+        {
+          "input_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+          "normalized_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+          "final_url": "https://substack.com/inbox/post/177782340?r=5rixnk&utm%5C_medium=ios%5D(https%3A%2F%2Fopen.substack.com%2Fpub%2Fjenesaii%2Fp%2Fwhen-the-doctor-spoke-the-world-stopped-7b4%3Fr%3D5rixnk&utm_medium=ios&triedRedirect=true",
+          "domain": "substack.com",
+          "ips": [
+            "104.18.37.200",
+            "172.64.150.56",
+            "2606:4700:4400::ac40:9638",
+            "2606:4700:440b::6812:25c8"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "article",
+          "confidence": 0.7,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "og:type": "article"
+          }
+        }
+      ],
+      "TL2_tooltip": "Verified source",
+      "TL3_detail": "Verified: article, website"
+    },
+    {
+      "comment_id": "comment_17",
+      "text": "I can recommend BeClever app. It has different topics. I like that articles are short and written in a light style",
+      "urls": [],
+      "status": "None",
+      "results": [],
+      "TL2_tooltip": "No evidence detected",
+      "TL3_detail": "Opinion only; no evidence detected"
+    }
+  ]
+}
