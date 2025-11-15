@@ -2,6 +2,7 @@ import re, json, socket, ipaddress, requests, tldextract
 from urllib.parse import urlparse, urlunparse
 from bs4 import BeautifulSoup
 from typing import List, Dict, Any, Tuple
+from pathlib import Path
 
 # ---------- URL utils ----------
 
@@ -30,19 +31,127 @@ def extract_urls_from_text(text: str) -> List[str]:
     n = []
     seen = set()
     for u in urls:
+        # Skip URLs that are obviously malformed
+        if not u or len(u) > 2000:  # Max URL length check
+            continue
         nu = normalize_url(u)
         if nu and nu not in seen:
-            seen.add(nu); n.append(nu)
+            # Additional validation: check if domain is reasonable length
+            try:
+                parsed = urlparse(nu)
+                hostname = parsed.hostname
+                if hostname and len(hostname) <= 253:  # Valid domain length
+                    seen.add(nu)
+                    n.append(nu)
+            except Exception:
+                # Skip malformed URLs that can't be parsed
+                continue
     return n
+
+# ---------- Pattern-based evidence detection ----------
+
+def load_evidence_patterns() -> Dict[str, Any]:
+    """Load evidence patterns from JSON file."""
+    patterns_file = Path(__file__).parent.parent / "evidence_patterns.json"
+    try:
+        with open(patterns_file, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"Warning: evidence_patterns.json not found at {patterns_file}")
+        return {"simple_keywords": [], "sentence_patterns": [], "multi_word_phrases": [], "credibility_indicators": []}
+
+# Load patterns once at module level
+EVIDENCE_PATTERNS = load_evidence_patterns()
+
+def detect_pattern_based_evidence(text: str) -> Dict[str, Any]:
+    """
+    Detect evidence cues in text using patterns from evidence_patterns.json.
+    Returns dict with detected patterns and confidence level.
+    """
+    text_lower = text.lower()
+    detected = {
+        "has_evidence_patterns": False,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"  # none, low, medium, high
+    }
+
+    # Check simple keywords
+    for keyword in EVIDENCE_PATTERNS.get("simple_keywords", []):
+        if keyword.lower() in text_lower:
+            detected["simple_keyword_matches"].append(keyword)
+
+    # Check sentence patterns (regex)
+    for pattern_obj in EVIDENCE_PATTERNS.get("sentence_patterns", []):
+        pattern = pattern_obj.get("pattern", "")
+        flags = re.IGNORECASE if pattern_obj.get("flags", "").lower() == "i" else 0
+        try:
+            if re.search(pattern, text, flags):
+                detected["sentence_pattern_matches"].append({
+                    "pattern": pattern_obj.get("description", pattern),
+                    "regex": pattern
+                })
+        except re.error:
+            continue
+
+    # Check multi-word phrases
+    for phrase in EVIDENCE_PATTERNS.get("multi_word_phrases", []):
+        if phrase.lower() in text_lower:
+            detected["phrase_matches"].append(phrase)
+
+    # Check credibility indicators
+    for indicator_group in EVIDENCE_PATTERNS.get("credibility_indicators", []):
+        indicator_type = indicator_group.get("type", "")
+        for keyword in indicator_group.get("keywords", []):
+            if keyword.lower() in text_lower:
+                detected["credibility_matches"].append({
+                    "type": indicator_type,
+                    "keyword": keyword
+                })
+
+    # Determine if evidence patterns are present
+    total_matches = (
+        len(detected["simple_keyword_matches"]) +
+        len(detected["sentence_pattern_matches"]) +
+        len(detected["phrase_matches"]) +
+        len(detected["credibility_matches"])
+    )
+
+    if total_matches > 0:
+        detected["has_evidence_patterns"] = True
+
+        # Determine confidence level
+        if (len(detected["sentence_pattern_matches"]) >= 2 or
+            len(detected["phrase_matches"]) >= 1 or
+            len(detected["credibility_matches"]) >= 2):
+            detected["confidence"] = "high"
+        elif len(detected["sentence_pattern_matches"]) >= 1:
+            detected["confidence"] = "medium"
+        else:
+            detected["confidence"] = "low"
+
+    return detected
 
 # ---------- Network guards & DNS ----------
 
 def resolve_public_ips(host: str) -> Tuple[bool, List[str], str | None]:
     """Resolve host; ensure IPs are public (not private/loopback/link-local)."""
+    # Validate host is not empty and not too long
+    if not host or len(host) > 253:  # Max domain length is 253 chars
+        return False, [], "invalid_host_length"
+
     try:
         infos = socket.getaddrinfo(host, None)
     except socket.gaierror as e:
         return False, [], f"dns_failure:{e}"
+    except UnicodeError as e:
+        # Handle IDNA encoding errors for malformed domains
+        return False, [], f"invalid_domain_encoding:{e}"
+    except Exception as e:
+        return False, [], f"dns_error:{type(e).__name__}"
+
     ips = sorted({i[4][0] for i in infos})
     try:
         for ip in ips:
@@ -217,11 +326,19 @@ def verify_and_classify(url: str) -> Dict[str, Any]:
 def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
     urls = extract_urls_from_text(text)
     link_results = [verify_and_classify(u) for u in urls]
+
+    # Detect pattern-based evidence
+    pattern_detection = detect_pattern_based_evidence(text)
+
     # Summarize comment-level status
     if not link_results:
-        status = "None"
+        # No URLs found - check for evidence patterns
+        if pattern_detection["has_evidence_patterns"]:
+            status = "Evidence present, unverified"
+        else:
+            status = "None"
     else:
-        # Verified if any link verified; Mixed if some verified and some not; else Unverified
+        # URLs found - verify them
         v = sum(1 for r in link_results if r["verified"])
         if v == len(link_results):
             status = "Verified"
@@ -229,24 +346,47 @@ def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
             status = "Mixed"
         else:
             status = "Unverified"
-    # TL2/TL3 style strings without domain lists
+
+    # Build TL2/TL3 tooltips based on status
     if status == "Verified":
         tl2 = "Verified source"
-        tl3 = f"Verified: {', '.join(sorted({r['category'] for r in link_results if r['verified']}))}"
+        # TL3 shows domains
+        verified_domains = [r.get('domain', '') for r in link_results if r["verified"]]
+        tl3 = f"Verified source: {', '.join(verified_domains)}" if verified_domains else "Verified source"
     elif status == "Mixed":
         tl2 = "Mixed evidence"
-        tl3 = f"Mixed: {sum(r['verified'] for r in link_results)} verified, {sum(not r['verified'] for r in link_results)} unverified"
+        verified_count = sum(r['verified'] for r in link_results)
+        unverified_count = sum(not r['verified'] for r in link_results)
+        verified_domains = [r.get('domain', '') for r in link_results if r["verified"]]
+        unverified_domains = [r.get('domain', '') for r in link_results if not r["verified"]]
+        tl3 = f"Mixed evidence: {verified_count} verified ({', '.join(verified_domains)}), {unverified_count} unverified ({', '.join(unverified_domains)})"
     elif status == "Unverified":
         tl2 = "Unverified source ⚠️"
-        tl3 = "Unverified: links unreachable or error"
+        unverified_domains = [r.get('domain', '') for r in link_results if not r["verified"]]
+        tl3 = f"Unverified source: {', '.join(unverified_domains)}" if unverified_domains else "Unverified: links unreachable or error"
+    elif status == "Evidence present, unverified":
+        tl2 = "Evidence present, unverified"
+        # Show what patterns were detected
+        pattern_summary = []
+        if pattern_detection["sentence_pattern_matches"]:
+            pattern_summary.append(f"{len(pattern_detection['sentence_pattern_matches'])} citation patterns")
+        if pattern_detection["phrase_matches"]:
+            pattern_summary.append(f"{len(pattern_detection['phrase_matches'])} academic phrases")
+        if pattern_detection["credibility_matches"]:
+            pattern_summary.append(f"{len(pattern_detection['credibility_matches'])} credibility indicators")
+        tl3 = f"Evidence cues detected ({', '.join(pattern_summary)}) but no verifiable sources linked"
     else:
         tl2 = "No evidence detected"
         tl3 = "Opinion only; no evidence detected"
+
     return {
         "comment_id": comment_id,
         "text": text,
         "urls": urls,
         "status": status,
+        "evidence_present": len(urls) > 0 or pattern_detection["has_evidence_patterns"],
+        "verified": status == "Verified",
+        "pattern_detection": pattern_detection,
         "results": link_results,
         "TL2_tooltip": tl2,
         "TL3_detail": tl3
