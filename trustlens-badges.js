@@ -861,17 +861,15 @@
           sections: [
             { label: "Tone:", value: "Hostile tone detected." },
             { label: "Evidence:", value: "Evidence unverified or absent." },
-            { label: "Source:", value: "Source authenticity unclear." },
-            { label: "Emotion:", value: "Emotionally charged." },
+            { label: "Source:", value: "Source authenticity unclear." }
           ],
         },
         mild: {
           title: "Includes subjective language and personal viewpoints.",
           sections: [
             { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Emotion:", value: "Reflects personal perspective." },
             { label: "Evidence:", value: "Limited or no evidence cited." },
-            { label: "Source:", value: "No credible sources detected." },
+            { label: "Source:", value: "No credible sources detected." }
           ],
         },
       };
@@ -900,13 +898,11 @@
             { label: "Tone:", value: "Hostile tone detected." },
             { label: "Evidence:", value: "Evidence unverified or absent." },
             { label: "Source:", value: "Source authenticity unclear." },
-            { label: "Emotion:", value: "Emotionally charged." },
           ];
         } else if (status === "Mixed") {
           title = "Includes subjective language and personal viewpoints.";
           sections = [
             { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Emotion:", value: "Reflects personal perspective." },
             { label: "Evidence:", value: "Limited or no evidence cited." },
             { label: "Source:", value: "No credible sources detected." },
           ];
@@ -914,9 +910,8 @@
           title = "Includes subjective language and personal viewpoints.";
           sections = [
             { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Emotion:", value: "Reflects personal perspective." },
             { label: "Evidence:", value: "Limited or no evidence cited." },
-            { label: "Source:", value: "No credible sources detected." },
+            { label: "Source:", value: "No credible sources detected." }
           ];
         }
 
