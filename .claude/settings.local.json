@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python test_evidence_patterns.py:*)",
       "Bash(python:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []

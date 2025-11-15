@@ -47,10 +47,10 @@ def get_tl1_badge(toxicity_level: str) -> str:
     """
     Get TL1 badge emoji based on toxicity level.
 
-    For now, ignoring emotions as requested:
+    Badge mapping per requirements:
     - Toxic -> Red
     - Mild -> Yellow
-    - Neutral -> Yellow (will be refined when emotions are added)
+    - Neutral -> Green
 
     Args:
         toxicity_level: Toxic, Mild, or Neutral
@@ -58,11 +58,10 @@ def get_tl1_badge(toxicity_level: str) -> str:
     Returns:
         Badge emoji
     """
-    # Simplified mapping without emotions
     badge_mapping = {
         "Toxic": "🔴",
         "Mild": "🟡",
-        "Neutral": "🟡"  # Default to yellow until emotions are integrated
+        "Neutral": "🟢"  # Green for neutral content
     }
     return badge_mapping.get(toxicity_level, "🟡")
 

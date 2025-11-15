@@ -26,6 +26,12 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from extract_pure_comments import extract_comments
 from evidence import analyze_comments as analyze_evidence, analyze_comment
+from evidence_monitored import (
+    get_performance_stats,
+    log_performance_stats,
+    print_performance_summary
+)
+from output_formatter import format_all_results
 
 
 app = FastAPI(title="Reddit Ingest API")
