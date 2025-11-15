@@ -1,52 +1,48 @@
 (function () {
- if (window.trustLensRobustInitialized) {
-   console.log("TrustLens: Already initialized, skipping...");
-   return;
- }
- window.trustLensRobustInitialized = true;
+  if (window.trustLensRobustInitialized) {
+    console.log("TrustLens: Already initialized, skipping...");
+    return;
+  }
+  window.trustLensRobustInitialized = true;
 
+  const API_BASE = "http://127.0.0.1:8000";
 
- const API_BASE = "http://127.0.0.1:8000";
+  class DuplicateProofManager {
+    constructor() {
+      this.processedCommentIds = new Set();
+      this.processing = new Map();
+      this.debugMode = false;
+      this.currentAnalysisData = null;
+      this.ROOT_SELECTOR =
+        'article[data-testid="comment"], [id^="t1_"], .Comment, .comment.thing, .thing[data-type="comment"]';
+      this.init();
+    }
 
+    init() {
+      this.injectStyles();
+      this.addDebugPanel();
+      this.createSidebar();
+      this.observe();
+      setTimeout(() => this.scan(), 800);
+      setTimeout(() => this.testAPI(), 400);
+    }
 
- class DuplicateProofManager {
-   constructor() {
-     this.processedCommentIds = new Set();
-     this.processing = new Map();
-     this.debugMode = false;
-     this.currentAnalysisData = null;
-     this.ROOT_SELECTOR =
-       'article[data-testid="comment"], [id^="t1_"], .Comment, .comment.thing, .thing[data-type="comment"]';
-     this.init();
-   }
-
-
-   init() {
-     this.injectStyles();
-     this.addDebugPanel();
-     this.createSidebar();
-     this.observe();
-     setTimeout(() => this.scan(), 800);
-     setTimeout(() => this.testAPI(), 400);
-   }
-
-
-   injectStyles() {
-     if (document.getElementById("trustlens-dup-styles")) return;
-     const style = document.createElement("style");
-     style.id = "trustlens-dup-styles";
-     style.textContent = `
+    injectStyles() {
+      if (document.getElementById("trustlens-dup-styles")) return;
+      const style = document.createElement("style");
+      style.id = "trustlens-dup-styles";
+      style.textContent = `
        .trustlens-badge{display:inline-block;width:344px;height:100px;padding:16px;border-radius:0;font:600 11px system-ui,sans-serif;margin-right:8px;border:16px solid rgba(0,0,0,.1);box-sizing:content-box;position:relative;cursor:pointer}
-       .trustlens-badge.trustlens-inline{width:auto !important;height:auto !important;padding:3px 8px !important;border-radius:10px !important;border:1px solid rgba(0,0,0,.12) !important;margin-right:8px;vertical-align:middle;line-height:1;font-size:11px !important;}
+       .trustlens-badge.trustlens-inline{width:auto !important;height:auto !important;padding:3px 8px !important;margin-right:8px;vertical-align:middle;line-height:1;font-size:11px !important;}
        .trustlens-user-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
        .trustlens-safe{background:#d4edda;color:#155724}
        .trustlens-low{background:#fff3cd;color:#856404}
        .trustlens-medium{background:#f8d7da;color:#721c24}
        .trustlens-high{background:#d1ecf1;color:#0c5460}
        .trustlens-severe{background:#f5c6cb;color:#721c24}
-       .trustlens-toxic{background:#dc3545;color:#fff}
-       .trustlens-mild{background:#ffc107;color:#000}
-       .trustlens-neutral{background:#28a745;color:#fff}
+      .trustlens-toxic{background:transparent;color:inherit}
+      .trustlens-mild{background:transparent;color:inherit}
+      .trustlens-neutral{background:transparent;color:inherit}
        .trustlens-loading{background:#f8f9fa;color:#6c757d}
       
        .trustlens-popup {
@@ -75,7 +71,6 @@
        .trustlens-popup-title {
          font-weight: 600;
          font-size: 14px;
-         margin-bottom: 12px;
          color: #1a1a1a;
        }
       
@@ -99,8 +94,9 @@
        }
       
        .trustlens-popup-link {
-         color: #0066cc;
-         text-decoration: none;
+         color: #07BEB8;
+         text-decoration: underline;
+         text-decoration-color: #07BEB8;
          font-weight: 500;
          margin-top: 8px;
          display: inline-block;
@@ -109,6 +105,7 @@
       
        .trustlens-popup-link:hover {
          text-decoration: underline;
+         text-decoration-color: #07BEB8;
        }
       
        /* Sidebar styles */
@@ -383,25 +380,23 @@
        .trustlens-debug{position:fixed;top:10px;left:10px;z-index:10000;background:rgba(0,0,0,.85);color:#fff;padding:10px 12px;border-radius:6px;font:12px/1.3 ui-monospace,Menlo,monospace;min-width:210px}
        .trustlens-debug button{margin-top:6px;margin-right:6px;padding:3px 6px;border:0;border-radius:4px;background:#2d6cdf;color:#fff;cursor:pointer}
      `;
-     document.head.appendChild(style);
-   }
+      document.head.appendChild(style);
+    }
 
+    createSidebar() {
+      // Create overlay
+      const overlay = document.createElement("div");
+      overlay.className = "trustlens-sidebar-overlay";
+      overlay.id = "trustlens-sidebar-overlay";
+      overlay.addEventListener("click", () => this.closeSidebar());
+      document.body.appendChild(overlay);
 
-   createSidebar() {
-     // Create overlay
-     const overlay = document.createElement('div');
-     overlay.className = 'trustlens-sidebar-overlay';
-     overlay.id = 'trustlens-sidebar-overlay';
-     overlay.addEventListener('click', () => this.closeSidebar());
-     document.body.appendChild(overlay);
+      // Create sidebar
+      const sidebar = document.createElement("div");
+      sidebar.className = "trustlens-sidebar";
+      sidebar.id = "trustlens-sidebar";
 
-
-     // Create sidebar
-     const sidebar = document.createElement('div');
-     sidebar.className = 'trustlens-sidebar';
-     sidebar.id = 'trustlens-sidebar';
-    
-     sidebar.innerHTML = `
+      sidebar.innerHTML = `
        <div class="trustlens-sidebar-header">
          <div class="trustlens-sidebar-header-text">
            <div class="trustlens-sidebar-title">New to |</div>
@@ -413,156 +408,223 @@
          <!-- Content will be populated dynamically -->
        </div>
      `;
-    
-     document.body.appendChild(sidebar);
-    
-     document.getElementById('trustlens-sidebar-close').addEventListener('click', () => this.closeSidebar());
-   }
 
+      document.body.appendChild(sidebar);
 
-   openSidebar(level, badgeColor) {
-     const sidebar = document.getElementById('trustlens-sidebar');
-     const overlay = document.getElementById('trustlens-sidebar-overlay');
-     const content = document.getElementById('trustlens-sidebar-content');
-    
-     // Populate sidebar content based on level
-     content.innerHTML = this.getSidebarContent(level, badgeColor);
-    
-     // Show sidebar
-     overlay.classList.add('show');
-     sidebar.classList.add('open');
-   }
+      document
+        .getElementById("trustlens-sidebar-close")
+        .addEventListener("click", () => this.closeSidebar());
+    }
 
+    openSidebar(level, badgeColor, badgeData = null) {
+      const sidebar = document.getElementById("trustlens-sidebar");
+      const overlay = document.getElementById("trustlens-sidebar-overlay");
+      const content = document.getElementById("trustlens-sidebar-content");
 
-   closeSidebar() {
-     const sidebar = document.getElementById('trustlens-sidebar');
-     const overlay = document.getElementById('trustlens-sidebar-overlay');
-    
-     overlay.classList.remove('show');
-     sidebar.classList.remove('open');
-   }
+      content.innerHTML = this.getSidebarContent(level, badgeColor, badgeData);
 
+      overlay.classList.add("show");
+      sidebar.classList.add("open");
+    }
 
-   getSidebarContent(level, badgeColor) {
-     // Define metrics based on badge type
-     const metrics = {
-       neutral: {
-         tone: 90,
-         toxicity: 5,
-         hostility: 3,
-         credibility: 75
-       },
-       mild: {
-         tone: 60,
-         toxicity: 25,
-         hostility: 15,
-         credibility: 45
-       },
-       toxic: {
-         tone: 20,
-         toxicity: 85,
-         hostility: 75,
-         credibility: 15
-       }
-     };
+    closeSidebar() {
+      const sidebar = document.getElementById("trustlens-sidebar");
+      const overlay = document.getElementById("trustlens-sidebar-overlay");
 
+      overlay.classList.remove("show");
+      sidebar.classList.remove("open");
+    }
 
-     const tags = {
-       neutral: ['personal tone', 'qualified claims', 'personal experience noted', 'no loaded language'],
-       mild: ['subjective tone', 'opinion-based', 'limited sources', 'personal viewpoint'],
-       toxic: ['hostile language', 'unverified claims', 'emotional language', 'loaded terms']
-     };
+    getSidebarContent(level, badgeColor, badgeData = null) {
+      const evidence = badgeData?.evidence || {};
+      const status = badgeData?.status || "None";
+      const urls = evidence.urls || [];
+      const results = evidence.results || [];
 
+      const verifiedCount = results.filter((r) => r.verified).length;
+      const totalCount = results.length;
+      const verifiedPercentage =
+        totalCount > 0 ? Math.round((verifiedCount / totalCount) * 100) : 0;
 
-     const currentMetrics = metrics[level] || metrics.neutral;
-     const currentTags = tags[level] || tags.neutral;
+      const credibilityMap = {
+        Verified: 85,
+        Mixed: 50,
+        Unverified: 20,
+        None: 30,
+      };
 
+      const credibility = credibilityMap[status] || 30;
+      const reachability = verifiedPercentage;
+      const sourceQuality =
+        verifiedCount > 0 ? Math.min(90, verifiedCount * 30) : 0;
 
-     return `
-       <a href="#" class="trustlens-sidebar-link">Why am I seeing this?</a>
+      let tags = [];
+      if (status === "Verified") {
+        tags = [
+          "verified sources",
+          "reachable links",
+          "credible evidence",
+          "fact-checked",
+        ];
+        if (results.length > 0) {
+          const categories = [
+            ...new Set(
+              results.filter((r) => r.verified).map((r) => r.category)
+            ),
+          ];
+          tags.push(...categories.slice(0, 2));
+        }
+      } else if (status === "Unverified") {
+        tags = [
+          "unverified sources",
+          "unreachable links",
+          "unverified claims",
+          "needs verification",
+        ];
+      } else if (status === "Mixed") {
+        tags = [
+          "mixed evidence",
+          "partial verification",
+          "some sources verified",
+          "needs review",
+        ];
+      } else {
+        tags = [
+          "no sources",
+          "opinion only",
+          "no evidence",
+          "personal viewpoint",
+        ];
+      }
+
+      const referencedSites = results
+        .filter((r) => r.verified && r.domain)
+        .map((r) => r.domain)
+        .filter((v, i, a) => a.indexOf(v) === i)
+        .slice(0, 5);
+
+      let referencedSitesHTML = "";
+      if (referencedSites.length > 0) {
+        referencedSitesHTML = referencedSites
+          .map((domain) => {
+            const result = results.find(
+              (r) => r.domain === domain && r.verified
+            );
+            const url = result
+              ? result.final_url || result.normalized_url
+              : `https://${domain}`;
+            return `<a href="${url}" target="_blank" class="trustlens-sidebar-link">${domain}</a>`;
+          })
+          .join("");
+      } else {
+        referencedSitesHTML =
+          '<span style="color: #666; font-size: 13px;">No verified sources found</span>';
+      }
+
+      const statusDescriptions = {
+        Verified: "All sources verified and reachable.",
+        Unverified: "Sources could not be verified or are unreachable.",
+        Mixed: "Some sources verified, some not.",
+        None: "No sources or links detected in this comment.",
+      };
+
+      return `
+      <a href="#" class="trustlens-sidebar-link">Why am I seeing this?</a>
       
-       <div class="trustlens-sidebar-section">
-         <div class="trustlens-sidebar-section-title">Analysis Breakdown</div>
+      <div class="trustlens-sidebar-section">
+        <div class="trustlens-sidebar-section-title">Evidence Analysis</div>
+        <div style="margin-bottom: 16px; padding: 12px; background: #f9f9f9; border-radius: 6px;">
+          <div style="font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px;">
+            Status: ${status}
+          </div>
+          <div style="font-size: 13px; color: #666; line-height: 1.4;">
+            ${statusDescriptions[status] || "Evidence analysis complete."}
+          </div>
+          ${
+            badgeData?.TL3_detail
+              ? `<div style="font-size: 12px; color: #888; margin-top: 8px;">${badgeData.TL3_detail}</div>`
+              : ""
+          }
+        </div>
         
-         <div class="trustlens-metric">
-           <div class="trustlens-metric-header">
-             <span class="trustlens-metric-label">Tone</span>
-             <span class="trustlens-metric-value">${currentMetrics.tone}%</span>
-           </div>
-           <div class="trustlens-metric-bar">
-             <div class="trustlens-metric-fill tone" style="width: ${currentMetrics.tone}%"></div>
-           </div>
-         </div>
+        <div class="trustlens-metric">
+          <div class="trustlens-metric-header">
+            <span class="trustlens-metric-label">Credibility</span>
+            <span class="trustlens-metric-value">${credibility}%</span>
+          </div>
+          <div class="trustlens-metric-bar">
+            <div class="trustlens-metric-fill credibility" style="width: ${credibility}%"></div>
+          </div>
+        </div>
         
-         <div class="trustlens-metric">
-           <div class="trustlens-metric-header">
-             <span class="trustlens-metric-label">Toxicity</span>
-             <span class="trustlens-metric-value">${currentMetrics.toxicity}%</span>
-           </div>
-           <div class="trustlens-metric-bar">
-             <div class="trustlens-metric-fill toxicity" style="width: ${currentMetrics.toxicity}%"></div>
-           </div>
-         </div>
+        ${
+          totalCount > 0
+            ? `
+        <div class="trustlens-metric">
+          <div class="trustlens-metric-header">
+            <span class="trustlens-metric-label">Source Reachability</span>
+            <span class="trustlens-metric-value">${reachability}%</span>
+          </div>
+          <div class="trustlens-metric-bar">
+            <div class="trustlens-metric-fill tone" style="width: ${reachability}%"></div>
+          </div>
+        </div>
         
-         <div class="trustlens-metric">
-           <div class="trustlens-metric-header">
-             <span class="trustlens-metric-label">Hostility</span>
-             <span class="trustlens-metric-value">${currentMetrics.hostility}%</span>
-           </div>
-           <div class="trustlens-metric-bar">
-             <div class="trustlens-metric-fill hostility" style="width: ${currentMetrics.hostility}%"></div>
-           </div>
-         </div>
+        <div class="trustlens-metric">
+          <div class="trustlens-metric-header">
+            <span class="trustlens-metric-label">Source Quality</span>
+            <span class="trustlens-metric-value">${sourceQuality}%</span>
+          </div>
+          <div class="trustlens-metric-bar">
+            <div class="trustlens-metric-fill toxicity" style="width: ${sourceQuality}%"></div>
+          </div>
+        </div>
+        `
+            : ""
+        }
         
-         <div class="trustlens-metric">
-           <div class="trustlens-metric-header">
-             <span class="trustlens-metric-label">Credibility</span>
-             <span class="trustlens-metric-value">${currentMetrics.credibility}%</span>
-           </div>
-           <div class="trustlens-metric-bar">
-             <div class="trustlens-metric-fill credibility" style="width: ${currentMetrics.credibility}%"></div>
-           </div>
-         </div>
-       </div>
+      </div>
       
-       <div class="trustlens-sidebar-section">
-         <div class="trustlens-sidebar-section-title">Signals Scan</div>
-         <div class="trustlens-tags">
-           ${currentTags.map(tag => `<span class="trustlens-tag">${tag}</span>`).join('')}
-         </div>
-       </div>
+      <div class="trustlens-sidebar-section">
+        <div class="trustlens-sidebar-section-title">Signals Scan</div>
+        <div class="trustlens-tags">
+          ${tags
+            .map((tag) => `<span class="trustlens-tag">${tag}</span>`)
+            .join("")}
+        </div>
+      </div>
       
-       <div class="trustlens-sidebar-section">
-         <div class="trustlens-sidebar-section-title">Color Indicators</div>
-         <div class="trustlens-color-legend">
-           <div class="trustlens-color-item">
-             <div class="trustlens-color-dot green"></div>
-             <div class="trustlens-color-text">
-               <div class="trustlens-color-title">Green - Balanced</div>
-               <div class="trustlens-color-desc">High credibility content with neutral tone, factual statements, and cited sources.</div>
-             </div>
-           </div>
-           <div class="trustlens-color-item">
-             <div class="trustlens-color-dot yellow"></div>
-             <div class="trustlens-color-text">
-               <div class="trustlens-color-title">Yellow - Opinion/Unverified</div>
-               <div class="trustlens-color-desc">Medium credibility with some subjective statements or uncited sources.</div>
-             </div>
-           </div>
-           <div class="trustlens-color-item">
-             <div class="trustlens-color-dot red"></div>
-             <div class="trustlens-color-text">
-               <div class="trustlens-color-title">Red - Hostile/Low Evidence</div>
-               <div class="trustlens-color-desc">Low credibility with emotional language, unsubstantiated claims, or toxic markers.</div>
-             </div>
-           </div>
-         </div>
-       </div>
+      <div class="trustlens-sidebar-section">
+        <div class="trustlens-sidebar-section-title">Color Indicators</div>
+        <div class="trustlens-color-legend">
+          <div class="trustlens-color-item">
+            <div class="trustlens-color-dot green"></div>
+            <div class="trustlens-color-text">
+              <div class="trustlens-color-title">Green - Verified</div>
+              <div class="trustlens-color-desc">All sources verified and reachable. High credibility with verified evidence.</div>
+            </div>
+          </div>
+          <div class="trustlens-color-item">
+            <div class="trustlens-color-dot yellow"></div>
+            <div class="trustlens-color-text">
+              <div class="trustlens-color-title">Yellow - Mixed/No Evidence</div>
+              <div class="trustlens-color-desc">Some sources verified or no sources found. Medium credibility with partial or no evidence.</div>
+            </div>
+          </div>
+          <div class="trustlens-color-item">
+            <div class="trustlens-color-dot red"></div>
+            <div class="trustlens-color-text">
+              <div class="trustlens-color-title">Red - Unverified</div>
+              <div class="trustlens-color-desc">Sources could not be verified or are unreachable. Low credibility with unverified evidence.</div>
+            </div>
+          </div>
+        </div>
+      </div>
       
-       <div class="trustlens-sidebar-section">
-         <div class="trustlens-sidebar-section-title">Referenced Sites</div>
-         <a href="#" class="trustlens-sidebar-link">None</a>
-       </div>
+      <div class="trustlens-sidebar-section">
+        <div class="trustlens-sidebar-section-title">Referenced Sites</div>
+        ${referencedSitesHTML}
+      </div>
       
        <div class="trustlens-sidebar-section">
          <div class="trustlens-feedback">
@@ -582,15 +644,14 @@
          I got called as a psychopath once where they still keep liking... "I received feedback that may not be entirely pleasant."
        </div>
      `;
-   }
+    }
 
-
-   addDebugPanel() {
-     if (!this.debugMode || document.getElementById("trustlens-debug")) return;
-     const box = document.createElement("div");
-     box.id = "trustlens-debug";
-     box.className = "trustlens-debug";
-     box.innerHTML = `
+    addDebugPanel() {
+      if (!this.debugMode || document.getElementById("trustlens-debug")) return;
+      const box = document.createElement("div");
+      box.id = "trustlens-debug";
+      box.className = "trustlens-debug";
+      box.innerHTML = `
        <div><strong>TrustLens Debug</strong></div>
        <div>Comments found: <span id="tl-count">0</span></div>
        <div>Processed: <span id="tl-processed">0</span></div>
@@ -603,790 +664,890 @@
          <button id="tl-check">Check Duplicates</button>
        </div>
      `;
-     document.body.appendChild(box);
-     document.getElementById("tl-scan").onclick = () => this.scan();
-     document.getElementById("tl-clear").onclick = () => this.clearAll();
-     document.getElementById("tl-check").onclick = () =>
-       this.checkDuplicates();
-
-
-     setInterval(() => this.updateBadgeCount(), 1000);
-   }
-
-
-   updateBadgeCount() {
-     const count = document.querySelectorAll(".trustlens-badge").length;
-     this.update("tl-badges", String(count));
-   }
-
-
-   checkDuplicates() {
-     const badges = document.querySelectorAll(
-       ".trustlens-badge[data-comment-id]"
-     );
-     const ids = Array.from(badges).map((b) => b.dataset.commentId);
-     const uniqueIds = new Set(ids);
-     const duplicates = ids.length - uniqueIds.size;
-
-
-     if (duplicates > 0) {
-       console.warn(`TrustLens: Found ${duplicates} duplicate badges!`);
-       this.update("tl-last", `⚠️ ${duplicates} duplicates found`);
-
-
-       const counts = {};
-       ids.forEach((id) => {
-         counts[id] = (counts[id] || 0) + 1;
-       });
-       const dupIds = Object.keys(counts).filter((id) => counts[id] > 1);
-       console.warn("Duplicate IDs:", dupIds);
-
-
-       dupIds.forEach((id) => {
-         const badgesWithId = Array.from(
-           document.querySelectorAll(
-             `.trustlens-badge[data-comment-id="${id}"]`
-           )
-         );
-         badgesWithId.slice(1).forEach((b) => b.remove());
-       });
-
-
-       this.updateBadgeCount();
-       this.update("tl-last", `Fixed ${duplicates} duplicates`);
-     } else {
-       this.update("tl-last", "No duplicates");
-     }
-   }
-
-
-   update(field, value) {
-     const el = document.getElementById(field);
-     if (el) el.textContent = value;
-   }
-
-
-   observe() {
-     const mo = new MutationObserver((muts) => {
-       for (const m of muts) {
-         for (const n of m.addedNodes) {
-           if (n.nodeType !== Node.ELEMENT_NODE) continue;
-           this.processNode(n);
-         }
-       }
-     });
-     mo.observe(document.body, { childList: true, subtree: true });
-   }
-
-
-   scan() {
-     const roots = this.findRoots();
-     this.update("tl-count", String(roots.length));
-     this.update("tl-last", `Scan ${roots.length}`);
-     roots.forEach((el, i) =>
-       setTimeout(() => this.processComment(el), i * 50)
-     );
-     setTimeout(() => {
-       this.update("tl-processed", String(this.processedCommentIds.size));
-       this.updateBadgeCount();
-     }, 1000);
-   }
-
-
-   clearAll() {
-     document.querySelectorAll(".trustlens-badge").forEach((b) => b.remove());
-     document.querySelectorAll(".trustlens-popup").forEach((p) => p.remove());
-     this.processedCommentIds.clear();
-     this.processing.clear();
-     document.querySelectorAll(this.ROOT_SELECTOR).forEach((el) => {
-       if (el.dataset) {
-         delete el.dataset.trustlensProcessed;
-         delete el.dataset.trustlensId;
-       }
-     });
-     this.update("tl-last", "Cleared");
-     this.update("tl-processed", "0");
-     this.updateBadgeCount();
-   }
-
-
-   findRoots() {
-     const nodes = Array.from(document.querySelectorAll(this.ROOT_SELECTOR));
-     return nodes.filter((el) => el.closest(this.ROOT_SELECTOR) === el);
-   }
-
-
-   processNode(node) {
-     const nodes = node.querySelectorAll(this.ROOT_SELECTOR);
-     nodes.forEach((el) => {
-       if (el.closest(this.ROOT_SELECTOR) === el) this.processComment(el);
-     });
-   }
-
-
-   getId(el) {
-     if (el.dataset && el.dataset.trustlensId) return el.dataset.trustlensId;
-     const id = el.getAttribute("id");
-     if (id && id.startsWith("t1_")) return (el.dataset.trustlensId = id);
-     const permalink = el.getAttribute("data-permalink");
-     if (permalink)
-       return (el.dataset.trustlensId = permalink.split("/").pop());
-     const fullname = el.getAttribute("data-fullname");
-     if (fullname) return (el.dataset.trustlensId = fullname);
-     return (el.dataset.trustlensId = `c_${Date.now()}_${Math.random()
-       .toString(36)
-       .slice(2)}`);
-   }
-
-
-   getText(el) {
-     const trySel = [".md", ".usertext-body", '[data-testid="comment"]'];
-     for (const s of trySel) {
-       const n = el.querySelector(s);
-       if (n && n.textContent && n.textContent.trim().length > 10)
-         return n.textContent.trim();
-     }
-     const all = el.textContent.trim();
-     return all.length > 10 ? all : null;
-   }
-
-
-   async testAPI() {
-     try {
-       const r = await fetch(`${API_BASE}/health`);
-       this.update("tl-api", r.ok ? "Connected" : "Error");
-     } catch {
-       this.update("tl-api", "Failed");
-     }
-   }
-
-
-   getPopupContent(level, badgeColor) {
-     const content = {
-       neutral: {
-         title: "Uses a neutral tone and mentions verifiable evidence.",
-         sections: [
-           { label: "Tone:", value: "Low toxicity, no hostility detected." },
-           { label: "Evidence:", value: "Evidence present and verified." },
-           { label: "Source:", value: "Includes verified sources." }
-         ]
-       },
-       toxic: {
-         title: "This content shows signs of hostility and emotional language.",
-         sections: [
-           { label: "Tone:", value: "Hostile tone detected." },
-           { label: "Evidence:", value: "Evidence unverified or absent." },
-           { label: "Source:", value: "Source authenticity unclear." },
-           { label: "Emotion:", value: "Emotionally-charged." }
-         ]
-       },
-       mild: {
-         title: "Includes subjective language and personal viewpoints.",
-         sections: [
-           { label: "Tone:", value: "Neutral to slightly subjective tone." },
-           { label: "Emotion:", value: "Reflects personal perspective." },
-           { label: "Evidence:", value: "Limited or no evidence cited." },
-           { label: "Source:", value: "No credible sources detected." }
-         ]
-       }
-     };
-
-
-     return content[level] || content.neutral;
-   }
-
-
-   createPopup(badge, level, badgeColor) {
-     document.querySelectorAll('.trustlens-popup').forEach(p => p.remove());
-
-
-     const popup = document.createElement('div');
-     popup.className = 'trustlens-popup';
-    
-     const popupData = this.getPopupContent(level, badgeColor);
-    
-     let sectionsHTML = '';
-     popupData.sections.forEach(section => {
-       sectionsHTML += `
-         <div class="trustlens-popup-section">
-           <div class="trustlens-popup-label">${section.label}</div>
-           <div class="trustlens-popup-value">${section.value}</div>
-         </div>
-       `;
-     });
-
-
-     popup.innerHTML = `
-       <div class="trustlens-popup-title">${popupData.title}</div>
-       ${sectionsHTML}
-       <a href="#" class="trustlens-popup-link" data-level="${level}" data-color="${badgeColor}">Learn more</a>
-     `;
-
-
-     document.body.appendChild(popup);
-    
-     const badgeRect = badge.getBoundingClientRect();
-     popup.style.left = `${badgeRect.left}px`;
-     popup.style.top = `${badgeRect.bottom + window.scrollY}px`;
-    
-     // Add click event to "Learn more" link
-     const learnMoreLink = popup.querySelector('.trustlens-popup-link');
-     learnMoreLink.addEventListener('click', (e) => {
-       e.preventDefault();
-       e.stopPropagation();
-       this.openSidebar(level, badgeColor);
-       popup.remove();
-     });
-    
-     return popup;
-   }
-
-
-   addHoverListeners(badge, level, badgeColor) {
-     let popup = null;
-     let hideTimeout = null;
-
-
-     const clearHideTimeout = () => {
-       if (hideTimeout) {
-         clearTimeout(hideTimeout);
-         hideTimeout = null;
-       }
-     };
-
-
-     const scheduleHide = () => {
-       clearHideTimeout();
-       hideTimeout = setTimeout(() => {
-         if (popup) {
-           popup.classList.remove('show');
-           setTimeout(() => {
-             if (popup && popup.parentElement) {
-               popup.remove();
-             }
-             popup = null;
-           }, 200);
-         }
-       }, 300);
-     };
-
-
-     badge.addEventListener('mouseenter', () => {
-       clearHideTimeout();
-      
-       popup = this.createPopup(badge, level, badgeColor);
-      
-       // Add hover listeners to the popup itself
-       popup.addEventListener('mouseenter', () => {
-         clearHideTimeout();
-       });
-      
-       popup.addEventListener('mouseleave', () => {
-         scheduleHide();
-       });
-      
-       // Small delay before showing
-       setTimeout(() => {
-         if (popup) {
-           popup.classList.add('show');
-         }
-       }, 100);
-     });
-
-
-     badge.addEventListener('mouseleave', () => {
-       scheduleHide();
-     });
-   }
-
-
-   async processComment(el) {
-     if (!el) return;
-
-
-     if (el.dataset.trustlensProcessed === "true") return;
-     const parentProcessed = el.closest(`[data-trustlens-processed="true"]`);
-     if (parentProcessed) return;
-
-
-     const id = this.getId(el);
-     if (!id) return;
-
-
-     if (this.processedCommentIds.has(id)) {
-       el.dataset.trustlensProcessed = "true";
-       return;
-     }
-
-
-     if (this.processing.has(id)) return;
-
-
-     const text = this.getText(el);
-     if (!text) return;
-
-
-     this.processing.set(id, true);
-     el.dataset.trustlensProcessed = "true";
-
-
-     el.querySelectorAll(`[data-trustlens-id="${id}"]`).forEach((nested) => {
-       nested.dataset.trustlensProcessed = "true";
-     });
-
-
-     el.querySelectorAll(`.trustlens-badge[data-comment-id="${id}"]`).forEach(
-       (b) => b.remove()
-     );
-     el.querySelectorAll(".trustlens-badge").forEach((b) => {
-       if (!b.dataset.commentId || b.dataset.commentId === id) b.remove();
-     });
-
-
-     this.insertBadge(el, id, "loading", "Analyzing...");
-
-
-     try {
-       const res = await fetch(`${API_BASE}/predict`, {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify({ texts: [text] }),
-       });
-       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-       const data = await res.json();
-
-
-       console.log("TrustLens: API response keys:", Object.keys(data));
-       console.log(
-         "TrustLens: badge_colors in response:",
-         "badge_colors" in data
-       );
-       console.log("TrustLens: badge_colors value:", data.badge_colors);
-
-
-       const badgeColor =
-         data.badge_colors && data.badge_colors[0]
-           ? data.badge_colors[0]
-           : "green";
-
-
-       console.log("TrustLens: Selected badgeColor:", badgeColor);
-
-
-       const colorToLabel = {
-         red: "Toxic",
-         yellow: "Mild",
-         green: "Neutral",
-       };
-
-
-       const displayText = colorToLabel[badgeColor] || "Neutral";
-       const levelKey =
-         badgeColor === "red"
-           ? "toxic"
-           : badgeColor === "yellow"
-           ? "mild"
-           : "neutral";
-
-
-       this.insertBadge(el, id, levelKey, displayText, true, badgeColor);
-       this.processedCommentIds.add(id);
-     } catch (e) {
-       console.warn("TrustLens: analysis failed", e);
-       this.insertBadge(el, id, "toxic", "Error");
-     } finally {
-       this.processing.delete(id);
-       this.update("tl-processed", String(this.processedCommentIds.size));
-       this.update("tl-last", `Done ${id}`);
-       this.updateBadgeCount();
-     }
-   }
-
-
-   pretty(level) {
-     return level.charAt(0).toUpperCase() + level.slice(1);
-   }
-
-
-   levelFrom(preds, probs) {
-     const maxProb = Math.max(...probs);
-     const toxicCount = preds.reduce((s, p) => s + p, 0);
-     if (maxProb < 0.5) return "safe";
-     if (toxicCount >= 3 || probs[1] >= 0.7) return "severe";
-     if (toxicCount >= 2 || maxProb >= 0.8) return "high";
-     if (toxicCount >= 1 || maxProb >= 0.6) return "medium";
-     return "low";
-   }
-
-
-   insertBadge(el, id, level, text, replace = false, badgeColor = null) {
-     console.log("TrustLens: insertBadge called", {
-       id,
-       level,
-       text,
-       replace,
-       badgeColor
-     });
-
-
-     const allExisting = el.querySelectorAll(
-       `.trustlens-badge[data-comment-id="${id}"]`
-     );
-     if (allExisting.length > 0) {
-       allExisting.forEach((b) => b.remove());
-       if (!replace) return;
-     }
-
-
-     el.querySelectorAll(".trustlens-badge").forEach((b) => {
-       if (!b.dataset.commentId || b.dataset.commentId === id) b.remove();
-     });
-
-
-     if (!replace && allExisting.length > 0) return;
-
-
-     const labelMap = {
-       toxic: "Toxic",
-       mild: "Mild",
-       neutral: "Neutral",
-       safe: "Balanced",
-       warning: "Scope for checks",
-       dangerous: "Potential Fraud",
-       loading: "Analyzing...",
-     };
-
-
-     const displayText = labelMap[level] || text;
-
-
-     const badge = document.createElement("span");
-     badge.className = `trustlens-badge trustlens-${level}`;
-     badge.dataset.commentId = id;
-
-
-     if (level === "neutral") {
-       const clipId = `trustlens-neutral-clip-${id.replace(
-         /[^a-zA-Z0-9]/g,
-         "-"
-       )}`;
-       const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
-         <g clip-path="url(#${clipId})">
-           <path d="M22.5714 9.25487V6.14286C22.5714 5.19609 21.8039 4.42857 20.8571 4.42857H18.9767C17.4197 4.42857 15.909 3.89865 14.6932 2.92595L12.2857 1L9.87827 2.92597C8.6624 3.89865 7.1517 4.42857 5.59465 4.42857H3.71429C2.76752 4.42857 2 5.19609 2 6.14286V9.25487C2 15.4859 6.24073 20.9173 12.2857 22.4286C18.3306 20.9173 22.5714 15.4859 22.5714 9.25487Z" stroke="currentColor" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-           <path d="M15.7123 8.017C15.8884 7.85335 16.1227 7.76288 16.3659 7.76467C16.609 7.76647 16.8419 7.86039 17.0154 8.02662C17.1889 8.19285 17.2895 8.41839 17.2959 8.65564C17.3024 8.89289 17.2141 9.1233 17.0498 9.29825L12.0623 15.3872C11.9766 15.4774 11.8731 15.5498 11.758 15.6C11.6429 15.6502 11.5187 15.6773 11.3926 15.6796C11.2666 15.6819 11.1414 15.6593 11.0245 15.6133C10.9076 15.5672 10.8015 15.4987 10.7123 15.4116L7.40483 12.1829C7.31272 12.0991 7.23884 11.9981 7.1876 11.8858C7.13636 11.7735 7.10881 11.6524 7.10659 11.5295C7.10437 11.4066 7.12753 11.2845 7.17468 11.1706C7.22183 11.0566 7.29201 10.9531 7.38103 10.8662C7.47006 10.7793 7.5761 10.7108 7.69283 10.6648C7.80957 10.6187 7.93461 10.5961 8.06048 10.5983C8.18636 10.6005 8.3105 10.6274 8.4255 10.6774C8.5405 10.7274 8.644 10.7995 8.72983 10.8894L11.3473 13.4434L15.6886 8.04384L15.7123 8.017Z" fill="currentColor"/>
-         </g>
-         <defs>
-           <clipPath id="${clipId}">
-             <rect width="24" height="23.4286" fill="white"/>
-           </clipPath>
-         </defs>
+      document.body.appendChild(box);
+      document.getElementById("tl-scan").onclick = () => this.scan();
+      document.getElementById("tl-clear").onclick = () => this.clearAll();
+      document.getElementById("tl-check").onclick = () =>
+        this.checkDuplicates();
+
+      setInterval(() => this.updateBadgeCount(), 1000);
+    }
+
+    updateBadgeCount() {
+      const count = document.querySelectorAll(".trustlens-badge").length;
+      this.update("tl-badges", String(count));
+    }
+
+    checkDuplicates() {
+      const badges = document.querySelectorAll(
+        ".trustlens-badge[data-comment-id]"
+      );
+      const ids = Array.from(badges).map((b) => b.dataset.commentId);
+      const uniqueIds = new Set(ids);
+      const duplicates = ids.length - uniqueIds.size;
+
+      if (duplicates > 0) {
+        console.warn(`TrustLens: Found ${duplicates} duplicate badges!`);
+        this.update("tl-last", `⚠️ ${duplicates} duplicates found`);
+
+        const counts = {};
+        ids.forEach((id) => {
+          counts[id] = (counts[id] || 0) + 1;
+        });
+        const dupIds = Object.keys(counts).filter((id) => counts[id] > 1);
+        console.warn("Duplicate IDs:", dupIds);
+
+        dupIds.forEach((id) => {
+          const badgesWithId = Array.from(
+            document.querySelectorAll(
+              `.trustlens-badge[data-comment-id="${id}"]`
+            )
+          );
+          badgesWithId.slice(1).forEach((b) => b.remove());
+        });
+
+        this.updateBadgeCount();
+        this.update("tl-last", `Fixed ${duplicates} duplicates`);
+      } else {
+        this.update("tl-last", "No duplicates");
+      }
+    }
+
+    update(field, value) {
+      const el = document.getElementById(field);
+      if (el) el.textContent = value;
+    }
+
+    observe() {
+      const mo = new MutationObserver((muts) => {
+        for (const m of muts) {
+          for (const n of m.addedNodes) {
+            if (n.nodeType !== Node.ELEMENT_NODE) continue;
+            this.processNode(n);
+          }
+        }
+      });
+      mo.observe(document.body, { childList: true, subtree: true });
+    }
+
+    scan() {
+      const roots = this.findRoots();
+      this.update("tl-count", String(roots.length));
+      this.update("tl-last", `Scan ${roots.length}`);
+      roots.forEach((el, i) =>
+        setTimeout(() => this.processComment(el), i * 50)
+      );
+      setTimeout(() => {
+        this.update("tl-processed", String(this.processedCommentIds.size));
+        this.updateBadgeCount();
+      }, 1000);
+    }
+
+    clearAll() {
+      document.querySelectorAll(".trustlens-badge").forEach((b) => b.remove());
+      document.querySelectorAll(".trustlens-popup").forEach((p) => p.remove());
+      this.processedCommentIds.clear();
+      this.processing.clear();
+      document.querySelectorAll(this.ROOT_SELECTOR).forEach((el) => {
+        if (el.dataset) {
+          delete el.dataset.trustlensProcessed;
+          delete el.dataset.trustlensId;
+        }
+      });
+      this.update("tl-last", "Cleared");
+      this.update("tl-processed", "0");
+      this.updateBadgeCount();
+    }
+
+    findRoots() {
+      const nodes = Array.from(document.querySelectorAll(this.ROOT_SELECTOR));
+      return nodes.filter((el) => el.closest(this.ROOT_SELECTOR) === el);
+    }
+
+    processNode(node) {
+      const nodes = node.querySelectorAll(this.ROOT_SELECTOR);
+      nodes.forEach((el) => {
+        if (el.closest(this.ROOT_SELECTOR) === el) this.processComment(el);
+      });
+    }
+
+    getId(el) {
+      if (el.dataset && el.dataset.trustlensId) return el.dataset.trustlensId;
+      const id = el.getAttribute("id");
+      if (id && id.startsWith("t1_")) return (el.dataset.trustlensId = id);
+      const permalink = el.getAttribute("data-permalink");
+      if (permalink)
+        return (el.dataset.trustlensId = permalink.split("/").pop());
+      const fullname = el.getAttribute("data-fullname");
+      if (fullname) return (el.dataset.trustlensId = fullname);
+      return (el.dataset.trustlensId = `c_${Date.now()}_${Math.random()
+        .toString(36)
+        .slice(2)}`);
+    }
+
+    getText(el) {
+      const trySel = [".md", ".usertext-body", '[data-testid="comment"]'];
+      for (const s of trySel) {
+        const n = el.querySelector(s);
+        if (n && n.textContent && n.textContent.trim().length > 10) {
+          let text = n.textContent.trim();
+
+          const links = n.querySelectorAll("a[href]");
+          const urls = new Set();
+          links.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (
+              href &&
+              (href.startsWith("http://") || href.startsWith("https://"))
+            ) {
+              urls.add(href);
+            }
+          });
+
+          urls.forEach((url) => {
+            if (!text.includes(url)) {
+              text += " " + url;
+            }
+          });
+
+          return text;
+        }
+      }
+      let all = el.textContent.trim();
+
+      const links = el.querySelectorAll("a[href]");
+      const urls = new Set();
+      links.forEach((link) => {
+        const href = link.getAttribute("href");
+        if (
+          href &&
+          (href.startsWith("http://") || href.startsWith("https://"))
+        ) {
+          urls.add(href);
+        }
+      });
+
+      urls.forEach((url) => {
+        if (!all.includes(url)) {
+          all += " " + url;
+        }
+      });
+
+      return all.length > 10 ? all : null;
+    }
+
+    async testAPI() {
+      try {
+        const r = await fetch(`${API_BASE}/health`);
+        this.update("tl-api", r.ok ? "Connected" : "Error");
+      } catch {
+        this.update("tl-api", "Failed");
+      }
+    }
+
+    getPopupContent(level, badgeColor, badgeData = null) {
+      const defaultContent = {
+        neutral: {
+          title: "Uses a neutral tone and mentions verifiable evidence.",
+          sections: [
+            { label: "Tone:", value: "Low toxicity, no hostility detected." },
+            { label: "Evidence:", value: "Evidence present and verified." },
+            { label: "Source:", value: "Includes verified sources." },
+          ],
+        },
+        toxic: {
+          title:
+            "This content shows signs of hostility and emotional language.",
+          sections: [
+            { label: "Tone:", value: "Hostile tone detected." },
+            { label: "Evidence:", value: "Evidence unverified or absent." },
+            { label: "Source:", value: "Source authenticity unclear." },
+            { label: "Emotion:", value: "Emotionally charged." },
+          ],
+        },
+        mild: {
+          title: "Includes subjective language and personal viewpoints.",
+          sections: [
+            { label: "Tone:", value: "Neutral to slightly subjective tone." },
+            { label: "Emotion:", value: "Reflects personal perspective." },
+            { label: "Evidence:", value: "Limited or no evidence cited." },
+            { label: "Source:", value: "No credible sources detected." },
+          ],
+        },
+      };
+
+      if (badgeData && badgeData.status) {
+        const status = badgeData.status;
+        const tooltip = badgeData.TL2_tooltip || "";
+        const detail = badgeData.TL3_detail || "";
+        const evidence = badgeData.evidence || {};
+
+        let title =
+          tooltip || defaultContent[level]?.title || "Evidence analysis";
+        let sections = [];
+
+        if (status === "Verified") {
+          title = "Uses a neutral tone and mentions verifiable evidence.";
+          sections = [
+            { label: "Tone:", value: "Low toxicity, no hostility detected." },
+            { label: "Evidence:", value: "Evidence present and verified." },
+            { label: "Source:", value: "Includes verified sources." },
+          ];
+        } else if (status === "Unverified") {
+          title =
+            "This content shows signs of hostility and emotional language.";
+          sections = [
+            { label: "Tone:", value: "Hostile tone detected." },
+            { label: "Evidence:", value: "Evidence unverified or absent." },
+            { label: "Source:", value: "Source authenticity unclear." },
+            { label: "Emotion:", value: "Emotionally charged." },
+          ];
+        } else if (status === "Mixed") {
+          title = "Includes subjective language and personal viewpoints.";
+          sections = [
+            { label: "Tone:", value: "Neutral to slightly subjective tone." },
+            { label: "Emotion:", value: "Reflects personal perspective." },
+            { label: "Evidence:", value: "Limited or no evidence cited." },
+            { label: "Source:", value: "No credible sources detected." },
+          ];
+        } else {
+          title = "Includes subjective language and personal viewpoints.";
+          sections = [
+            { label: "Tone:", value: "Neutral to slightly subjective tone." },
+            { label: "Emotion:", value: "Reflects personal perspective." },
+            { label: "Evidence:", value: "Limited or no evidence cited." },
+            { label: "Source:", value: "No credible sources detected." },
+          ];
+        }
+
+        return { title, sections };
+      }
+
+      return defaultContent[level] || defaultContent.neutral;
+    }
+
+    createPopup(badge, level, badgeColor, badgeData = null) {
+      document.querySelectorAll(".trustlens-popup").forEach((p) => p.remove());
+
+      const popup = document.createElement("div");
+      popup.className = "trustlens-popup";
+
+      if (!badgeData && badge.dataset.evidenceStatus) {
+        badgeData = {
+          status: badge.dataset.evidenceStatus,
+          TL2_tooltip: badge.dataset.evidenceTooltip || "",
+          TL3_detail: badge.dataset.evidenceDetail || "",
+          evidence: badge.dataset.evidenceData
+            ? JSON.parse(badge.dataset.evidenceData)
+            : {},
+        };
+      }
+
+      const popupData = this.getPopupContent(level, badgeColor, badgeData);
+
+      let sectionsHTML = "";
+      popupData.sections.forEach((section) => {
+        sectionsHTML += `
+        <div class="trustlens-popup-section">
+          <div class="trustlens-popup-label">${section.label}</div>
+          <div class="trustlens-popup-value">${section.value}</div>
+        </div>
+      `;
+      });
+
+      popup.innerHTML = `
+      <div class="trustlens-popup-title">${popupData.title}</div>
+      <hr style="border: none; border-top: 1px solid #07BEB8; margin: 5px 0;">
+      ${sectionsHTML}
+      <a href="#" class="trustlens-popup-link" data-level="${level}" data-color="${badgeColor}">Learn more</a>
+    `;
+
+      document.body.appendChild(popup);
+
+      const badgeRect = badge.getBoundingClientRect();
+      popup.style.left = `${badgeRect.left}px`;
+      popup.style.top = `${badgeRect.bottom + window.scrollY}px`;
+
+      const learnMoreLink = popup.querySelector(".trustlens-popup-link");
+      learnMoreLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.openSidebar(level, badgeColor, badgeData);
+        popup.remove();
+      });
+
+      return popup;
+    }
+
+    addHoverListeners(badge, level, badgeColor, badgeData = null) {
+      let popup = null;
+      let hideTimeout = null;
+
+      const clearHideTimeout = () => {
+        if (hideTimeout) {
+          clearTimeout(hideTimeout);
+          hideTimeout = null;
+        }
+      };
+
+      const scheduleHide = () => {
+        clearHideTimeout();
+        hideTimeout = setTimeout(() => {
+          if (popup) {
+            popup.classList.remove("show");
+            setTimeout(() => {
+              if (popup && popup.parentElement) {
+                popup.remove();
+              }
+              popup = null;
+            }, 200);
+          }
+        }, 300);
+      };
+
+      badge.addEventListener("mouseenter", () => {
+        clearHideTimeout();
+
+        popup = this.createPopup(badge, level, badgeColor, badgeData);
+
+        popup.addEventListener("mouseenter", () => {
+          clearHideTimeout();
+        });
+
+        popup.addEventListener("mouseleave", () => {
+          scheduleHide();
+        });
+
+        setTimeout(() => {
+          if (popup) {
+            popup.classList.add("show");
+          }
+        }, 100);
+      });
+
+      badge.addEventListener("mouseleave", () => {
+        scheduleHide();
+      });
+    }
+
+    async processComment(el) {
+      if (!el) return;
+
+      if (el.dataset.trustlensProcessed === "true") return;
+      const parentProcessed = el.closest(`[data-trustlens-processed="true"]`);
+      if (parentProcessed) return;
+
+      const id = this.getId(el);
+      if (!id) return;
+
+      if (this.processedCommentIds.has(id)) {
+        el.dataset.trustlensProcessed = "true";
+        return;
+      }
+
+      if (this.processing.has(id)) return;
+
+      const text = this.getText(el);
+      if (!text) return;
+
+      const textPreview =
+        text.length > 100 ? text.substring(0, 100) + "..." : text;
+      console.log(`TrustLens: Extracted text for comment ${id}:`, textPreview);
+      console.log(
+        `TrustLens: Text length: ${
+          text.length
+        }, Contains URL: ${/https?:\/\//.test(text)}`
+      );
+
+      this.processing.set(id, true);
+      el.dataset.trustlensProcessed = "true";
+
+      el.querySelectorAll(`[data-trustlens-id="${id}"]`).forEach((nested) => {
+        nested.dataset.trustlensProcessed = "true";
+      });
+
+      el.querySelectorAll(`.trustlens-badge[data-comment-id="${id}"]`).forEach(
+        (b) => b.remove()
+      );
+      el.querySelectorAll(".trustlens-badge").forEach((b) => {
+        if (!b.dataset.commentId || b.dataset.commentId === id) b.remove();
+      });
+
+      this.insertBadge(el, id, "loading", "Analyzing...");
+
+      try {
+        const res = await fetch(`${API_BASE}/analyze-evidence`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text }),
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        console.log("TrustLens: Evidence API response:", data);
+        console.log("TrustLens: Evidence status:", data.status);
+        console.log("TrustLens: Badge color:", data.badge_color);
+
+        const badgeColor = data.badge_color || "yellow";
+        const evidenceStatus = (data.status || "None").trim();
+        const evidenceData = data.evidence || {};
+
+        const statusToLabel = {
+          Verified: "Verified",
+          Unverified: "Unverified",
+          Mixed: "Mixed",
+          None: "No Evidence",
+        };
+
+        const statusToLevel = {
+          Verified: "neutral",
+          Unverified: "toxic",
+          Mixed: "mild",
+          None: "mild",
+        };
+
+        const displayText = statusToLabel[evidenceStatus] || "No Evidence";
+        let levelKey = statusToLevel[evidenceStatus];
+        if (!levelKey) {
+          console.warn(
+            `TrustLens: Unknown evidence status "${evidenceStatus}", defaulting to "mild"`
+          );
+          levelKey = "mild";
+        }
+
+        console.log("TrustLens: Evidence status mapping", {
+          evidenceStatus,
+          levelKey,
+          displayText,
+          badgeColor,
+        });
+
+        const badgeData = {
+          status: evidenceStatus,
+          badgeColor: badgeColor,
+          evidence: evidenceData,
+          TL2_tooltip: data.TL2_tooltip || "",
+          TL3_detail: data.TL3_detail || "",
+        };
+
+        this.insertBadge(
+          el,
+          id,
+          levelKey,
+          displayText,
+          true,
+          badgeColor,
+          badgeData
+        );
+        this.processedCommentIds.add(id);
+      } catch (e) {
+        console.warn("TrustLens: evidence analysis failed", e);
+        this.insertBadge(el, id, "mild", "Error");
+      } finally {
+        this.processing.delete(id);
+        this.update("tl-processed", String(this.processedCommentIds.size));
+        this.update("tl-last", `Done ${id}`);
+        this.updateBadgeCount();
+      }
+    }
+
+    pretty(level) {
+      return level.charAt(0).toUpperCase() + level.slice(1);
+    }
+
+    levelFrom(preds, probs) {
+      const maxProb = Math.max(...probs);
+      const toxicCount = preds.reduce((s, p) => s + p, 0);
+      if (maxProb < 0.5) return "safe";
+      if (toxicCount >= 3 || probs[1] >= 0.7) return "severe";
+      if (toxicCount >= 2 || maxProb >= 0.8) return "high";
+      if (toxicCount >= 1 || maxProb >= 0.6) return "medium";
+      return "low";
+    }
+
+    insertBadge(
+      el,
+      id,
+      level,
+      text,
+      replace = false,
+      badgeColor = null,
+      badgeData = null
+    ) {
+      if (badgeData && badgeData.status) {
+        const statusToLevel = {
+          Verified: "neutral",
+          Unverified: "toxic",
+          Mixed: "mild",
+          None: "mild",
+        };
+        const expectedLevel = statusToLevel[badgeData.status];
+        if (expectedLevel && level !== expectedLevel) {
+          console.warn(
+            `TrustLens: Level mismatch! Status "${badgeData.status}" should map to level "${expectedLevel}" but got "${level}". Using correct level.`
+          );
+          level = expectedLevel;
+        }
+      }
+
+      console.log("TrustLens: insertBadge called", {
+        id,
+        level,
+        text,
+        replace,
+        badgeColor,
+        badgeData: badgeData ? { status: badgeData.status } : null,
+      });
+
+      const allExisting = el.querySelectorAll(
+        `.trustlens-badge[data-comment-id="${id}"]`
+      );
+      if (allExisting.length > 0) {
+        allExisting.forEach((b) => b.remove());
+        if (!replace) return;
+      }
+
+      el.querySelectorAll(".trustlens-badge").forEach((b) => {
+        if (!b.dataset.commentId || b.dataset.commentId === id) b.remove();
+      });
+
+      if (!replace && allExisting.length > 0) return;
+
+      const labelMap = {
+        toxic: "Unverified",
+        mild: "Mixed",
+        neutral: "Verified",
+        safe: "Verified",
+        warning: "Mixed",
+        dangerous: "Unverified",
+        loading: "Analyzing...",
+      };
+
+      const displayText =
+        text && text !== "Analyzing..." ? text : labelMap[level] || "Unknown";
+
+      const badge = document.createElement("span");
+      badge.className = `trustlens-badge trustlens-${level}`;
+      badge.dataset.commentId = id;
+      if (badgeData) {
+        badge.dataset.evidenceStatus = badgeData.status;
+        badge.dataset.evidenceTooltip = badgeData.TL2_tooltip || "";
+        badge.dataset.evidenceDetail = badgeData.TL3_detail || "";
+        badge.dataset.evidenceData = JSON.stringify(badgeData.evidence || {});
+      }
+
+      if (level === "neutral") {
+        const clipId = `trustlens-neutral-clip-${id.replace(
+          /[^a-zA-Z0-9]/g,
+          "-"
+        )}`;
+        const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle;">
+        <g clip-path="url(#${clipId})">
+        <path d="M22.5714 9.25487V6.14286C22.5714 5.19609 21.8039 4.42857 20.8571 4.42857H18.9767C17.4197 4.42857 15.909 3.89865 14.6932 2.92595L12.2857 1L9.87827 2.92597C8.6624 3.89865 7.1517 4.42857 5.59465 4.42857H3.71429C2.76752 4.42857 2 5.19609 2 6.14286V9.25487C2 15.4859 6.24073 20.9173 12.2857 22.4286C18.3306 20.9173 22.5714 15.4859 22.5714 9.25487Z" stroke="#388E3C" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.7123 8.017C15.8884 7.85335 16.1227 7.76288 16.3659 7.76467C16.609 7.76647 16.8419 7.86039 17.0154 8.02662C17.1889 8.19285 17.2895 8.41839 17.2959 8.65564C17.3024 8.89289 17.2141 9.1233 17.0498 9.29825L12.0623 15.3872C11.9766 15.4774 11.8731 15.5498 11.758 15.6C11.6429 15.6502 11.5187 15.6773 11.3926 15.6796C11.2666 15.6819 11.1414 15.6593 11.0245 15.6133C10.9076 15.5672 10.8015 15.4987 10.7123 15.4116L7.40483 12.1829C7.31272 12.0991 7.23884 11.9981 7.1876 11.8858C7.13636 11.7735 7.10881 11.6524 7.10659 11.5295C7.10437 11.4066 7.12753 11.2845 7.17468 11.1706C7.22183 11.0566 7.29201 10.9531 7.38103 10.8662C7.47006 10.7793 7.5761 10.7108 7.69283 10.6648C7.80957 10.6187 7.93461 10.5961 8.06048 10.5983C8.18636 10.6005 8.3105 10.6274 8.4255 10.6774C8.5405 10.7274 8.644 10.7995 8.72983 10.8894L11.3473 13.4434L15.6886 8.04384L15.7123 8.017Z" fill="#388E3C"/>
+        </g>
+        <defs>
+        <clipPath id="${clipId}">
+        <rect width="24" height="23.4286" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>`;
+        badge.innerHTML = svgIcon;
+      } else if (level === "toxic") {
+        const clipId0 = `trustlens-toxic-clip0-${id.replace(
+          /[^a-zA-Z0-9]/g,
+          "-"
+        )}`;
+        const clipId1 = `trustlens-toxic-clip1-${id.replace(
+          /[^a-zA-Z0-9]/g,
+          "-"
+        )}`;
+        const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle;">
+        <g clip-path="url(#${clipId0})">
+        <path d="M22.5714 9.25487V6.14286C22.5714 5.19609 21.8039 4.42857 20.8571 4.42857H18.9767C17.4197 4.42857 15.909 3.89865 14.6932 2.92595L12.2857 1L9.87827 2.92597C8.6624 3.89865 7.1517 4.42857 5.59465 4.42857H3.71429C2.76752 4.42857 2 5.19609 2 6.14286V9.25487C2 15.4859 6.24073 20.9173 12.2857 22.4286C18.3306 20.9173 22.5714 15.4859 22.5714 9.25487Z" stroke="#ED0000" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
+        <g clip-path="url(#${clipId1})">
+        <path d="M12.0002 12.5894L9.27787 15.3186C9.15191 15.4436 9.00491 15.5061 8.83683 15.5061C8.66879 15.5061 8.52183 15.4436 8.396 15.3186C8.271 15.1936 8.2085 15.0478 8.2085 14.8811C8.2085 14.7144 8.271 14.5686 8.396 14.4436L11.1252 11.7144L8.396 9.01298C8.271 8.88702 8.2085 8.73998 8.2085 8.57194C8.2085 8.4039 8.271 8.25694 8.396 8.1311C8.521 8.0061 8.66683 7.9436 8.8335 7.9436C9.00016 7.9436 9.146 8.0061 9.271 8.1311L12.0002 10.8603L14.7016 8.1311C14.8137 8.0061 14.9572 7.9436 15.1322 7.9436C15.3072 7.9436 15.4577 8.0061 15.5835 8.1311C15.7085 8.2561 15.771 8.40194 15.771 8.5686C15.771 8.73527 15.7085 8.8811 15.5835 9.0061L12.8543 11.7144L15.5835 14.4367C15.7085 14.5627 15.771 14.7097 15.771 14.8778C15.771 15.0458 15.7085 15.1928 15.5835 15.3186C15.4585 15.4436 15.3127 15.5061 15.146 15.5061C14.9793 15.5061 14.8335 15.4436 14.7085 15.3186L12.0002 12.5894Z" fill="#ED0000"/>
+        </g>
+        </g>
+        <defs>
+        <clipPath id="${clipId0}">
+        <rect width="24" height="23.4286" fill="white"/>
+        </clipPath>
+        <clipPath id="${clipId1}">
+        <rect width="20" height="20" fill="white" transform="translate(2 1.71436)"/>
+        </clipPath>
+        </defs>
+        </svg>`;
+        badge.innerHTML = svgIcon;
+      } else if (level === "mild") {
+        const clipId = `trustlens-mild-clip-${id.replace(
+          /[^a-zA-Z0-9]/g,
+          "-"
+        )}`;
+        const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle;">
+        <g clip-path="url(#${clipId})">
+        <path d="M22.2858 9.54051V6.4285C22.2858 5.48174 21.5183 4.71422 20.5715 4.71422H18.6911C17.1341 4.71422 15.6234 4.1843 14.4075 3.21159L12.0001 1.28564L9.59263 3.21161C8.37676 4.1843 6.86606 4.71422 5.30901 4.71422H3.42864C2.48188 4.71422 1.71436 5.48174 1.71436 6.4285V9.54051C1.71436 15.7715 5.95509 21.2029 12.0001 22.7142C18.045 21.2029 22.2858 15.7715 22.2858 9.54051Z" stroke="#EDE246" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13.5975 9.22283C13.5975 8.6854 13.4239 8.25833 13.0768 7.94167C12.7297 7.625 12.2699 7.46667 11.6975 7.46667C11.3441 7.46667 11.0242 7.5446 10.7378 7.7005C10.4515 7.8564 10.2047 8.084 9.99749 8.38333C9.87526 8.5611 9.71139 8.67223 9.50582 8.71667C9.30026 8.7611 9.10306 8.73333 8.91416 8.63333C8.70306 8.5111 8.57526 8.3611 8.53082 8.18333C8.48639 8.00557 8.53082 7.8111 8.66416 7.6C8.99749 7.08889 9.42872 6.69444 9.95782 6.41667C10.4869 6.13889 11.0668 6 11.6975 6C12.7419 6 13.5808 6.29022 14.2142 6.87067C14.8475 7.451 15.1642 8.21077 15.1642 9.15C15.1642 9.6611 15.0531 10.1333 14.8308 10.5667C14.6086 11 14.2419 11.4667 13.7308 11.9667C13.3197 12.3556 13.0419 12.6651 12.8975 12.8953C12.7531 13.1256 12.6586 13.3882 12.6142 13.6833C12.5808 13.9167 12.4808 14.1111 12.3142 14.2667C12.1475 14.4222 11.9542 14.5 11.7342 14.5C11.5143 14.5 11.3254 14.425 11.1675 14.275C11.0097 14.125 10.9308 13.95 10.9308 13.75C10.9308 13.3722 11.0308 13.0056 11.2308 12.65C11.4308 12.2944 11.7384 11.9266 12.1535 11.5463C12.6828 11.071 13.0558 10.6556 13.2725 10.3C13.4892 9.94443 13.5975 9.5854 13.5975 9.22283ZM11.696 18.6667C11.3748 18.6667 11.1003 18.5523 10.8725 18.3235C10.6447 18.0947 10.5308 17.8197 10.5308 17.4985C10.5308 17.1773 10.6452 16.9028 10.874 16.675C11.1028 16.4472 11.3778 16.3333 11.699 16.3333C12.0202 16.3333 12.2947 16.4477 12.5225 16.6765C12.7503 16.9053 12.8642 17.1803 12.8642 17.5015C12.8642 17.8227 12.7498 18.0972 12.521 18.325C12.2922 18.5528 12.0172 18.6667 11.696 18.6667Z" fill="#EDE246"/>
+        </g>
+        <defs>
+        <clipPath id="${clipId}">
+        <rect width="24" height="24" fill="white"/>
+        </clipPath>
+        </defs>
+        </svg>`;
+        badge.innerHTML = svgIcon;
+      } else if (level === "loading") {
+        const spinnerId = `trustlens-spinner-${id.replace(
+          /[^a-zA-Z0-9]/g,
+          "-"
+        )}`;
+        const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle;">
+         <circle cx="12" cy="12" r="10" stroke="#ccc" stroke-width="2" fill="none" opacity="0.3"/>
+         <circle cx="12" cy="12" r="10" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="31.416" stroke-dashoffset="31.416" opacity="0.7">
+           <animate attributeName="stroke-dashoffset" dur="1s" values="31.416;0" repeatCount="indefinite"/>
+           <animateTransform attributeName="transform" type="rotate" dur="1s" values="0 12 12;360 12 12" repeatCount="indefinite"/>
+         </circle>
        </svg>`;
-       badge.innerHTML = svgIcon + displayText;
-     } else if (level === "toxic") {
-       const clipId = `trustlens-toxic-clip-${id.replace(
-         /[^a-zA-Z0-9]/g,
-         "-"
-       )}`;
-       const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
-<g clip-path="url(#clip0_265_155)">
-<path d="M22.5714 9.25487V6.14286C22.5714 5.19609 21.8039 4.42857 20.8571 4.42857H18.9767C17.4197 4.42857 15.909 3.89865 14.6932 2.92595L12.2857 1L9.87827 2.92597C8.6624 3.89865 7.1517 4.42857 5.59465 4.42857H3.71429C2.76752 4.42857 2 5.19609 2 6.14286V9.25487C2 15.4859 6.24073 20.9173 12.2857 22.4286C18.3306 20.9173 22.5714 15.4859 22.5714 9.25487Z" stroke="#FDFBFB" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-<g clip-path="url(#clip1_265_155)">
-<path d="M12.0002 12.5894L9.27787 15.3186C9.15191 15.4436 9.00491 15.5061 8.83683 15.5061C8.66879 15.5061 8.52183 15.4436 8.396 15.3186C8.271 15.1936 8.2085 15.0478 8.2085 14.8811C8.2085 14.7144 8.271 14.5686 8.396 14.4436L11.1252 11.7144L8.396 9.01298C8.271 8.88702 8.2085 8.73998 8.2085 8.57194C8.2085 8.4039 8.271 8.25694 8.396 8.1311C8.521 8.0061 8.66683 7.9436 8.8335 7.9436C9.00016 7.9436 9.146 8.0061 9.271 8.1311L12.0002 10.8603L14.7016 8.1311C14.8137 8.0061 14.9572 7.9436 15.1322 7.9436C15.3072 7.9436 15.4577 8.0061 15.5835 8.1311C15.7085 8.2561 15.771 8.40194 15.771 8.5686C15.771 8.73527 15.7085 8.8811 15.5835 9.0061L12.8543 11.7144L15.5835 14.4367C15.7085 14.5627 15.771 14.7097 15.771 14.8778C15.771 15.0458 15.7085 15.1928 15.5835 15.3186C15.4585 15.4436 15.3127 15.5061 15.146 15.5061C14.9793 15.5061 14.8335 15.4436 14.7085 15.3186L12.0002 12.5894Z" fill="#FDFBFB"/>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_265_155">
-<rect width="24" height="23.4286" fill="white"/>
-</clipPath>
-<clipPath id="clip1_265_155">
-<rect width="20" height="20" fill="white" transform="translate(2 1.71436)"/>
-</clipPath>
-</defs>
-       </svg>`;
-       badge.innerHTML = svgIcon + displayText;
-     } else if (level === 'mild') {
-       const clipId = `trustlens-mild-clip-${id.replace(/[^a-zA-Z0-9]/g, '-')}`;
-       const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: inline-block; vertical-align: middle; margin-right: 4px;">
-         <g clip-path="url(#${clipId})">
-           <path d="M22.2858 9.54051V6.4285C22.2858 5.48174 21.5183 4.71422 20.5715 4.71422H18.6911C17.1341 4.71422 15.6234 4.1843 14.4075 3.21159L12.0001 1.28564L9.59263 3.21161C8.37676 4.1843 6.86606 4.71422 5.30901 4.71422H3.42864C2.48188 4.71422 1.71436 5.48174 1.71436 6.4285V9.54051C1.71436 15.7715 5.95509 21.2029 12.0001 22.7142C18.045 21.2029 22.2858 15.7715 22.2858 9.54051Z" stroke="currentColor" stroke-width="2.14286" stroke-linecap="round" stroke-linejoin="round"/>
-           <path d="M13.5975 9.22283C13.5975 8.6854 13.4239 8.25833 13.0768 7.94167C12.7297 7.625 12.2699 7.46667 11.6975 7.46667C11.3441 7.46667 11.0242 7.5446 10.7378 7.7005C10.4515 7.8564 10.2047 8.084 9.99749 8.38333C9.87526 8.5611 9.71139 8.67223 9.50582 8.71667C9.30026 8.7611 9.10306 8.73333 8.91416 8.63333C8.70306 8.5111 8.57526 8.3611 8.53082 8.18333C8.48639 8.00557 8.53082 7.8111 8.66416 7.6C8.99749 7.08889 9.42872 6.69444 9.95782 6.41667C10.4869 6.13889 11.0668 6 11.6975 6C12.7419 6 13.5808 6.29022 14.2142 6.87067C14.8475 7.451 15.1642 8.21077 15.1642 9.15C15.1642 9.6611 15.0531 10.1333 14.8308 10.5667C14.6086 11 14.2419 11.4667 13.7308 11.9667C13.3197 12.3556 13.0419 12.6651 12.8975 12.8953C12.7531 13.1256 12.6586 13.3882 12.6142 13.6833C12.5808 13.9167 12.4808 14.1111 12.3142 14.2667C12.1475 14.4222 11.9542 14.5 11.7342 14.5C11.5143 14.5 11.3254 14.425 11.1675 14.275C11.0097 14.125 10.9308 13.95 10.9308 13.75C10.9308 13.3722 11.0308 13.0056 11.2308 12.65C11.4308 12.2944 11.7384 11.9266 12.1535 11.5463C12.6828 11.071 13.0558 10.6556 13.2725 10.3C13.4892 9.94443 13.5975 9.5854 13.5975 9.22283ZM11.696 18.6667C11.3748 18.6667 11.1003 18.5523 10.8725 18.3235C10.6447 18.0947 10.5308 17.8197 10.5308 17.4985C10.5308 17.1773 10.6452 16.9028 10.874 16.675C11.1028 16.4472 11.3778 16.3333 11.699 16.3333C12.0202 16.3333 12.2947 16.4477 12.5225 16.6765C12.7503 16.9053 12.8642 17.1803 12.8642 17.5015C12.8642 17.8227 12.7498 18.0972 12.521 18.325C12.2922 18.5528 12.0172 18.6667 11.696 18.6667Z" fill="currentColor"/>
-         </g>
-         <defs>
-           <clipPath id="${clipId}">
-             <rect width="24" height="24" fill="white"/>
-           </clipPath>
-         </defs>
-       </svg>`;
-       badge.innerHTML = svgIcon + displayText;
-     } else {
-       badge.textContent = displayText;
-     }
+        badge.innerHTML = svgIcon;
+      } else {
+        badge.innerHTML = "";
+      }
 
+      badge.style.display = "inline-flex";
+      badge.style.alignItems = "center";
+      badge.style.justifyContent = "center";
+      badge.style.fontSize = "11px";
+      badge.style.padding = "0";
+      badge.style.borderRadius = "0";
+      badge.style.border = "none";
+      badge.style.fontWeight = "600";
+      badge.style.verticalAlign = "middle";
+      badge.style.width = "auto";
+      badge.style.height = "auto";
+      badge.style.minWidth = "auto";
+      badge.style.minHeight = "auto";
+      badge.style.boxSizing = "border-box";
+      badge.style.flexShrink = "0";
+      badge.style.background = "transparent";
+      badge.style.color = "inherit";
 
-     badge.style.display = "inline-flex";
-     badge.style.alignItems = "center";
-     badge.style.fontSize = "11px";
-     badge.style.padding = "4px 12px";
-     badge.style.borderRadius = "12px";
-     badge.style.border = "none";
-     badge.style.fontWeight = "600";
-     badge.style.verticalAlign = "middle";
-     badge.style.width = "auto";
-     badge.style.height = "auto";
-     badge.style.boxSizing = "border-box";
-     badge.style.flexShrink = "0";
-     badge.style.justifyContent = "space-between";
+      if (level !== "loading") {
+        this.addHoverListeners(badge, level, badgeColor, badgeData);
+      }
 
+      const commentRoot =
+        el.closest("shreddit-comment") ||
+        el.closest('article[data-testid="comment"]') ||
+        el.closest(this.ROOT_SELECTOR) ||
+        el;
+      console.log(
+        "TrustLens: Comment root:",
+        commentRoot.tagName,
+        commentRoot.getAttribute("data-testid") || commentRoot.className
+      );
 
-     switch (level) {
-       case "toxic":
-         badge.style.background = "#D32F2F";
-         badge.style.color = "white";
-         break;
-       case "mild":
-         badge.style.background = "#EDE246";
-         badge.style.color = "#000";
-         break;
-       case "neutral":
-         badge.style.background = "#388E3C";
-         badge.style.color = "white";
-         break;
-       default:
-         badge.style.background = "#1976d2";
-         badge.style.color = "white";
-     }
+      const usernameSelectors = [
+        'a[href^="/user/"]',
+        'a[href^="/u/"]',
+        'a[data-testid="comment_author_link"]',
+        ".author",
+      ];
 
+      let usernameEl = null;
+      for (const sel of usernameSelectors) {
+        const found = commentRoot.querySelector(sel);
+        if (found) {
+          console.log(
+            "TrustLens: Found username with selector:",
+            sel,
+            "Username:",
+            found.textContent
+          );
+          usernameEl = found;
+          break;
+        }
+      }
 
-     if (level !== 'loading') {
-       this.addHoverListeners(badge, level, badgeColor);
-     }
+      if (!usernameEl) {
+        console.log("TrustLens: No username found, using fallback");
+      }
 
+      if (usernameEl && usernameEl.parentElement) {
+        console.log(
+          "TrustLens: Found username element:",
+          usernameEl.textContent
+        );
 
-     const commentRoot =
-       el.closest("shreddit-comment") ||
-       el.closest('article[data-testid="comment"]') ||
-       el.closest(this.ROOT_SELECTOR) ||
-       el;
-     console.log(
-       "TrustLens: Comment root:",
-       commentRoot.tagName,
-       commentRoot.getAttribute("data-testid") || commentRoot.className
-     );
+        let metadataRow = null;
+        let current = usernameEl;
+        let depth = 0;
 
+        while (current && depth < 10) {
+          const classList = current.classList
+            ? Array.from(current.classList).join(" ")
+            : "no-classes";
+          console.log(
+            `TrustLens: Level ${depth}: ${current.tagName} classes="${classList}"`
+          );
 
-     const usernameSelectors = [
-       'a[href^="/user/"]',
-       'a[href^="/u/"]',
-       'a[data-testid="comment_author_link"]',
-       ".author",
-     ];
+          if (
+            current.classList &&
+            current.classList.contains("flex") &&
+            current.classList.contains("flex-none") &&
+            current.classList.contains("flex-row") &&
+            current.classList.contains("flex-nowrap") &&
+            current.classList.contains("items-center")
+          ) {
+            console.log(
+              "TrustLens: Found THE CORRECT flex-none flex-nowrap flex-row items-center container!"
+            );
+            metadataRow = current;
+            break;
+          }
 
+          current = current.parentElement;
+          depth++;
+        }
 
-     let usernameEl = null;
-     for (const sel of usernameSelectors) {
-       const found = commentRoot.querySelector(sel);
-       if (found) {
-         console.log(
-           "TrustLens: Found username with selector:",
-           sel,
-           "Username:",
-           found.textContent
-         );
-         usernameEl = found;
-         break;
-       }
-     }
+        if (!metadataRow) {
+          console.warn(
+            "TrustLens: Could not find the correct metadata row, trying flex flex-row items-center"
+          );
+          current = usernameEl;
+          depth = 0;
 
+          while (current && depth < 10) {
+            if (
+              current.classList &&
+              current.classList.contains("flex") &&
+              current.classList.contains("flex-row") &&
+              current.classList.contains("items-center")
+            ) {
+              console.log(
+                "TrustLens: Found flex flex-row items-center container!"
+              );
+              metadataRow = current;
+              break;
+            }
+            current = current.parentElement;
+            depth++;
+          }
+        }
 
-     if (!usernameEl) {
-       console.log("TrustLens: No username found, using fallback");
-     }
+        if (!metadataRow) {
+          console.warn("TrustLens: Could not find metadata row");
+          current = usernameEl;
+          depth = 0;
+          while (current && depth < 10) {
+            if (current.querySelector && current.querySelector("time")) {
+              console.log(
+                "TrustLens: Using fallback - found container with time at depth",
+                depth
+              );
+              metadataRow = current;
+              break;
+            }
+            current = current.parentElement;
+            depth++;
+          }
+        }
 
+        if (!metadataRow) {
+          console.error(
+            "TrustLens: Could not find any suitable container for badge"
+          );
+        } else {
+          console.log(
+            "TrustLens: Final container:",
+            metadataRow.className,
+            metadataRow.tagName
+          );
 
-     if (usernameEl && usernameEl.parentElement) {
-       console.log(
-         "TrustLens: Found username element:",
-         usernameEl.textContent
-       );
+          const isInsideCommentMeta = metadataRow.closest(
+            '[slot="commentMeta"]'
+          );
+          console.log("TrustLens: Inside commentMeta?", !!isInsideCommentMeta);
 
+          badge.classList.add("trustlens-inline");
 
-       let metadataRow = null;
-       let current = usernameEl;
-       let depth = 0;
+          const commentMeta = commentRoot.querySelector('[slot="commentMeta"]');
+          if (commentMeta) {
+            commentMeta.querySelectorAll(".trustlens-badge").forEach((b) => {
+              console.log(
+                "TrustLens: Removing existing badge from commentMeta"
+              );
+              b.remove();
+            });
 
+            commentMeta.style.display = "flex";
+            commentMeta.style.justifyContent = "space-between";
+            commentMeta.style.alignItems = "center";
+            commentMeta.style.width = "100%";
 
-       while (current && depth < 10) {
-         const classList = current.classList
-           ? Array.from(current.classList).join(" ")
-           : "no-classes";
-         console.log(
-           `TrustLens: Level ${depth}: ${current.tagName} classes="${classList}"`
-         );
+            commentMeta.appendChild(badge);
+            console.log(
+              "TrustLens: Badge appended to commentMeta with justify-between"
+            );
+          } else {
+            const summary = commentRoot.querySelector("summary");
+            if (summary) {
+              summary
+                .querySelectorAll(".trustlens-badge")
+                .forEach((b) => b.remove());
+              summary.style.display = "flex";
+              summary.style.justifyContent = "space-between";
+              summary.style.alignItems = "center";
+              summary.style.width = "100%";
+              summary.appendChild(badge);
+              console.log(
+                "TrustLens: Badge appended to summary with justify-between (fallback)"
+              );
+            } else {
+              metadataRow.querySelectorAll(".trustlens-badge").forEach((b) => {
+                console.log("TrustLens: Removing existing badge from metadata");
+                b.remove();
+              });
+              metadataRow.appendChild(badge);
+            }
+          }
 
+          console.log(
+            "TrustLens: Badge inserted successfully!",
+            "Badge:",
+            badge.textContent
+          );
+          return;
+        }
+      }
 
-         if (
-           current.classList &&
-           current.classList.contains("flex") &&
-           current.classList.contains("flex-none") &&
-           current.classList.contains("flex-row") &&
-           current.classList.contains("flex-nowrap") &&
-           current.classList.contains("items-center")
-         ) {
-           console.log(
-             "TrustLens: Found THE CORRECT flex-none flex-nowrap flex-row items-center container!"
-           );
-           metadataRow = current;
-           break;
-         }
+      console.log("TrustLens: Using fallback insertion method");
+      let targetContainer = null;
+      const md = el.querySelector(".md");
+      if (
+        md &&
+        (md.parentElement === el || md.closest(this.ROOT_SELECTOR) === el)
+      ) {
+        targetContainer = md;
+      }
+      if (!targetContainer) {
+        const usertext = el.querySelector(".usertext-body");
+        if (
+          usertext &&
+          (usertext.parentElement === el ||
+            usertext.closest(this.ROOT_SELECTOR) === el)
+        ) {
+          targetContainer = usertext;
+        }
+      }
+      if (!targetContainer) targetContainer = el;
 
+      targetContainer
+        .querySelectorAll(".trustlens-badge")
+        .forEach((b) => b.remove());
+      targetContainer.insertAdjacentElement("afterbegin", badge);
+      console.log("TrustLens: Fallback badge inserted");
+    }
+  }
 
-         current = current.parentElement;
-         depth++;
-       }
-
-
-       if (!metadataRow) {
-         console.warn(
-           "TrustLens: Could not find the correct metadata row, trying flex flex-row items-center"
-         );
-         current = usernameEl;
-         depth = 0;
-
-
-         while (current && depth < 10) {
-           if (
-             current.classList &&
-             current.classList.contains("flex") &&
-             current.classList.contains("flex-row") &&
-             current.classList.contains("items-center")
-           ) {
-             console.log(
-               "TrustLens: Found flex flex-row items-center container!"
-             );
-             metadataRow = current;
-             break;
-           }
-           current = current.parentElement;
-           depth++;
-         }
-       }
-
-
-       if (!metadataRow) {
-         console.warn("TrustLens: Could not find metadata row");
-         current = usernameEl;
-         depth = 0;
-         while (current && depth < 10) {
-           if (current.querySelector && current.querySelector("time")) {
-             console.log(
-               "TrustLens: Using fallback - found container with time at depth",
-               depth
-             );
-             metadataRow = current;
-             break;
-           }
-           current = current.parentElement;
-           depth++;
-         }
-       }
-
-
-       if (!metadataRow) {
-         console.error(
-           "TrustLens: Could not find any suitable container for badge"
-         );
-       } else {
-         console.log(
-           "TrustLens: Final container:",
-           metadataRow.className,
-           metadataRow.tagName
-         );
-
-
-         const isInsideCommentMeta = metadataRow.closest(
-           '[slot="commentMeta"]'
-         );
-         console.log("TrustLens: Inside commentMeta?", !!isInsideCommentMeta);
-
-
-         badge.classList.add("trustlens-inline");
-
-
-         const commentMeta = commentRoot.querySelector('[slot="commentMeta"]');
-         if (commentMeta) {
-           commentMeta.querySelectorAll(".trustlens-badge").forEach((b) => {
-             console.log("TrustLens: Removing existing badge from commentMeta");
-             b.remove();
-           });
-          
-           commentMeta.style.display = 'flex';
-           commentMeta.style.justifyContent = 'space-between';
-           commentMeta.style.alignItems = 'center';
-           commentMeta.style.width = '100%';
-          
-           commentMeta.appendChild(badge);
-           console.log("TrustLens: Badge appended to commentMeta with justify-between");
-         } else {
-           const summary = commentRoot.querySelector('summary');
-           if (summary) {
-             summary.querySelectorAll(".trustlens-badge").forEach((b) => b.remove());
-             summary.style.display = 'flex';
-             summary.style.justifyContent = 'space-between';
-             summary.style.alignItems = 'center';
-             summary.style.width = '100%';
-             summary.appendChild(badge);
-             console.log("TrustLens: Badge appended to summary with justify-between (fallback)");
-           } else {
-             metadataRow.querySelectorAll(".trustlens-badge").forEach((b) => {
-               console.log("TrustLens: Removing existing badge from metadata");
-               b.remove();
-             });
-             metadataRow.appendChild(badge);
-           }
-         }
-
-
-         console.log(
-           "TrustLens: Badge inserted successfully!",
-           "Badge:",
-           badge.textContent
-         );
-         return;
-       }
-     }
-
-
-     console.log("TrustLens: Using fallback insertion method");
-     let targetContainer = null;
-     const md = el.querySelector(".md");
-     if (
-       md &&
-       (md.parentElement === el || md.closest(this.ROOT_SELECTOR) === el)
-     ) {
-       targetContainer = md;
-     }
-     if (!targetContainer) {
-       const usertext = el.querySelector(".usertext-body");
-       if (
-         usertext &&
-         (usertext.parentElement === el ||
-           usertext.closest(this.ROOT_SELECTOR) === el)
-       ) {
-         targetContainer = usertext;
-       }
-     }
-     if (!targetContainer) targetContainer = el;
-
-
-     targetContainer
-       .querySelectorAll(".trustlens-badge")
-       .forEach((b) => b.remove());
-     targetContainer.insertAdjacentElement("afterbegin", badge);
-     console.log("TrustLens: Fallback badge inserted");
-   }
- }
-
-
- window.trustLensDuplicateProof = new DuplicateProofManager();
+  window.trustLensDuplicateProof = new DuplicateProofManager();
 })();
-

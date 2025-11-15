@@ -25,14 +25,7 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from extract_pure_comments import extract_comments
-from evidence import analyze_comments as analyze_evidence
-from evidence_monitored import (
-    analyze_comments_monitored,
-    get_performance_stats,
-    log_performance_stats,
-    print_performance_summary
-)
-from output_formatter import format_all_results
+from evidence import analyze_comments as analyze_evidence, analyze_comment
 
 
 app = FastAPI(title="Reddit Ingest API")
@@ -62,8 +55,8 @@ class Texts(BaseModel):
     texts: List[str]
 
 
-class EvidencePayload(BaseModel):
-    comments: List[Dict[str, str]]  # List of {comment_id: str, text: str}
+class SingleComment(BaseModel):
+    text: str
 
 
 def get_next_output_path(directory: str, prefix: str = "toxicity_output", ext: str = ".json") -> str:
@@ -106,13 +99,39 @@ async def ingest(payload: IngestPayload):
         print(msg, file=sys.stderr, flush=True)
         return {"status": "error", "message": msg}
 
-    # 3) Analyze evidence/sources in comments (with performance monitoring)
-    # Format comments for evidence analysis (needs comment_id and text)
-    comments_for_evidence = [
-        {"comment_id": f"comment_{i}", "text": text}
-        for i, text in enumerate(comments)
-    ]
-    evidence_results = analyze_comments_monitored(comments_for_evidence)
+    # 3) Analyze evidence/sources in comments
+    # Process each comment individually to handle errors gracefully
+    # This ensures one bad URL doesn't break analysis for all comments
+    evidence_results = []
+    for i, text in enumerate(comments):
+        comment_id = f"comment_{i}"
+        try:
+            result = analyze_comment(comment_id, text)
+            evidence_results.append(result)
+        except (UnicodeError, ValueError, OSError) as e:
+            # Handle DNS/URL resolution errors for individual comments
+            # These are expected for malformed URLs
+            evidence_results.append({
+                "comment_id": comment_id,
+                "text": text,
+                "urls": [],
+                "status": "None",
+                "results": [],
+                "TL2_tooltip": "Unable to verify sources",
+                "TL3_detail": "Could not analyze URLs in this comment"
+            })
+        except Exception as e:
+            # Handle any other unexpected errors for individual comments
+            evidence_results.append({
+                "comment_id": comment_id,
+                "text": text,
+                "urls": [],
+                "status": "None",
+                "results": [],
+                "TL2_tooltip": "Analysis error",
+                "TL3_detail": "Error analyzing evidence"
+            })
+    
     print(f"Analyzed {len(evidence_results)} comments for evidence", file=sys.stdout, flush=True)
 
     # Get performance stats for this batch
@@ -168,6 +187,66 @@ def predict_output(comments: Texts):
     print(f"DEBUG main.py: predict_output result keys: {list(result.keys()) if isinstance(result, dict) else 'Not a dict'}", flush=True)
     print(f"DEBUG main.py: badge_colors in result: {'badge_colors' in result if isinstance(result, dict) else 'N/A'}", flush=True)
     return result
+
+
+@app.post("/analyze-evidence")
+def analyze_evidence_single(comment: SingleComment):
+    """Analyze evidence for a single comment - for frontend use."""
+    import uuid
+    try:
+        comment_id = f"comment_{uuid.uuid4().hex[:8]}"
+        result = analyze_comment(comment_id, comment.text)
+        status_to_color = {
+            "Verified": "green",
+            "Unverified": "red",
+            "Mixed": "yellow",
+            "None": "yellow"
+        }
+        badge_color = status_to_color.get(result["status"], "yellow")
+        return {
+            "status": result["status"],
+            "badge_color": badge_color,
+            "evidence": result,
+            "TL2_tooltip": result.get("TL2_tooltip", ""),
+            "TL3_detail": result.get("TL3_detail", "")
+        }
+    except (UnicodeError, ValueError, OSError) as e:
+        # Handle DNS/URL resolution errors gracefully (e.g., invalid hostnames)
+        # These are expected for malformed URLs and should not crash the server
+        print(f"Warning: Could not analyze evidence for comment (invalid URL/hostname): {type(e).__name__}", file=sys.stderr, flush=True)
+        return {
+            "status": "None",
+            "badge_color": "yellow",
+            "evidence": {
+                "comment_id": "",
+                "text": comment.text,
+                "urls": [],
+                "status": "None",
+                "results": [],
+                "TL2_tooltip": "Unable to verify sources",
+                "TL3_detail": "Could not analyze URLs in this comment"
+            },
+            "TL2_tooltip": "Unable to verify sources",
+            "TL3_detail": "Could not analyze URLs in this comment"
+        }
+    except Exception as e:
+        # Handle any other unexpected errors
+        print(f"Error in analyze_evidence_single: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+        return {
+            "status": "None",
+            "badge_color": "yellow",
+            "evidence": {
+                "comment_id": "",
+                "text": comment.text,
+                "urls": [],
+                "status": "None",
+                "results": [],
+                "TL2_tooltip": "Analysis error",
+                "TL3_detail": "Error analyzing evidence"
+            },
+            "TL2_tooltip": "Analysis error",
+            "TL3_detail": "Error analyzing evidence"
+        }
 
 
 @app.get("/health")
