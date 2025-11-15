@@ -1,0 +1,628 @@
+{
+  "source_filename": "test_formatted_output.json",
+  "total_comments": 5,
+  "summary": {
+    "toxicity": {
+      "toxic": 1,
+      "mild": 1,
+      "neutral": 3
+    },
+    "evidence": {
+      "verified": 0,
+      "unverified": 4,
+      "partial": 0,
+      "none": 1
+    }
+  },
+  "comments": [
+    {
+      "comment_id": "comment_0",
+      "text": "This is complete garbage and anyone who believes this is an idiot!",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, unverifiable evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.85,
+        "severe_toxic": 0.12,
+        "obscene": 0.65,
+        "threat": 0.05,
+        "insult": 0.78,
+        "identity_hate": 0.03
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 1,
+        "threat": 0,
+        "insult": 1,
+        "identity_hate": 0
+      },
+      "evidence_status": "Evidence present, unverified",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Evidence cues detected (1 credibility indicators) but no verifiable sources linked",
+      "pattern_detection": {
+        "has_evidence_patterns": true,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [
+          {
+            "type": "government_sources",
+            "keyword": "who"
+          }
+        ],
+        "confidence": "low"
+      }
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "According to research published at https://www.nature.com/articles/article1, this approach shows promise.",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.02,
+        "severe_toxic": 0.01,
+        "obscene": 0.01,
+        "threat": 0.01,
+        "insult": 0.01,
+        "identity_hate": 0.01
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://www.nature.com/articles/article1,"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.nature.com/articles/article1,",
+          "normalized_url": "https://www.nature.com/articles/article1,",
+          "final_url": null,
+          "domain": "nature.com",
+          "ips": [
+            "199.232.64.95"
+          ],
+          "public_dns_ok": true,
+          "http_ok": false,
+          "status": 404,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "http_status_404",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "Unverified source: nature.com",
+      "pattern_detection": {
+        "has_evidence_patterns": true,
+        "simple_keyword_matches": [
+          "according to",
+          "research"
+        ],
+        "sentence_pattern_matches": [
+          {
+            "pattern": "Detects 'according to' followed by 'research' in the same sentence",
+            "regex": "according to[^.!?]*\\b(research|researchers)\\b"
+          },
+          {
+            "pattern": "Detects 'according to [credible source type]'",
+            "regex": "according to\\s+(the\\s+)?(study|research|report|survey|analysis|experts?|scientists?|doctors?|professor|university|institute|journal)"
+          }
+        ],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "high"
+      }
+    },
+    {
+      "comment_id": "comment_2",
+      "text": "I think this might work, but I'm not entirely sure. Just my opinion.",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.35,
+        "severe_toxic": 0.05,
+        "obscene": 0.08,
+        "threat": 0.02,
+        "insult": 0.12,
+        "identity_hate": 0.01
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_3",
+      "text": "Check out this article: https://www.bbc.com/news/article123",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.03,
+        "severe_toxic": 0.01,
+        "obscene": 0.02,
+        "threat": 0.01,
+        "insult": 0.01,
+        "identity_hate": 0.01
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://www.bbc.com/news/article123"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.bbc.com/news/article123",
+          "normalized_url": "https://www.bbc.com/news/article123",
+          "final_url": null,
+          "domain": "bbc.com",
+          "ips": [
+            "199.232.64.81"
+          ],
+          "public_dns_ok": true,
+          "http_ok": false,
+          "status": 404,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "http_status_404",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "Unverified source: bbc.com",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_4",
+      "text": "Data from a recent study shows 75% improvement in outcomes.",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.15,
+        "severe_toxic": 0.02,
+        "obscene": 0.03,
+        "threat": 0.01,
+        "insult": 0.05,
+        "identity_hate": 0.01
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Evidence present, unverified",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Evidence cues detected () but no verifiable sources linked",
+      "pattern_detection": {
+        "has_evidence_patterns": true,
+        "simple_keyword_matches": [
+          "study shows"
+        ],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "low"
+      }
+    }
+  ],
+  "raw_data": {
+    "toxicity": {
+      "labels": [
+        "toxic",
+        "severe_toxic",
+        "obscene",
+        "threat",
+        "insult",
+        "identity_hate"
+      ],
+      "probabilities": [
+        [
+          0.85,
+          0.12,
+          0.65,
+          0.05,
+          0.78,
+          0.03
+        ],
+        [
+          0.02,
+          0.01,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ],
+        [
+          0.35,
+          0.05,
+          0.08,
+          0.02,
+          0.12,
+          0.01
+        ],
+        [
+          0.03,
+          0.01,
+          0.02,
+          0.01,
+          0.01,
+          0.01
+        ],
+        [
+          0.15,
+          0.02,
+          0.03,
+          0.01,
+          0.05,
+          0.01
+        ]
+      ],
+      "predictions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "badge_colors": [
+        "red",
+        "green",
+        "yellow",
+        "green",
+        "green"
+      ],
+      "detailed": [
+        {
+          "text": "This is complete garbage and anyone who believes this is an idiot!",
+          "scores": {
+            "toxic": 0.85,
+            "severe_toxic": 0.12,
+            "obscene": 0.65,
+            "threat": 0.05,
+            "insult": 0.78,
+            "identity_hate": 0.03
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 1,
+            "threat": 0,
+            "insult": 1,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "According to research published at https://www.nature.com/articles/article1, this approach shows promise.",
+          "scores": {
+            "toxic": 0.02,
+            "severe_toxic": 0.01,
+            "obscene": 0.01,
+            "threat": 0.01,
+            "insult": 0.01,
+            "identity_hate": 0.01
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I think this might work, but I'm not entirely sure. Just my opinion.",
+          "scores": {
+            "toxic": 0.35,
+            "severe_toxic": 0.05,
+            "obscene": 0.08,
+            "threat": 0.02,
+            "insult": 0.12,
+            "identity_hate": 0.01
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "Check out this article: https://www.bbc.com/news/article123",
+          "scores": {
+            "toxic": 0.03,
+            "severe_toxic": 0.01,
+            "obscene": 0.02,
+            "threat": 0.01,
+            "insult": 0.01,
+            "identity_hate": 0.01
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Data from a recent study shows 75% improvement in outcomes.",
+          "scores": {
+            "toxic": 0.15,
+            "severe_toxic": 0.02,
+            "obscene": 0.03,
+            "threat": 0.01,
+            "insult": 0.05,
+            "identity_hate": 0.01
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "comment_id": "comment_0",
+        "text": "This is complete garbage and anyone who believes this is an idiot!",
+        "urls": [],
+        "status": "Evidence present, unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": true,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [
+            {
+              "type": "government_sources",
+              "keyword": "who"
+            }
+          ],
+          "confidence": "low"
+        },
+        "results": [],
+        "TL2_tooltip": "Evidence present, unverified",
+        "TL3_detail": "Evidence cues detected (1 credibility indicators) but no verifiable sources linked"
+      },
+      {
+        "comment_id": "comment_1",
+        "text": "According to research published at https://www.nature.com/articles/article1, this approach shows promise.",
+        "urls": [
+          "https://www.nature.com/articles/article1,"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": true,
+          "simple_keyword_matches": [
+            "according to",
+            "research"
+          ],
+          "sentence_pattern_matches": [
+            {
+              "pattern": "Detects 'according to' followed by 'research' in the same sentence",
+              "regex": "according to[^.!?]*\\b(research|researchers)\\b"
+            },
+            {
+              "pattern": "Detects 'according to [credible source type]'",
+              "regex": "according to\\s+(the\\s+)?(study|research|report|survey|analysis|experts?|scientists?|doctors?|professor|university|institute|journal)"
+            }
+          ],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "high"
+        },
+        "results": [
+          {
+            "input_url": "https://www.nature.com/articles/article1,",
+            "normalized_url": "https://www.nature.com/articles/article1,",
+            "final_url": null,
+            "domain": "nature.com",
+            "ips": [
+              "199.232.64.95"
+            ],
+            "public_dns_ok": true,
+            "http_ok": false,
+            "status": 404,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "http_status_404",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverified source ⚠️",
+        "TL3_detail": "Unverified source: nature.com"
+      },
+      {
+        "comment_id": "comment_2",
+        "text": "I think this might work, but I'm not entirely sure. Just my opinion.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_3",
+        "text": "Check out this article: https://www.bbc.com/news/article123",
+        "urls": [
+          "https://www.bbc.com/news/article123"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.bbc.com/news/article123",
+            "normalized_url": "https://www.bbc.com/news/article123",
+            "final_url": null,
+            "domain": "bbc.com",
+            "ips": [
+              "199.232.64.81"
+            ],
+            "public_dns_ok": true,
+            "http_ok": false,
+            "status": 404,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "http_status_404",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverified source ⚠️",
+        "TL3_detail": "Unverified source: bbc.com"
+      },
+      {
+        "comment_id": "comment_4",
+        "text": "Data from a recent study shows 75% improvement in outcomes.",
+        "urls": [],
+        "status": "Evidence present, unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": true,
+          "simple_keyword_matches": [
+            "study shows"
+          ],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "low"
+        },
+        "results": [],
+        "TL2_tooltip": "Evidence present, unverified",
+        "TL3_detail": "Evidence cues detected () but no verifiable sources linked"
+      }
+    ]
+  }
+}

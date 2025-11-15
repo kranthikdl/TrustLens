@@ -134,14 +134,21 @@ async def ingest(payload: IngestPayload):
     
     print(f"Analyzed {len(evidence_results)} comments for evidence", file=sys.stdout, flush=True)
 
-    # 4) Persist results to JSON file (auto-numbered, safe on Windows)
+    # Get performance stats for this batch
+    perf_stats = get_performance_stats()
+
+    # 4) Format results according to output structure (include performance stats)
+    formatted_output = format_all_results(
+        comments=comments,
+        toxicity_results=predictions,
+        evidence_results=evidence_results,
+        source_filename=payload.filename,
+        performance_stats=perf_stats
+    )
+
+    # 5) Persist results to JSON file (auto-numbered, safe on Windows)
     out_path = get_next_output_path("artifacts", prefix="toxicity_output", ext=".json")
-    payload_to_save = {
-        "source_filename": payload.filename,  # only stored inside JSON
-        "comments": comments,
-        "toxicity": predictions,
-        "evidence": evidence_results
-    }
+    payload_to_save = formatted_output
 
     # Use 'x' to avoid overwriting if called concurrently; fall back to next number if needed
     try:
@@ -154,24 +161,21 @@ async def ingest(payload: IngestPayload):
 
     print(f"Saved predictions to: {out_path}", file=sys.stdout, flush=True)
 
-    # Return where we saved it, plus quick-access fields for UI convenience
-    # Summarize evidence statistics
-    evidence_stats = {
-        "verified": sum(1 for e in evidence_results if e["status"] == "Verified"),
-        "unverified": sum(1 for e in evidence_results if e["status"] == "Unverified"),
-        "mixed": sum(1 for e in evidence_results if e["status"] == "Mixed"),
-        "none": sum(1 for e in evidence_results if e["status"] == "None")
-    }
+    # Log performance stats to file
+    perf_log_path = log_performance_stats()
+    print(f"Performance metrics saved to: {perf_log_path}", file=sys.stdout, flush=True)
 
+    # Print performance summary to console
+    print_performance_summary()
+
+    # Return where we saved it, plus quick-access fields for UI convenience
     return {
         "status": "ok",
         "saved_to": out_path,
-        "counts": {
-            "comments": len(comments),
-            "labels": len(predictions.get("labels", []))
-        },
-        "badge_colors": predictions.get("badge_colors", []),
-        "evidence_stats": evidence_stats
+        "total_comments": formatted_output["total_comments"],
+        "summary": formatted_output["summary"],
+        "preview": formatted_output["comments"][:3] if len(formatted_output["comments"]) > 0 else [],  # Show first 3 comments as preview
+        "performance": perf_stats  # Include real-time performance metrics
     }
 
 
@@ -248,3 +252,24 @@ def analyze_evidence_single(comment: SingleComment):
 @app.get("/health")
 async def health():
     return {"status": "healthy"}
+
+
+@app.get("/performance")
+async def get_performance():
+    """Get real-time performance metrics for evidence analysis."""
+    stats = get_performance_stats()
+    return {
+        "status": "ok",
+        "metrics": stats
+    }
+
+
+@app.post("/performance/reset")
+async def reset_performance():
+    """Reset performance monitoring statistics."""
+    from performance_monitor import reset_monitor
+    reset_monitor()
+    return {
+        "status": "ok",
+        "message": "Performance metrics have been reset"
+    }
