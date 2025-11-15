@@ -118,12 +118,13 @@ async def ingest(payload: IngestPayload):
     # Get performance stats for this batch
     perf_stats = get_performance_stats()
 
-    # 4) Format results according to output structure
+    # 4) Format results according to output structure (include performance stats)
     formatted_output = format_all_results(
         comments=comments,
         toxicity_results=predictions,
         evidence_results=evidence_results,
-        source_filename=payload.filename
+        source_filename=payload.filename,
+        performance_stats=perf_stats
     )
 
     # 5) Persist results to JSON file (auto-numbered, safe on Windows)

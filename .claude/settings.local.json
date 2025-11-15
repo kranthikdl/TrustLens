@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python test_evidence_patterns.py:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

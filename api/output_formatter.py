@@ -176,7 +176,8 @@ def format_all_results(
     comments: List[str],
     toxicity_results: Dict[str, Any],
     evidence_results: List[Dict[str, Any]],
-    source_filename: str = ""
+    source_filename: str = "",
+    performance_stats: Dict[str, Any] = None
 ) -> Dict[str, Any]:
     """
     Format complete analysis results for all comments.
@@ -186,6 +187,7 @@ def format_all_results(
         toxicity_results: Full toxicity model output
         evidence_results: List of evidence analysis results
         source_filename: Source file name
+        performance_stats: Performance monitoring statistics (optional)
 
     Returns:
         Complete formatted output
@@ -222,7 +224,7 @@ def format_all_results(
         "none": sum(1 for c in formatted_comments if c["evidence_present"] == "No")
     }
 
-    return {
+    output = {
         "source_filename": source_filename,
         "total_comments": len(comments),
         "summary": {
@@ -237,3 +239,9 @@ def format_all_results(
             "evidence": evidence_results
         }
     }
+
+    # Add performance stats if available
+    if performance_stats:
+        output["performance_metrics"] = performance_stats
+
+    return output
