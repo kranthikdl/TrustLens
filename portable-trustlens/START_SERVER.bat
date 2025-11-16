@@ -3,19 +3,19 @@ REM TrustLens Backend - Portable Launcher
 echo ============================================
 echo TrustLens Backend Server
 echo ============================================
-echo.
+echo:
 
 REM Change to the directory where this batch file is located
 cd /d "%~dp0"
 
 echo Current directory: %CD%
-echo.
+echo:
 
 REM Check if venv exists
 if not exist "venv\Scripts\activate.bat" (
     echo ERROR: Virtual environment not found!
     echo Please run create_portable.bat first to set up the environment.
-    echo.
+    echo:
     pause
     exit /b 1
 )
@@ -23,8 +23,8 @@ if not exist "venv\Scripts\activate.bat" (
 REM Check if this is first run
 if not exist "venv\Lib\site-packages\fastapi" (
     echo First-time setup detected...
-    echo Installing dependencies (this will take a few minutes)...
-    echo.
+    echo Installing dependencies - this will take a few minutes...
+    echo:
     call venv\Scripts\activate.bat
     if errorlevel 1 (
         echo ERROR: Failed to activate virtual environment
@@ -48,9 +48,9 @@ if not exist "venv\Lib\site-packages\fastapi" (
         exit /b 1
     )
 
-    echo.
+    echo:
     echo Installation complete!
-    echo.
+    echo:
 )
 
 echo Starting server...
@@ -63,10 +63,10 @@ if errorlevel 1 (
 
 python launcher.py
 if errorlevel 1 (
-    echo.
+    echo:
     echo ERROR: Server failed to start
     echo Check the error messages above
 )
 
-echo.
+echo:
 pause
