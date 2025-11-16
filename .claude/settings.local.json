@@ -6,7 +6,8 @@
       "Bash(dir:*)",
       "Bash(findstr:*)",
       "Bash(pip install:*)",
-      "Bash(pyinstaller:*)"
+      "Bash(pyinstaller:*)",
+      "Bash(call test.bat)"
     ],
     "deny": [],
     "ask": []
