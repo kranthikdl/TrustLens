@@ -28,6 +28,14 @@ def setup_paths():
     """Setup necessary paths for the application."""
     base_path = get_base_path()
 
+    # Change working directory to the executable location
+    # This ensures artifacts and logs are created in the right place
+    if getattr(sys, 'frozen', False):
+        # Running as executable - change to exe directory
+        exe_dir = Path(sys.executable).parent
+        os.chdir(exe_dir)
+        logger.info(f"Changed working directory to: {exe_dir}")
+
     # Add api directory to Python path
     api_path = base_path / 'api'
     if str(api_path) not in sys.path:
@@ -41,6 +49,7 @@ def setup_paths():
     perf_logs_dir.mkdir(parents=True, exist_ok=True)
 
     logger.info(f"Base path: {base_path}")
+    logger.info(f"Working directory: {Path.cwd()}")
     logger.info(f"API path: {api_path}")
     logger.info(f"Artifacts directory: {artifacts_dir.absolute()}")
     logger.info(f"Performance logs directory: {perf_logs_dir.absolute()}")
@@ -48,6 +57,12 @@ def setup_paths():
 def start_server():
     """Start the FastAPI server."""
     try:
+        print("=" * 60)
+        print("TrustLens Backend Server")
+        print("=" * 60)
+        print("Initializing...")
+        print()
+
         setup_paths()
 
         logger.info("=" * 60)
@@ -58,8 +73,11 @@ def start_server():
         logger.info("Press CTRL+C to stop the server")
         logger.info("=" * 60)
 
+        print("\nImporting application modules...")
         # Import the FastAPI app
         from api.main import app
+        print("Modules loaded successfully!")
+        print()
 
         # Start uvicorn server
         uvicorn.run(
@@ -70,12 +88,48 @@ def start_server():
         )
 
     except KeyboardInterrupt:
-        logger.info("\nServer stopped by user")
+        print("\n")
+        logger.info("Server stopped by user")
+        print("\nPress Enter to exit...")
+        input()
+    except ImportError as e:
+        print("\n" + "=" * 60)
+        print("ERROR: Failed to import required modules")
+        print("=" * 60)
+        print(f"\nDetails: {e}")
+        print("\nThis usually means:")
+        print("1. The executable wasn't built correctly")
+        print("2. Some dependencies are missing")
+        print("3. Try rebuilding with: build.bat")
+        print("\nFull error:")
+        import traceback
+        traceback.print_exc()
+        print("\nPress Enter to exit...")
+        input()
+        sys.exit(1)
     except Exception as e:
-        logger.error(f"Error starting server: {e}")
-        logger.exception("Full traceback:")
-        input("\nPress Enter to exit...")
+        print("\n" + "=" * 60)
+        print("ERROR: Server failed to start")
+        print("=" * 60)
+        print(f"\nError: {e}")
+        print("\nFull traceback:")
+        import traceback
+        traceback.print_exc()
+        print("\n" + "=" * 60)
+        print("Press Enter to exit...")
+        input()
         sys.exit(1)
 
 if __name__ == "__main__":
-    start_server()
+    try:
+        start_server()
+    except Exception as e:
+        print("\n" + "=" * 60)
+        print("CRITICAL ERROR")
+        print("=" * 60)
+        print(f"\nUnexpected error: {e}")
+        import traceback
+        traceback.print_exc()
+        print("\nPress Enter to exit...")
+        input()
+        sys.exit(1)

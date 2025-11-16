@@ -56,12 +56,25 @@ if errorlevel 1 (
 )
 
 echo.
+echo [Creating launcher shortcuts...]
+
+REM Create a convenient launcher batch file in the dist folder
+(
+echo @echo off
+echo cd /d "%%~dp0trustlens-backend"
+echo start "" "trustlens-backend.exe"
+) > "dist\Start TrustLens Backend.bat"
+
+echo.
 echo ============================================
 echo Build completed successfully!
 echo ============================================
 echo.
 echo The executable can be found in: dist\trustlens-backend\
-echo Run: dist\trustlens-backend\trustlens-backend.exe
+echo.
+echo To start the server, you can either:
+echo   1. Double-click: dist\trustlens-backend\trustlens-backend.exe
+echo   2. Or use: dist\Start TrustLens Backend.bat
 echo.
 echo Note: The first run may take longer as ML models are loaded.
 echo.
