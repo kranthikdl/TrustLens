@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill /PID 4520 /F)",
+      "Bash(taskkill:*)",
+      "Bash(uvicorn:*)",
+      "Bash(timeout:*)",
+      "Bash(python test_evidence.py:*)",
+      "Bash(python:*)",
+      "Bash(dir:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

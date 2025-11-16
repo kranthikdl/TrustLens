@@ -4,7 +4,9 @@
       "Bash(python test_evidence_patterns.py:*)",
       "Bash(python:*)",
       "Bash(dir:*)",
-      "Bash(findstr:*)"
+      "Bash(findstr:*)",
+      "Bash(pip install:*)",
+      "Bash(pyinstaller:*)"
     ],
     "deny": [],
     "ask": []

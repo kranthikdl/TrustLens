@@ -1,0 +1,51 @@
+{
+  "timestamp": "2025-11-14T21:58:57.680148",
+  "session_duration_seconds": 0.01,
+  "total_comments_processed": 1,
+  "total_urls_verified": 0,
+  "successful_verifications": 0,
+  "failed_verifications": 0,
+  "verification_success_rate": 0,
+  "overall_throughput_comments_per_sec": 88.24,
+  "operations": {
+    "pattern_detection": {
+      "operation": "pattern_detection",
+      "sample_size": 1,
+      "avg_latency_ms": 8.982,
+      "median_latency_ms": 8.982,
+      "min_latency_ms": 8.982,
+      "max_latency_ms": 8.982,
+      "std_dev_ms": 0,
+      "throughput_ops_per_sec": 111.33
+    },
+    "url_extraction": {
+      "operation": "url_extraction",
+      "sample_size": 1,
+      "avg_latency_ms": 0.053,
+      "median_latency_ms": 0.053,
+      "min_latency_ms": 0.053,
+      "max_latency_ms": 0.053,
+      "std_dev_ms": 0,
+      "throughput_ops_per_sec": 18939.38
+    },
+    "url_verification": {
+      "operation": "url_verification",
+      "sample_size": 0,
+      "avg_latency_ms": 0,
+      "median_latency_ms": 0,
+      "min_latency_ms": 0,
+      "max_latency_ms": 0,
+      "throughput_ops_per_sec": 0
+    },
+    "full_analysis": {
+      "operation": "full_analysis",
+      "sample_size": 1,
+      "avg_latency_ms": 9.132,
+      "median_latency_ms": 9.132,
+      "min_latency_ms": 9.132,
+      "max_latency_ms": 9.132,
+      "std_dev_ms": 0,
+      "throughput_ops_per_sec": 109.5
+    }
+  }
+}

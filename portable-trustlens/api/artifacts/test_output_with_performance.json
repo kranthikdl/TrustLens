@@ -1,0 +1,196 @@
+{
+  "source_filename": "test_file.json",
+  "total_comments": 2,
+  "summary": {
+    "toxicity": {
+      "toxic": 0,
+      "mild": 1,
+      "neutral": 1
+    },
+    "evidence": {
+      "verified": 0,
+      "unverified": 1,
+      "partial": 0,
+      "none": 1
+    }
+  },
+  "comments": [
+    {
+      "comment_id": "comment_0",
+      "text": "According to research, this works.",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {},
+      "toxicity_predictions": {},
+      "evidence_status": "Evidence present, unverified",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Evidence cues detected (2 citation patterns) but no verifiable sources linked",
+      "pattern_detection": {
+        "has_evidence_patterns": true,
+        "simple_keyword_matches": [
+          "according to",
+          "research"
+        ],
+        "sentence_pattern_matches": [
+          {
+            "pattern": "Detects 'according to' followed by 'research' in the same sentence",
+            "regex": "according to[^.!?]*\\b(research|researchers)\\b"
+          },
+          {
+            "pattern": "Detects 'according to [credible source type]'",
+            "regex": "according to\\s+(the\\s+)?(study|research|report|survey|analysis|experts?|scientists?|doctors?|professor|university|institute|journal)"
+          }
+        ],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "high"
+      }
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "I think this is great!",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {},
+      "toxicity_predictions": {},
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    }
+  ],
+  "raw_data": {
+    "toxicity": {
+      "detailed": [
+        {
+          "badge_color": "green",
+          "scores": {},
+          "predictions": {}
+        },
+        {
+          "badge_color": "yellow",
+          "scores": {},
+          "predictions": {}
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "comment_id": "c1",
+        "text": "According to research, this works.",
+        "urls": [],
+        "status": "Evidence present, unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": true,
+          "simple_keyword_matches": [
+            "according to",
+            "research"
+          ],
+          "sentence_pattern_matches": [
+            {
+              "pattern": "Detects 'according to' followed by 'research' in the same sentence",
+              "regex": "according to[^.!?]*\\b(research|researchers)\\b"
+            },
+            {
+              "pattern": "Detects 'according to [credible source type]'",
+              "regex": "according to\\s+(the\\s+)?(study|research|report|survey|analysis|experts?|scientists?|doctors?|professor|university|institute|journal)"
+            }
+          ],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "high"
+        },
+        "results": [],
+        "TL2_tooltip": "Evidence present, unverified",
+        "TL3_detail": "Evidence cues detected (2 citation patterns) but no verifiable sources linked"
+      },
+      {
+        "comment_id": "c2",
+        "text": "I think this is great!",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      }
+    ]
+  },
+  "performance_metrics": {
+    "timestamp": "2025-11-14T22:02:37.326197",
+    "session_duration_seconds": 0.0,
+    "total_comments_processed": 2,
+    "total_urls_verified": 0,
+    "successful_verifications": 0,
+    "failed_verifications": 0,
+    "verification_success_rate": 0,
+    "overall_throughput_comments_per_sec": 572.6,
+    "operations": {
+      "pattern_detection": {
+        "operation": "pattern_detection",
+        "sample_size": 2,
+        "avg_latency_ms": 1.02,
+        "median_latency_ms": 1.02,
+        "min_latency_ms": 0.028,
+        "max_latency_ms": 2.012,
+        "std_dev_ms": 1.402,
+        "throughput_ops_per_sec": 980.39
+      },
+      "url_extraction": {
+        "operation": "url_extraction",
+        "sample_size": 2,
+        "avg_latency_ms": 0.008,
+        "median_latency_ms": 0.008,
+        "min_latency_ms": 0.004,
+        "max_latency_ms": 0.012,
+        "std_dev_ms": 0.006,
+        "throughput_ops_per_sec": 121211.63
+      },
+      "url_verification": {
+        "operation": "url_verification",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "full_analysis": {
+        "operation": "full_analysis",
+        "sample_size": 2,
+        "avg_latency_ms": 1.041,
+        "median_latency_ms": 1.041,
+        "min_latency_ms": 0.038,
+        "max_latency_ms": 2.043,
+        "std_dev_ms": 1.417,
+        "throughput_ops_per_sec": 961.08
+      }
+    }
+  }
+}
