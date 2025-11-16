@@ -40,16 +40,22 @@ def normalize_text(text: str) -> str:
     return text
 
 def _badge_color_for_row(row_probs: np.ndarray) -> str:
-    # Rules:
-    # Red   → if any label has score ≥ 0.5
-    # Yellow→ if none ≥ 0.5 but max score ∈ [0.3, 0.5)
-    # Green → if all scores < 0.3
-    if (row_probs >= 0.5).any():
+    """
+    Determine badge color based on the "toxic" label (index 0) only.
+
+    Per TL1 requirements:
+    - Red (Toxic)   → toxic score ≥ 0.5
+    - Yellow (Mild) → toxic score ∈ [0.3, 0.5)
+    - Green (Neutral) → toxic score < 0.3
+    """
+    toxic_score = float(row_probs[0])  # First label is "toxic"
+
+    if toxic_score >= 0.5:
         return "red"
-    top = float(row_probs.max(initial=0.0))
-    if top >= 0.3:
+    elif toxic_score >= 0.3:
         return "yellow"
-    return "green"
+    else:
+        return "green"
 
 @app.post("/predict")
 def predict(data: Texts):

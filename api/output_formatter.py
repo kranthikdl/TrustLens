@@ -43,27 +43,35 @@ def get_evidence_fields(evidence_status: str) -> Dict[str, Any]:
     return status_mapping.get(evidence_status, {"evidence_present": "No", "evidence_verified": "N/A"})
 
 
-def get_tl1_badge(toxicity_level: str) -> str:
+def get_tl1_badge(toxicity_level: str, evidence_present: str = "No", evidence_verified: str = "N/A") -> str:
     """
-    Get TL1 badge emoji based on toxicity level.
+    Get TL1 badge emoji based on toxicity level and evidence status.
 
-    Badge mapping per requirements:
-    - Toxic -> Red
-    - Mild -> Yellow
-    - Neutral -> Green
+    Badge mapping per TL1 requirements:
+    - Toxic (any evidence status) -> Red 🔴
+    - Mild (any evidence status) -> Yellow 🟡
+    - Neutral + Verified evidence -> Green 🟢
+    - Neutral + Unverified evidence -> Yellow 🟡
+    - Neutral + No evidence -> Green 🟢
 
     Args:
         toxicity_level: Toxic, Mild, or Neutral
+        evidence_present: Yes or No
+        evidence_verified: Yes, No, Partial, or N/A
 
     Returns:
         Badge emoji
     """
-    badge_mapping = {
-        "Toxic": "🔴",
-        "Mild": "🟡",
-        "Neutral": "🟢"  # Green for neutral content
-    }
-    return badge_mapping.get(toxicity_level, "🟡")
+    if toxicity_level == "Toxic":
+        return "🔴"  # Red for all toxic content
+    elif toxicity_level == "Mild":
+        return "🟡"  # Yellow for all mild content
+    else:  # Neutral
+        # Neutral with unverified evidence gets yellow badge
+        if evidence_present == "Yes" and evidence_verified in ["No", "Partial"]:
+            return "🟡"  # Yellow for neutral with unverified evidence
+        else:
+            return "🟢"  # Green for neutral with verified or no evidence
 
 
 def get_tl2_tooltip(toxicity_level: str, evidence_present: str, evidence_verified: str) -> str:
@@ -133,7 +141,11 @@ def format_comment_result(
     evidence_fields = get_evidence_fields(evidence_status)
 
     # Generate TL1 and TL2
-    tl1_badge = get_tl1_badge(toxicity_level)
+    tl1_badge = get_tl1_badge(
+        toxicity_level,
+        evidence_fields["evidence_present"],
+        evidence_fields["evidence_verified"]
+    )
     tl2_tooltip = get_tl2_tooltip(
         toxicity_level,
         evidence_fields["evidence_present"],
