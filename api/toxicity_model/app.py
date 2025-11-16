@@ -24,6 +24,21 @@ class Texts(BaseModel):
 def home():
     return {"message": "Toxicity API is running!"}
 
+def normalize_text(text: str) -> str:
+    """
+    Normalize Unicode characters to ASCII equivalents.
+    This prevents misclassification due to special characters like curly quotes.
+    """
+    # Replace smart/curly quotes with regular quotes
+    text = text.replace('\u2018', "'").replace('\u2019', "'")  # single quotes ' '
+    text = text.replace('\u201c', '"').replace('\u201d', '"')  # double quotes " "
+    # Replace various dashes with regular hyphen
+    text = text.replace('\u2013', '-').replace('\u2014', '-')  # en-dash, em-dash
+    text = text.replace('\u2026', '...')  # ellipsis
+    # Replace other common Unicode punctuation
+    text = text.replace('\u00a0', ' ')  # non-breaking space
+    return text
+
 def _badge_color_for_row(row_probs: np.ndarray) -> str:
     # Rules:
     # Red   → if any label has score ≥ 0.5
@@ -39,8 +54,12 @@ def _badge_color_for_row(row_probs: np.ndarray) -> str:
 @app.post("/predict")
 def predict(data: Texts):
     print("=== PREDICT FUNCTION CALLED - VERSION WITH BADGE_COLORS ===", flush=True)
+
+    # Normalize texts to handle Unicode characters (e.g., curly quotes)
+    normalized_texts = [normalize_text(text) for text in data.texts]
+
     enc = tokenizer(
-        data.texts,
+        normalized_texts,
         truncation=True,
         padding=True,
         max_length=128,
@@ -62,11 +81,12 @@ def predict(data: Texts):
 
     # New: detailed per-item objects
     detailed = []
-    for text, row_probs, row_preds, color in zip(data.texts, probs, preds, badge_colors):
+    # Use original texts for output, but predictions are based on normalized texts
+    for orig_text, row_probs, row_preds, color in zip(data.texts, probs, preds, badge_colors):
         scores_dict = {label: float(p) for label, p in zip(LABELS, row_probs)}
         preds_dict = {label: int(v) for label, v in zip(LABELS, row_preds)}
         detailed.append({
-            "text": text,
+            "text": orig_text,  # Keep original text in output
             "scores": scores_dict,
             "predictions": preds_dict,
             "badge_color": color,
