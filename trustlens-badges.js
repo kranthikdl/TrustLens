@@ -1080,10 +1080,12 @@
         const data = await res.json();
 
         console.log("TrustLens: Evidence API response:", data);
+        console.log("TrustLens: Toxicity level:", data.toxicity_level);
         console.log("TrustLens: Evidence status:", data.status);
-        console.log("TrustLens: Badge color:", data.badge_color);
+        console.log("TrustLens: TL1 badge:", data.TL1_badge);
 
-        const badgeColor = data.badge_color || "yellow";
+        // Use the correct level calculated by backend (based on toxicity + evidence)
+        const levelKey = data.level || "mild";
         const evidenceStatus = (data.status || "None").trim();
         const evidenceData = data.evidence || {};
 
@@ -1094,32 +1096,23 @@
           None: "No Evidence",
         };
 
-        const statusToLevel = {
-          Verified: "neutral",
-          Unverified: "toxic",
-          Mixed: "mild",
-          None: "mild",
-        };
-
         const displayText = statusToLabel[evidenceStatus] || "No Evidence";
-        let levelKey = statusToLevel[evidenceStatus];
-        if (!levelKey) {
-          console.warn(
-            `TrustLens: Unknown evidence status "${evidenceStatus}", defaulting to "mild"`
-          );
-          levelKey = "mild";
-        }
 
-        console.log("TrustLens: Evidence status mapping", {
+        console.log("TrustLens: Badge assignment", {
+          toxicity_level: data.toxicity_level,
+          evidence_present: data.evidence_present,
+          evidence_verified: data.evidence_verified,
           evidenceStatus,
           levelKey,
+          TL1_badge: data.TL1_badge,
           displayText,
-          badgeColor,
         });
 
         const badgeData = {
           status: evidenceStatus,
-          badgeColor: badgeColor,
+          toxicity_level: data.toxicity_level,
+          evidence_present: data.evidence_present,
+          evidence_verified: data.evidence_verified,
           evidence: evidenceData,
           TL2_tooltip: data.TL2_tooltip || "",
           TL3_detail: data.TL3_detail || "",
@@ -1131,7 +1124,7 @@
           levelKey,
           displayText,
           true,
-          badgeColor,
+          null,  // badgeColor not needed - level determines color
           badgeData
         );
         this.processedCommentIds.add(id);
@@ -1169,21 +1162,8 @@
       badgeColor = null,
       badgeData = null
     ) {
-      if (badgeData && badgeData.status) {
-        const statusToLevel = {
-          Verified: "neutral",
-          Unverified: "toxic",
-          Mixed: "mild",
-          None: "mild",
-        };
-        const expectedLevel = statusToLevel[badgeData.status];
-        if (expectedLevel && level !== expectedLevel) {
-          console.warn(
-            `TrustLens: Level mismatch! Status "${badgeData.status}" should map to level "${expectedLevel}" but got "${level}". Using correct level.`
-          );
-          level = expectedLevel;
-        }
-      }
+      // Level is now correctly calculated by backend based on toxicity + evidence
+      // No need to override based on evidence status alone
 
       console.log("TrustLens: insertBadge called", {
         id,

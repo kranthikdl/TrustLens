@@ -197,24 +197,55 @@ def predict_output(comments: Texts):
 
 @app.post("/analyze-evidence")
 def analyze_evidence_single(comment: SingleComment):
-    """Analyze evidence for a single comment - for frontend use."""
+    """Analyze evidence AND toxicity for a single comment - for frontend use."""
     import uuid
+    from output_formatter import get_toxicity_level, get_evidence_fields, get_tl1_badge, get_tl2_tooltip
+
     try:
         comment_id = f"comment_{uuid.uuid4().hex[:8]}"
-        result = analyze_comment(comment_id, comment.text)
-        status_to_color = {
-            "Verified": "green",
-            "Unverified": "red",
-            "Mixed": "yellow",
-            "None": "yellow"
+
+        # 1. Analyze toxicity
+        toxicity_result = toxicity_predict(Texts(texts=[comment.text]))
+        badge_color = toxicity_result["badge_colors"][0]  # red/yellow/green
+        toxicity_level = get_toxicity_level(badge_color)  # Toxic/Mild/Neutral
+
+        # 2. Analyze evidence
+        evidence_result = analyze_comment(comment_id, comment.text)
+        evidence_fields = get_evidence_fields(evidence_result["status"])
+
+        # 3. Get correct TL1 badge based on BOTH toxicity and evidence
+        tl1_badge = get_tl1_badge(
+            toxicity_level,
+            evidence_fields["evidence_present"],
+            evidence_fields["evidence_verified"]
+        )
+
+        # 4. Get TL2 tooltip
+        tl2_tooltip = get_tl2_tooltip(
+            toxicity_level,
+            evidence_fields["evidence_present"],
+            evidence_fields["evidence_verified"]
+        )
+
+        # 5. Map badge emoji to level for frontend
+        badge_to_level = {
+            "🔴": "toxic",
+            "🟡": "mild",
+            "🟢": "neutral"
         }
-        badge_color = status_to_color.get(result["status"], "yellow")
+        level = badge_to_level.get(tl1_badge, "mild")
+
         return {
-            "status": result["status"],
-            "badge_color": badge_color,
-            "evidence": result,
-            "TL2_tooltip": result.get("TL2_tooltip", ""),
-            "TL3_detail": result.get("TL3_detail", "")
+            "status": evidence_result["status"],
+            "badge_color": badge_color,  # Keep for backwards compatibility
+            "toxicity_level": toxicity_level,  # Toxic/Mild/Neutral
+            "level": level,  # toxic/mild/neutral for frontend CSS
+            "TL1_badge": tl1_badge,  # Emoji badge
+            "evidence": evidence_result,
+            "TL2_tooltip": tl2_tooltip,
+            "TL3_detail": evidence_result.get("TL3_detail", ""),
+            "evidence_present": evidence_fields["evidence_present"],
+            "evidence_verified": evidence_fields["evidence_verified"]
         }
     except (UnicodeError, ValueError, OSError) as e:
         # Handle DNS/URL resolution errors gracefully (e.g., invalid hostnames)
