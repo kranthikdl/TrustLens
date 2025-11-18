@@ -1,0 +1,2878 @@
+{
+  "source_filename": "Where do you find interesting articles to read?",
+  "total_comments": 23,
+  "summary": {
+    "toxicity": {
+      "toxic": 1,
+      "mild": 0,
+      "neutral": 22
+    },
+    "evidence": {
+      "verified": 8,
+      "unverified": 3,
+      "partial": 0,
+      "none": 12
+    }
+  },
+  "comments": [
+    {
+      "comment_id": "comment_0",
+      "text": "If you use Google Chrome, you can click beside your initial on the \"Google Apps\" 9-dotted logo and click \"News.\" You'll get recommendations based on the topics and sites you often read when you use Google. In Firefox, you get \"Recommended by Pocket\" when you open a new tab after opening the browser, and some of those articles are interesting.\n\nThe only sites I go to on purpose for articles often are sites that are basically a politics/news combo, newspapers and sports sites. Not going to list those.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.000578366219997406,
+        "severe_toxic": 0.00012513497495092452,
+        "obscene": 0.00017616366676520556,
+        "threat": 0.00012912735110148787,
+        "insult": 0.00017484415729995817,
+        "identity_hate": 0.00014358179760165513
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "https://news.ycombinator.com/",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0007151945610530674,
+        "severe_toxic": 0.00011416102643124759,
+        "obscene": 0.0001749183575157076,
+        "threat": 0.00012264908582437783,
+        "insult": 0.00018059466674458236,
+        "identity_hate": 0.00014246675709728152
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://news.ycombinator.com/"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://news.ycombinator.com/",
+          "normalized_url": "https://news.ycombinator.com/",
+          "final_url": "https://news.ycombinator.com/",
+          "domain": "ycombinator.com",
+          "ips": [
+            "209.216.230.207",
+            "2606:7100:1:67::26"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://news.ycombinator.com/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_2",
+      "text": "Literally came here to post this as soon as I saw the title. That site is the *real* r/INTP.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0008422269020229578,
+        "severe_toxic": 0.00010799374285852537,
+        "obscene": 0.000209582329262048,
+        "threat": 0.00010347225179430097,
+        "insult": 0.0001758910802891478,
+        "identity_hate": 0.00012520038580987602
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_3",
+      "text": "I like to listen to podcasts that cover a broad range of subjects, then look up more information on the stories I find interesting. Often, they’ll have some great links in the show notes. \n\nMy go-tos are [*The Intelligence*](https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ) from The Economist, [*The Journal.*](https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w) from the Wall Street Journal, and [*The Daily*](https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA) from The New York Times.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0006061883759684861,
+        "severe_toxic": 0.0001241109857801348,
+        "obscene": 0.00018330836610402912,
+        "threat": 0.00012833952496293932,
+        "insult": 0.00017193642270285636,
+        "identity_hate": 0.00014240373275242746
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+        "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+        "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+          "normalized_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+          "final_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+          "domain": "spotify.com",
+          "ips": [
+            "199.232.67.42",
+            "2a04:4e42:50::810"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        },
+        {
+          "input_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+          "normalized_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+          "final_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+          "domain": "spotify.com",
+          "ips": [
+            "199.232.67.42",
+            "2a04:4e42:50::810"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        },
+        {
+          "input_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+          "normalized_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+          "final_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+          "domain": "spotify.com",
+          "ips": [
+            "199.232.67.42",
+            "2a04:4e42:50::810"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ, https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w, https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_4",
+      "text": "aeon, nature, science, ncbi (a collection of databases containing information about science in generell: psychology, chemistry, neuroscience, biology etc.) -> [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/)",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.0005856105708517134,
+        "severe_toxic": 0.00012653875455725938,
+        "obscene": 0.00018829372129403055,
+        "threat": 0.00012430617061909288,
+        "insult": 0.00017818121705204248,
+        "identity_hate": 0.00014397635823115706
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/",
+          "normalized_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/",
+          "final_url": null,
+          "domain": "nih.gov",
+          "ips": [
+            "130.14.29.110",
+            "2607:f220:41e:4290::110"
+          ],
+          "public_dns_ok": true,
+          "http_ok": false,
+          "status": 404,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "http_status_404",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "URL is not verified: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_5",
+      "text": "Google discover",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007720855646766722,
+        "severe_toxic": 0.00010944042151095346,
+        "obscene": 0.00017619557911530137,
+        "threat": 0.00010761923476820812,
+        "insult": 0.00017946412845049053,
+        "identity_hate": 0.00014090162585489452
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_6",
+      "text": "twitter",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0009051609667949378,
+        "severe_toxic": 0.00010622668924042955,
+        "obscene": 0.00017837910854723305,
+        "threat": 0.00010548609134275466,
+        "insult": 0.00017773293075151742,
+        "identity_hate": 0.00014437201025430113
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_7",
+      "text": "I like [Discover Magazine](https://www.discovermagazine.com/), phys.org and Livescience.com",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.000619372702203691,
+        "severe_toxic": 0.00012417088146321476,
+        "obscene": 0.0001789030502550304,
+        "threat": 0.0001332819228991866,
+        "insult": 0.0001748375070746988,
+        "identity_hate": 0.0001433003053534776
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://www.discovermagazine.com/"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.discovermagazine.com/",
+          "normalized_url": "https://www.discovermagazine.com/",
+          "final_url": "https://www.discovermagazine.com/",
+          "domain": "discovermagazine.com",
+          "ips": [
+            "216.223.155.118"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://www.discovermagazine.com/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_8",
+      "text": "Another good site is [phys.org](https://phys.org)  \n\n\nit mainly covers science news, but covers some other things, and mostly apolitical.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0005919201648794115,
+        "severe_toxic": 0.0001276956027140841,
+        "obscene": 0.000179304217454046,
+        "threat": 0.00013439246686175466,
+        "insult": 0.00017408559506293386,
+        "identity_hate": 0.00014421406376641244
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://phys.org"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://phys.org",
+          "normalized_url": "https://phys.org",
+          "final_url": "https://phys.org/",
+          "domain": "phys.org",
+          "ips": [
+            "2001:48c8:13:5::52",
+            "72.251.233.232"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://phys.org/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_9",
+      "text": "All over the place... I've collected my favourties here... [https://tetw.org/Greats](https://tetw.org/Greats)",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.000742096861358732,
+        "severe_toxic": 0.00011140890273964033,
+        "obscene": 0.00018121858010999858,
+        "threat": 0.00011140591959701851,
+        "insult": 0.00017334171570837498,
+        "identity_hate": 0.0001357152796117589
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://tetw.org/Greats](https://tetw.org/Greats"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://tetw.org/Greats](https://tetw.org/Greats",
+          "normalized_url": "https://tetw.org/Greats](https://tetw.org/Greats",
+          "final_url": null,
+          "domain": "tetw.org",
+          "ips": [
+            "66.6.44.4"
+          ],
+          "public_dns_ok": true,
+          "http_ok": false,
+          "status": 404,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "http_status_404",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "URL is not verified: https://tetw.org/Greats](https://tetw.org/Greats",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_10",
+      "text": "[deleted]",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006795766530558467,
+        "severe_toxic": 0.00011499355605337769,
+        "obscene": 0.00018223727238364518,
+        "threat": 0.00011343560618115589,
+        "insult": 0.00018161798652727157,
+        "identity_hate": 0.00013843851047568023
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_11",
+      "text": "Thanks",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007007452077232301,
+        "severe_toxic": 0.00011278243619017303,
+        "obscene": 0.00018603124772198498,
+        "threat": 0.00011092161003034562,
+        "insult": 0.0001716340339044109,
+        "identity_hate": 0.00013598043005913496
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_12",
+      "text": "Side eye",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.005027614999562502,
+        "severe_toxic": 8.916447404772043e-05,
+        "obscene": 0.0003325906291138381,
+        "threat": 0.00010204371210420504,
+        "insult": 0.0003432392841205001,
+        "identity_hate": 0.00017775429296307266
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_13",
+      "text": "If you need something to read the articles to you try https://read2me.online/",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0006690424052067101,
+        "severe_toxic": 0.00011938106035813689,
+        "obscene": 0.00017117102106567472,
+        "threat": 0.0001332382089458406,
+        "insult": 0.0001742573076626286,
+        "identity_hate": 0.00013947172556072474
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://read2me.online/"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://read2me.online/",
+          "normalized_url": "https://read2me.online/",
+          "final_url": "https://read2me.online/",
+          "domain": "read2me.online",
+          "ips": [
+            "172.66.40.196",
+            "172.66.43.60",
+            "2606:4700:3108::ac42:28c4",
+            "2606:4700:3108::ac42:2b3c"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://read2me.online/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_14",
+      "text": "for me readers' digest works",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007168800802901387,
+        "severe_toxic": 0.00011271307448623702,
+        "obscene": 0.00017340337217319757,
+        "threat": 0.00012076404527761042,
+        "insult": 0.0001773217663867399,
+        "identity_hate": 0.00013641016266774386
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_15",
+      "text": "[Randomreaddot.com](https://www.randomreaddot.com)",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0008004569099284708,
+        "severe_toxic": 0.00010718590783653781,
+        "obscene": 0.00017537512758281082,
+        "threat": 0.00011395176989026368,
+        "insult": 0.00018527447537053376,
+        "identity_hate": 0.00013925418897997588
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://www.randomreaddot.com"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.randomreaddot.com",
+          "normalized_url": "https://www.randomreaddot.com",
+          "final_url": "https://www.randomreaddot.com/",
+          "domain": "randomreaddot.com",
+          "ips": [
+            "167.71.178.191"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://www.randomreaddot.com/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_16",
+      "text": "I just joined Borowitz and I composed an article but I lost it and cannot find it",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006860743160359561,
+        "severe_toxic": 0.00011621142766671255,
+        "obscene": 0.00017474449123255908,
+        "threat": 0.00011517946404637769,
+        "insult": 0.0001781693281373009,
+        "identity_hate": 0.00014361244393512607
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_17",
+      "text": "we actually just wrote an article on beliefs in AI and how this shapes decision making, give it a read here: [https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action)",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Balanced or neutral tone, unverifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.0005729601252824068,
+        "severe_toxic": 0.00012771070760209113,
+        "obscene": 0.00019133786554448307,
+        "threat": 0.00012280192459002137,
+        "insult": 0.00017482650582678616,
+        "identity_hate": 0.00014418628416024148
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action",
+          "normalized_url": "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action",
+          "final_url": null,
+          "domain": "decidr.ai",
+          "ips": [
+            "216.150.1.129",
+            "216.150.16.129"
+          ],
+          "public_dns_ok": true,
+          "http_ok": false,
+          "status": 404,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "http_status_404",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "URL is not verified: https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_18",
+      "text": "Would highly recommend Substack. Found this article about dealing with grief. You can find a bunch of reads that suit your needs.\n\nhttps://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0008357378537766635,
+        "severe_toxic": 0.00010883150389418006,
+        "obscene": 0.00018404990260023624,
+        "threat": 0.00012019572022836655,
+        "insult": 0.00017911248141899705,
+        "identity_hate": 0.00013679599214810878
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+        "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+          "normalized_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+          "final_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        },
+        {
+          "input_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+          "normalized_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+          "final_url": "https://substack.com/inbox/post/177782340?r=5rixnk&utm%5C_medium=ios%5D(https%3A%2F%2Fopen.substack.com%2Fpub%2Fjenesaii%2Fp%2Fwhen-the-doctor-spoke-the-world-stopped-7b4%3Fr%3D5rixnk&utm_medium=ios&triedRedirect=true",
+          "domain": "substack.com",
+          "ips": [
+            "104.18.37.200",
+            "172.64.150.56",
+            "2606:4700:4400::ac40:9638",
+            "2606:4700:440b::6812:25c8"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "article",
+          "confidence": 0.7,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "og:type": "article"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9, https://substack.com/inbox/post/177782340?r=5rixnk&utm%5C_medium=ios%5D(https%3A%2F%2Fopen.substack.com%2Fpub%2Fjenesaii%2Fp%2Fwhen-the-doctor-spoke-the-world-stopped-7b4%3Fr%3D5rixnk&utm_medium=ios&triedRedirect=true",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_19",
+      "text": "I like to mashup random bullshit (random configuration of words) and hit the search bar. Then I'll never know when 4 hours have already passed.",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, no evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.8349806666374207,
+        "severe_toxic": 0.011096365749835968,
+        "obscene": 0.7833669781684875,
+        "threat": 0.0013395445421338081,
+        "insult": 0.04566272720694542,
+        "identity_hate": 0.0015088494401425123
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 1,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_20",
+      "text": "Hey can you elaborate?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0008126445463858545,
+        "severe_toxic": 0.00011050353350583464,
+        "obscene": 0.00018267602717969567,
+        "threat": 0.00011303899373160675,
+        "insult": 0.00017847590788733214,
+        "identity_hate": 0.00013858405873179436
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_21",
+      "text": "There's plenty of decent stuff on YouTube. I watch though at 2x speed.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006383592262864113,
+        "severe_toxic": 0.0001198556856252253,
+        "obscene": 0.0001827215019147843,
+        "threat": 0.000123987250844948,
+        "insult": 0.0001718646235531196,
+        "identity_hate": 0.00013641185068991035
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_22",
+      "text": "Zergnet.com",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0009526205249130726,
+        "severe_toxic": 0.00010147528519155458,
+        "obscene": 0.00017884183034766465,
+        "threat": 0.00010794008994707838,
+        "insult": 0.00018100166926160455,
+        "identity_hate": 0.00014080935216043144
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://Zergnet.com"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://Zergnet.com",
+          "normalized_url": "https://Zergnet.com",
+          "final_url": "https://www.zergnet.com/",
+          "domain": "zergnet.com",
+          "ips": [
+            "107.20.214.113",
+            "34.198.200.239"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://www.zergnet.com/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    }
+  ],
+  "raw_data": {
+    "toxicity": {
+      "labels": [
+        "toxic",
+        "severe_toxic",
+        "obscene",
+        "threat",
+        "insult",
+        "identity_hate"
+      ],
+      "probabilities": [
+        [
+          0.000578366219997406,
+          0.00012513497495092452,
+          0.00017616366676520556,
+          0.00012912735110148787,
+          0.00017484415729995817,
+          0.00014358179760165513
+        ],
+        [
+          0.0007151945610530674,
+          0.00011416102643124759,
+          0.0001749183575157076,
+          0.00012264908582437783,
+          0.00018059466674458236,
+          0.00014246675709728152
+        ],
+        [
+          0.0008422269020229578,
+          0.00010799374285852537,
+          0.000209582329262048,
+          0.00010347225179430097,
+          0.0001758910802891478,
+          0.00012520038580987602
+        ],
+        [
+          0.0006061883759684861,
+          0.0001241109857801348,
+          0.00018330836610402912,
+          0.00012833952496293932,
+          0.00017193642270285636,
+          0.00014240373275242746
+        ],
+        [
+          0.0005856105708517134,
+          0.00012653875455725938,
+          0.00018829372129403055,
+          0.00012430617061909288,
+          0.00017818121705204248,
+          0.00014397635823115706
+        ],
+        [
+          0.0007720855646766722,
+          0.00010944042151095346,
+          0.00017619557911530137,
+          0.00010761923476820812,
+          0.00017946412845049053,
+          0.00014090162585489452
+        ],
+        [
+          0.0009051609667949378,
+          0.00010622668924042955,
+          0.00017837910854723305,
+          0.00010548609134275466,
+          0.00017773293075151742,
+          0.00014437201025430113
+        ],
+        [
+          0.000619372702203691,
+          0.00012417088146321476,
+          0.0001789030502550304,
+          0.0001332819228991866,
+          0.0001748375070746988,
+          0.0001433003053534776
+        ],
+        [
+          0.0005919201648794115,
+          0.0001276956027140841,
+          0.000179304217454046,
+          0.00013439246686175466,
+          0.00017408559506293386,
+          0.00014421406376641244
+        ],
+        [
+          0.000742096861358732,
+          0.00011140890273964033,
+          0.00018121858010999858,
+          0.00011140591959701851,
+          0.00017334171570837498,
+          0.0001357152796117589
+        ],
+        [
+          0.0006795766530558467,
+          0.00011499355605337769,
+          0.00018223727238364518,
+          0.00011343560618115589,
+          0.00018161798652727157,
+          0.00013843851047568023
+        ],
+        [
+          0.0007007452077232301,
+          0.00011278243619017303,
+          0.00018603124772198498,
+          0.00011092161003034562,
+          0.0001716340339044109,
+          0.00013598043005913496
+        ],
+        [
+          0.005027614999562502,
+          8.916447404772043e-05,
+          0.0003325906291138381,
+          0.00010204371210420504,
+          0.0003432392841205001,
+          0.00017775429296307266
+        ],
+        [
+          0.0006690424052067101,
+          0.00011938106035813689,
+          0.00017117102106567472,
+          0.0001332382089458406,
+          0.0001742573076626286,
+          0.00013947172556072474
+        ],
+        [
+          0.0007168800802901387,
+          0.00011271307448623702,
+          0.00017340337217319757,
+          0.00012076404527761042,
+          0.0001773217663867399,
+          0.00013641016266774386
+        ],
+        [
+          0.0008004569099284708,
+          0.00010718590783653781,
+          0.00017537512758281082,
+          0.00011395176989026368,
+          0.00018527447537053376,
+          0.00013925418897997588
+        ],
+        [
+          0.0006860743160359561,
+          0.00011621142766671255,
+          0.00017474449123255908,
+          0.00011517946404637769,
+          0.0001781693281373009,
+          0.00014361244393512607
+        ],
+        [
+          0.0005729601252824068,
+          0.00012771070760209113,
+          0.00019133786554448307,
+          0.00012280192459002137,
+          0.00017482650582678616,
+          0.00014418628416024148
+        ],
+        [
+          0.0008357378537766635,
+          0.00010883150389418006,
+          0.00018404990260023624,
+          0.00012019572022836655,
+          0.00017911248141899705,
+          0.00013679599214810878
+        ],
+        [
+          0.8349806666374207,
+          0.011096365749835968,
+          0.7833669781684875,
+          0.0013395445421338081,
+          0.04566272720694542,
+          0.0015088494401425123
+        ],
+        [
+          0.0008126445463858545,
+          0.00011050353350583464,
+          0.00018267602717969567,
+          0.00011303899373160675,
+          0.00017847590788733214,
+          0.00013858405873179436
+        ],
+        [
+          0.0006383592262864113,
+          0.0001198556856252253,
+          0.0001827215019147843,
+          0.000123987250844948,
+          0.0001718646235531196,
+          0.00013641185068991035
+        ],
+        [
+          0.0009526205249130726,
+          0.00010147528519155458,
+          0.00017884183034766465,
+          0.00010794008994707838,
+          0.00018100166926160455,
+          0.00014080935216043144
+        ]
+      ],
+      "predictions": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "badge_colors": [
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "red",
+        "green",
+        "green",
+        "green"
+      ],
+      "detailed": [
+        {
+          "text": "If you use Google Chrome, you can click beside your initial on the \"Google Apps\" 9-dotted logo and click \"News.\" You'll get recommendations based on the topics and sites you often read when you use Google. In Firefox, you get \"Recommended by Pocket\" when you open a new tab after opening the browser, and some of those articles are interesting.\n\nThe only sites I go to on purpose for articles often are sites that are basically a politics/news combo, newspapers and sports sites. Not going to list those.",
+          "scores": {
+            "toxic": 0.000578366219997406,
+            "severe_toxic": 0.00012513497495092452,
+            "obscene": 0.00017616366676520556,
+            "threat": 0.00012912735110148787,
+            "insult": 0.00017484415729995817,
+            "identity_hate": 0.00014358179760165513
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "https://news.ycombinator.com/",
+          "scores": {
+            "toxic": 0.0007151945610530674,
+            "severe_toxic": 0.00011416102643124759,
+            "obscene": 0.0001749183575157076,
+            "threat": 0.00012264908582437783,
+            "insult": 0.00018059466674458236,
+            "identity_hate": 0.00014246675709728152
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Literally came here to post this as soon as I saw the title. That site is the *real* r/INTP.",
+          "scores": {
+            "toxic": 0.0008422269020229578,
+            "severe_toxic": 0.00010799374285852537,
+            "obscene": 0.000209582329262048,
+            "threat": 0.00010347225179430097,
+            "insult": 0.0001758910802891478,
+            "identity_hate": 0.00012520038580987602
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I like to listen to podcasts that cover a broad range of subjects, then look up more information on the stories I find interesting. Often, they’ll have some great links in the show notes. \n\nMy go-tos are [*The Intelligence*](https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ) from The Economist, [*The Journal.*](https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w) from the Wall Street Journal, and [*The Daily*](https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA) from The New York Times.",
+          "scores": {
+            "toxic": 0.0006061883759684861,
+            "severe_toxic": 0.0001241109857801348,
+            "obscene": 0.00018330836610402912,
+            "threat": 0.00012833952496293932,
+            "insult": 0.00017193642270285636,
+            "identity_hate": 0.00014240373275242746
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "aeon, nature, science, ncbi (a collection of databases containing information about science in generell: psychology, chemistry, neuroscience, biology etc.) -> [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/)",
+          "scores": {
+            "toxic": 0.0005856105708517134,
+            "severe_toxic": 0.00012653875455725938,
+            "obscene": 0.00018829372129403055,
+            "threat": 0.00012430617061909288,
+            "insult": 0.00017818121705204248,
+            "identity_hate": 0.00014397635823115706
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Google discover",
+          "scores": {
+            "toxic": 0.0007720855646766722,
+            "severe_toxic": 0.00010944042151095346,
+            "obscene": 0.00017619557911530137,
+            "threat": 0.00010761923476820812,
+            "insult": 0.00017946412845049053,
+            "identity_hate": 0.00014090162585489452
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "twitter",
+          "scores": {
+            "toxic": 0.0009051609667949378,
+            "severe_toxic": 0.00010622668924042955,
+            "obscene": 0.00017837910854723305,
+            "threat": 0.00010548609134275466,
+            "insult": 0.00017773293075151742,
+            "identity_hate": 0.00014437201025430113
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I like [Discover Magazine](https://www.discovermagazine.com/), phys.org and Livescience.com",
+          "scores": {
+            "toxic": 0.000619372702203691,
+            "severe_toxic": 0.00012417088146321476,
+            "obscene": 0.0001789030502550304,
+            "threat": 0.0001332819228991866,
+            "insult": 0.0001748375070746988,
+            "identity_hate": 0.0001433003053534776
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Another good site is [phys.org](https://phys.org)  \n\n\nit mainly covers science news, but covers some other things, and mostly apolitical.",
+          "scores": {
+            "toxic": 0.0005919201648794115,
+            "severe_toxic": 0.0001276956027140841,
+            "obscene": 0.000179304217454046,
+            "threat": 0.00013439246686175466,
+            "insult": 0.00017408559506293386,
+            "identity_hate": 0.00014421406376641244
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "All over the place... I've collected my favourties here... [https://tetw.org/Greats](https://tetw.org/Greats)",
+          "scores": {
+            "toxic": 0.000742096861358732,
+            "severe_toxic": 0.00011140890273964033,
+            "obscene": 0.00018121858010999858,
+            "threat": 0.00011140591959701851,
+            "insult": 0.00017334171570837498,
+            "identity_hate": 0.0001357152796117589
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "[deleted]",
+          "scores": {
+            "toxic": 0.0006795766530558467,
+            "severe_toxic": 0.00011499355605337769,
+            "obscene": 0.00018223727238364518,
+            "threat": 0.00011343560618115589,
+            "insult": 0.00018161798652727157,
+            "identity_hate": 0.00013843851047568023
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Thanks",
+          "scores": {
+            "toxic": 0.0007007452077232301,
+            "severe_toxic": 0.00011278243619017303,
+            "obscene": 0.00018603124772198498,
+            "threat": 0.00011092161003034562,
+            "insult": 0.0001716340339044109,
+            "identity_hate": 0.00013598043005913496
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Side eye",
+          "scores": {
+            "toxic": 0.005027614999562502,
+            "severe_toxic": 8.916447404772043e-05,
+            "obscene": 0.0003325906291138381,
+            "threat": 0.00010204371210420504,
+            "insult": 0.0003432392841205001,
+            "identity_hate": 0.00017775429296307266
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "If you need something to read the articles to you try https://read2me.online/",
+          "scores": {
+            "toxic": 0.0006690424052067101,
+            "severe_toxic": 0.00011938106035813689,
+            "obscene": 0.00017117102106567472,
+            "threat": 0.0001332382089458406,
+            "insult": 0.0001742573076626286,
+            "identity_hate": 0.00013947172556072474
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "for me readers' digest works",
+          "scores": {
+            "toxic": 0.0007168800802901387,
+            "severe_toxic": 0.00011271307448623702,
+            "obscene": 0.00017340337217319757,
+            "threat": 0.00012076404527761042,
+            "insult": 0.0001773217663867399,
+            "identity_hate": 0.00013641016266774386
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "[Randomreaddot.com](https://www.randomreaddot.com)",
+          "scores": {
+            "toxic": 0.0008004569099284708,
+            "severe_toxic": 0.00010718590783653781,
+            "obscene": 0.00017537512758281082,
+            "threat": 0.00011395176989026368,
+            "insult": 0.00018527447537053376,
+            "identity_hate": 0.00013925418897997588
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I just joined Borowitz and I composed an article but I lost it and cannot find it",
+          "scores": {
+            "toxic": 0.0006860743160359561,
+            "severe_toxic": 0.00011621142766671255,
+            "obscene": 0.00017474449123255908,
+            "threat": 0.00011517946404637769,
+            "insult": 0.0001781693281373009,
+            "identity_hate": 0.00014361244393512607
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "we actually just wrote an article on beliefs in AI and how this shapes decision making, give it a read here: [https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action)",
+          "scores": {
+            "toxic": 0.0005729601252824068,
+            "severe_toxic": 0.00012771070760209113,
+            "obscene": 0.00019133786554448307,
+            "threat": 0.00012280192459002137,
+            "insult": 0.00017482650582678616,
+            "identity_hate": 0.00014418628416024148
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Would highly recommend Substack. Found this article about dealing with grief. You can find a bunch of reads that suit your needs.\n\nhttps://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+          "scores": {
+            "toxic": 0.0008357378537766635,
+            "severe_toxic": 0.00010883150389418006,
+            "obscene": 0.00018404990260023624,
+            "threat": 0.00012019572022836655,
+            "insult": 0.00017911248141899705,
+            "identity_hate": 0.00013679599214810878
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I like to mashup random bullshit (random configuration of words) and hit the search bar. Then I'll never know when 4 hours have already passed.",
+          "scores": {
+            "toxic": 0.8349806666374207,
+            "severe_toxic": 0.011096365749835968,
+            "obscene": 0.7833669781684875,
+            "threat": 0.0013395445421338081,
+            "insult": 0.04566272720694542,
+            "identity_hate": 0.0015088494401425123
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 1,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "Hey can you elaborate?",
+          "scores": {
+            "toxic": 0.0008126445463858545,
+            "severe_toxic": 0.00011050353350583464,
+            "obscene": 0.00018267602717969567,
+            "threat": 0.00011303899373160675,
+            "insult": 0.00017847590788733214,
+            "identity_hate": 0.00013858405873179436
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "There's plenty of decent stuff on YouTube. I watch though at 2x speed.",
+          "scores": {
+            "toxic": 0.0006383592262864113,
+            "severe_toxic": 0.0001198556856252253,
+            "obscene": 0.0001827215019147843,
+            "threat": 0.000123987250844948,
+            "insult": 0.0001718646235531196,
+            "identity_hate": 0.00013641185068991035
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Zergnet.com",
+          "scores": {
+            "toxic": 0.0009526205249130726,
+            "severe_toxic": 0.00010147528519155458,
+            "obscene": 0.00017884183034766465,
+            "threat": 0.00010794008994707838,
+            "insult": 0.00018100166926160455,
+            "identity_hate": 0.00014080935216043144
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "comment_id": "comment_0",
+        "text": "If you use Google Chrome, you can click beside your initial on the \"Google Apps\" 9-dotted logo and click \"News.\" You'll get recommendations based on the topics and sites you often read when you use Google. In Firefox, you get \"Recommended by Pocket\" when you open a new tab after opening the browser, and some of those articles are interesting.\n\nThe only sites I go to on purpose for articles often are sites that are basically a politics/news combo, newspapers and sports sites. Not going to list those.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_1",
+        "text": "https://news.ycombinator.com/",
+        "urls": [
+          "https://news.ycombinator.com/"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://news.ycombinator.com/",
+            "normalized_url": "https://news.ycombinator.com/",
+            "final_url": "https://news.ycombinator.com/",
+            "domain": "ycombinator.com",
+            "ips": [
+              "209.216.230.207",
+              "2606:7100:1:67::26"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://news.ycombinator.com/"
+      },
+      {
+        "comment_id": "comment_2",
+        "text": "Literally came here to post this as soon as I saw the title. That site is the *real* r/INTP.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_3",
+        "text": "I like to listen to podcasts that cover a broad range of subjects, then look up more information on the stories I find interesting. Often, they’ll have some great links in the show notes. \n\nMy go-tos are [*The Intelligence*](https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ) from The Economist, [*The Journal.*](https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w) from the Wall Street Journal, and [*The Daily*](https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA) from The New York Times.",
+        "urls": [
+          "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+          "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+          "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+            "normalized_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+            "final_url": "https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ",
+            "domain": "spotify.com",
+            "ips": [
+              "199.232.67.42",
+              "2a04:4e42:50::810"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          },
+          {
+            "input_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+            "normalized_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+            "final_url": "https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w",
+            "domain": "spotify.com",
+            "ips": [
+              "199.232.67.42",
+              "2a04:4e42:50::810"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          },
+          {
+            "input_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+            "normalized_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+            "final_url": "https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA",
+            "domain": "spotify.com",
+            "ips": [
+              "199.232.67.42",
+              "2a04:4e42:50::810"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://open.spotify.com/show/12zKAMNyS2GNentUzxq9QN?si=V08McLz9TFOjQSLs8rVjQQ, https://open.spotify.com/show/0KxdEdeY2Wb3zr28dMlQva?si=XPho0MG9QUC0IwmNPEV24w, https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=ARifZqXzQ6aN73hOesIoMA"
+      },
+      {
+        "comment_id": "comment_4",
+        "text": "aeon, nature, science, ncbi (a collection of databases containing information about science in generell: psychology, chemistry, neuroscience, biology etc.) -> [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/)",
+        "urls": [
+          "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/",
+            "normalized_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/",
+            "final_url": null,
+            "domain": "nih.gov",
+            "ips": [
+              "130.14.29.110",
+              "2607:f220:41e:4290::110"
+            ],
+            "public_dns_ok": true,
+            "http_ok": false,
+            "status": 404,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "http_status_404",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverifiable evidence",
+        "TL3_detail": "URL is not verified: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2861872/"
+      },
+      {
+        "comment_id": "comment_5",
+        "text": "Google discover",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_6",
+        "text": "twitter",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_7",
+        "text": "I like [Discover Magazine](https://www.discovermagazine.com/), phys.org and Livescience.com",
+        "urls": [
+          "https://www.discovermagazine.com/"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.discovermagazine.com/",
+            "normalized_url": "https://www.discovermagazine.com/",
+            "final_url": "https://www.discovermagazine.com/",
+            "domain": "discovermagazine.com",
+            "ips": [
+              "216.223.155.118"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://www.discovermagazine.com/"
+      },
+      {
+        "comment_id": "comment_8",
+        "text": "Another good site is [phys.org](https://phys.org)  \n\n\nit mainly covers science news, but covers some other things, and mostly apolitical.",
+        "urls": [
+          "https://phys.org"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://phys.org",
+            "normalized_url": "https://phys.org",
+            "final_url": "https://phys.org/",
+            "domain": "phys.org",
+            "ips": [
+              "2001:48c8:13:5::52",
+              "72.251.233.232"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://phys.org/"
+      },
+      {
+        "comment_id": "comment_9",
+        "text": "All over the place... I've collected my favourties here... [https://tetw.org/Greats](https://tetw.org/Greats)",
+        "urls": [
+          "https://tetw.org/Greats](https://tetw.org/Greats"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://tetw.org/Greats](https://tetw.org/Greats",
+            "normalized_url": "https://tetw.org/Greats](https://tetw.org/Greats",
+            "final_url": null,
+            "domain": "tetw.org",
+            "ips": [
+              "66.6.44.4"
+            ],
+            "public_dns_ok": true,
+            "http_ok": false,
+            "status": 404,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "http_status_404",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverifiable evidence",
+        "TL3_detail": "URL is not verified: https://tetw.org/Greats](https://tetw.org/Greats"
+      },
+      {
+        "comment_id": "comment_10",
+        "text": "[deleted]",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_11",
+        "text": "Thanks",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_12",
+        "text": "Side eye",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_13",
+        "text": "If you need something to read the articles to you try https://read2me.online/",
+        "urls": [
+          "https://read2me.online/"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://read2me.online/",
+            "normalized_url": "https://read2me.online/",
+            "final_url": "https://read2me.online/",
+            "domain": "read2me.online",
+            "ips": [
+              "172.66.40.196",
+              "172.66.43.60",
+              "2606:4700:3108::ac42:28c4",
+              "2606:4700:3108::ac42:2b3c"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://read2me.online/"
+      },
+      {
+        "comment_id": "comment_14",
+        "text": "for me readers' digest works",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_15",
+        "text": "[Randomreaddot.com](https://www.randomreaddot.com)",
+        "urls": [
+          "https://www.randomreaddot.com"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.randomreaddot.com",
+            "normalized_url": "https://www.randomreaddot.com",
+            "final_url": "https://www.randomreaddot.com/",
+            "domain": "randomreaddot.com",
+            "ips": [
+              "167.71.178.191"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://www.randomreaddot.com/"
+      },
+      {
+        "comment_id": "comment_16",
+        "text": "I just joined Borowitz and I composed an article but I lost it and cannot find it",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_17",
+        "text": "we actually just wrote an article on beliefs in AI and how this shapes decision making, give it a read here: [https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action)",
+        "urls": [
+          "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action",
+            "normalized_url": "https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action",
+            "final_url": null,
+            "domain": "decidr.ai",
+            "ips": [
+              "216.150.1.129",
+              "216.150.16.129"
+            ],
+            "public_dns_ok": true,
+            "http_ok": false,
+            "status": 404,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "http_status_404",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverifiable evidence",
+        "TL3_detail": "URL is not verified: https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action](https://www.decidr.ai/blog/what-are-beliefs-in-ai-understanding-assumptions-in-action"
+      },
+      {
+        "comment_id": "comment_18",
+        "text": "Would highly recommend Substack. Found this article about dealing with grief. You can find a bunch of reads that suit your needs.\n\nhttps://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9\n\n[https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios)",
+        "urls": [
+          "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+          "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+            "normalized_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+            "final_url": "https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          },
+          {
+            "input_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+            "normalized_url": "https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm\\_medium=ios](https://open.substack.com/pub/jenesaii/p/when-the-doctor-spoke-the-world-stopped-7b4?r=5rixnk&utm_medium=ios",
+            "final_url": "https://substack.com/inbox/post/177782340?r=5rixnk&utm%5C_medium=ios%5D(https%3A%2F%2Fopen.substack.com%2Fpub%2Fjenesaii%2Fp%2Fwhen-the-doctor-spoke-the-world-stopped-7b4%3Fr%3D5rixnk&utm_medium=ios&triedRedirect=true",
+            "domain": "substack.com",
+            "ips": [
+              "104.18.37.200",
+              "172.64.150.56",
+              "2606:4700:4400::ac40:9638",
+              "2606:4700:440b::6812:25c8"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "article",
+            "confidence": 0.7,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "og:type": "article"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://preview.redd.it/120z4m678wyf1.jpeg?width=800&format=pjpg&auto=webp&s=4ea57f6033e272ba9e7d36613ac94d52a278f1e9, https://substack.com/inbox/post/177782340?r=5rixnk&utm%5C_medium=ios%5D(https%3A%2F%2Fopen.substack.com%2Fpub%2Fjenesaii%2Fp%2Fwhen-the-doctor-spoke-the-world-stopped-7b4%3Fr%3D5rixnk&utm_medium=ios&triedRedirect=true"
+      },
+      {
+        "comment_id": "comment_19",
+        "text": "I like to mashup random bullshit (random configuration of words) and hit the search bar. Then I'll never know when 4 hours have already passed.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_20",
+        "text": "Hey can you elaborate?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_21",
+        "text": "There's plenty of decent stuff on YouTube. I watch though at 2x speed.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_22",
+        "text": "Zergnet.com",
+        "urls": [
+          "https://Zergnet.com"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://Zergnet.com",
+            "normalized_url": "https://Zergnet.com",
+            "final_url": "https://www.zergnet.com/",
+            "domain": "zergnet.com",
+            "ips": [
+              "107.20.214.113",
+              "34.198.200.239"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://www.zergnet.com/"
+      }
+    ]
+  },
+  "performance_metrics": {
+    "timestamp": "2025-11-17T20:35:21.616598",
+    "session_duration_seconds": 47.35,
+    "total_comments_processed": 0,
+    "total_urls_verified": 0,
+    "successful_verifications": 0,
+    "failed_verifications": 0,
+    "verification_success_rate": 0,
+    "overall_throughput_comments_per_sec": 0.0,
+    "operations": {
+      "pattern_detection": {
+        "operation": "pattern_detection",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_extraction": {
+        "operation": "url_extraction",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_verification": {
+        "operation": "url_verification",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "full_analysis": {
+        "operation": "full_analysis",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      }
+    }
+  }
+}

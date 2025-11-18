@@ -1,5 +1,9 @@
 fastapi==0.115.0
-uvicorn==0.30.6
-tldextract
-requests
+uvicorn[standard]==0.30.6
+httpx
 beautifulsoup4
+requests
+tldextract
+transformers
+torch
+pydantic

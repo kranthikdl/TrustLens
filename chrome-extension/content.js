@@ -308,15 +308,15 @@ function processExistingCommentsForAnalysis() {
 function processCommentForAnalysis(commentElement) {
     const commentId = extractCommentIdFromElement(commentElement);
     if (!commentId) return;
-    
+
     const commentText = extractCommentTextFromElement(commentElement);
-    if (!commentText || commentText.length < 10) return;
-    
+    if (!commentText || commentText.trim().length === 0) return;
+
     // Check if already analyzed
     if (window.trustLensBadgeManager && window.trustLensBadgeManager.isAnalyzed(commentId)) {
         return;
     }
-    
+
     // Queue for analysis
     analyzeCommentRealTime(commentText, commentId);
 }

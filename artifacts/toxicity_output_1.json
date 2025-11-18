@@ -1,0 +1,3017 @@
+{
+  "source_filename": "Porn! The punchline is porn!",
+  "total_comments": 28,
+  "summary": {
+    "toxicity": {
+      "toxic": 5,
+      "mild": 4,
+      "neutral": 19
+    },
+    "evidence": {
+      "verified": 6,
+      "unverified": 1,
+      "partial": 0,
+      "none": 21
+    }
+  },
+  "comments": [
+    {
+      "comment_id": "comment_0",
+      "text": "Welcome to r/terriblefacebookmemes! It sucks, but it is ours.\n\n [Please click on this link to be informed of a critical change in our rules.](https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/)\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/terriblefacebookmemes) if you have any questions or concerns.*",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, verifiable evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.32398006319999695,
+        "severe_toxic": 0.0012840720592066646,
+        "obscene": 0.1680440753698349,
+        "threat": 0.0007160112727433443,
+        "insult": 0.013140741735696793,
+        "identity_hate": 0.0008993384544737637
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+          "normalized_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+          "final_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+          "domain": "reddit.com",
+          "ips": [
+            "199.232.65.140"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: reddit.com",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0015195850282907486,
+        "severe_toxic": 9.898599091684446e-05,
+        "obscene": 0.0002429774176562205,
+        "threat": 0.00011249896488152444,
+        "insult": 0.00020675711857620627,
+        "identity_hate": 0.00014562340220436454
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+          "normalized_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+          "final_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: redd.it",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_2",
+      "text": "I thought twitter was the racist app...",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.06446108967065811,
+        "severe_toxic": 0.00014581279538106173,
+        "obscene": 0.0013522362569347024,
+        "threat": 0.00022918898321222514,
+        "insult": 0.0017921430990099907,
+        "identity_hate": 0.0005831000744365156
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_3",
+      "text": "Reddit is casual racism and Twitter is competitive racism",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.35179823637008667,
+        "severe_toxic": 0.0005097363027743995,
+        "obscene": 0.0031421922612935305,
+        "threat": 0.0011080533731728792,
+        "insult": 0.007471664343029261,
+        "identity_hate": 0.013930542394518852
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_4",
+      "text": "4chan is the Olympics",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0047467672266066074,
+        "severe_toxic": 9.126655641011894e-05,
+        "obscene": 0.00034063629573211074,
+        "threat": 9.301678073825315e-05,
+        "insult": 0.0002891128824558109,
+        "identity_hate": 0.0001673336373642087
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_5",
+      "text": "Facebook is the hall of fame",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.005492094438523054,
+        "severe_toxic": 9.349859465146437e-05,
+        "obscene": 0.00040207779966294765,
+        "threat": 0.00012821292330045253,
+        "insult": 0.0003006596234627068,
+        "identity_hate": 0.00016556655464228243
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_6",
+      "text": "Whata bout IFunny?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.001413840800523758,
+        "severe_toxic": 9.444171882933006e-05,
+        "obscene": 0.00018137189908884466,
+        "threat": 0.00010756844858406112,
+        "insult": 0.00019655149662867188,
+        "identity_hate": 0.00015269522555172443
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_7",
+      "text": "Yes",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0009408519836142659,
+        "severe_toxic": 0.0001122151588788256,
+        "obscene": 0.0002041591505985707,
+        "threat": 0.00010002688941312954,
+        "insult": 0.00018620195623952895,
+        "identity_hate": 0.0001466468966100365
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_8",
+      "text": "And Instagram is straight up GODHOOD of racism",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.315879762172699,
+        "severe_toxic": 0.0006723243277519941,
+        "obscene": 0.005405156407505274,
+        "threat": 0.001264101010747254,
+        "insult": 0.00549636734649539,
+        "identity_hate": 0.015926670283079147
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_9",
+      "text": "Honey I think our role plays are getting a little too elaborate.\n\nLike it was fun at first but can’t we just like pretend we don’t know each other and meet at a bar?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006935630808584392,
+        "severe_toxic": 0.00011631895904429257,
+        "obscene": 0.00017536642553750426,
+        "threat": 0.00011954030924243852,
+        "insult": 0.00017920011305250227,
+        "identity_hate": 0.00014379005006048828
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_10",
+      "text": "Best way to deal with the fire would be to shut the oven door and that apron looks highly flamable and totally unsuitable for use near flames",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.04792578145861626,
+        "severe_toxic": 0.00016112721641547978,
+        "obscene": 0.0007826041546650231,
+        "threat": 0.0007832342525944114,
+        "insult": 0.0013923946535214782,
+        "identity_hate": 0.0005667076911777258
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_11",
+      "text": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0018221447244286537,
+        "severe_toxic": 9.750616300152615e-05,
+        "obscene": 0.0002619994047563523,
+        "threat": 0.00011045760766137391,
+        "insult": 0.00021730312437284738,
+        "identity_hate": 0.00014948633906897157
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+          "normalized_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+          "final_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: redd.it",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_12",
+      "text": "Even worse, it could be starring your mother",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, no evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.7749817371368408,
+        "severe_toxic": 0.0012510874075815082,
+        "obscene": 0.025912867859005928,
+        "threat": 0.0032388961408287287,
+        "insult": 0.1749623417854309,
+        "identity_hate": 0.004912087693810463
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_13",
+      "text": "Or she could just pee on it. That wouldn't be porn right?",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.3677093982696533,
+        "severe_toxic": 0.0006890416843816638,
+        "obscene": 0.023974211886525154,
+        "threat": 0.0007325089536607265,
+        "insult": 0.00556145329028368,
+        "identity_hate": 0.0011906838044524193
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_14",
+      "text": "Depends if someone is in the fire, they'd be getting a golden shower",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.004512803629040718,
+        "severe_toxic": 9.580996993463486e-05,
+        "obscene": 0.00028534812736324966,
+        "threat": 0.00015347384032793343,
+        "insult": 0.00026973491185344756,
+        "identity_hate": 0.00019917686586268246
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_15",
+      "text": "A modest proposal.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0005803646054118872,
+        "severe_toxic": 0.00013331446098163724,
+        "obscene": 0.000199682850507088,
+        "threat": 0.0001232717913808301,
+        "insult": 0.00018663764058146626,
+        "identity_hate": 0.00014644874318037182
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_16",
+      "text": "It practically already is even without taking off the apron",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0011238722363486886,
+        "severe_toxic": 0.00010550851584412158,
+        "obscene": 0.00020526173466350883,
+        "threat": 0.00010037526953965425,
+        "insult": 0.0001854788133641705,
+        "identity_hate": 0.00013947598927188665
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_17",
+      "text": "If you think that's porn you need to update your education.",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, no evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.7534053921699524,
+        "severe_toxic": 0.001681249006651342,
+        "obscene": 0.07827986031770706,
+        "threat": 0.0012673716992139816,
+        "insult": 0.029091060161590576,
+        "identity_hate": 0.003520222380757332
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_18",
+      "text": "𝑒𝓇𝑜𝓉𝒾𝒸𝒶",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.005230684764683247,
+        "severe_toxic": 0.00010386243229731917,
+        "obscene": 0.00037949197576381266,
+        "threat": 0.00011249703675275669,
+        "insult": 0.00028160118381492794,
+        "identity_hate": 0.00017145034507848322
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_19",
+      "text": "What is an apron?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0009502345928922296,
+        "severe_toxic": 0.00010173193732043728,
+        "obscene": 0.00018194418225903064,
+        "threat": 0.00010401051258668303,
+        "insult": 0.00017958873650059104,
+        "identity_hate": 0.00013583774853032082
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_20",
+      "text": "The thing cooks put on so they don't get their clothes dirty. It looks like one on the woman. Also, as with most things at this point, some people have kink/fetish for them.\n\nEdit:Okay most of them are much bigger than what is in the picture.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.03523556515574455,
+        "severe_toxic": 0.00016793946269899607,
+        "obscene": 0.0014802055666223168,
+        "threat": 0.00021791207836940885,
+        "insult": 0.0012832718202844262,
+        "identity_hate": 0.0005054447683505714
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_21",
+      "text": "That apron is terrible, it does not cover the midsection and upper legs where you are most likely to make contact with surfaces and spills.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.013020348735153675,
+        "severe_toxic": 0.0001177662707050331,
+        "obscene": 0.0004272524965927005,
+        "threat": 0.00034154404420405626,
+        "insult": 0.0005537159740924835,
+        "identity_hate": 0.00031916736043058336
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_22",
+      "text": "Got the joke?? She's hot so she should be naked!!",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, no evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.7745118141174316,
+        "severe_toxic": 0.0027621001936495304,
+        "obscene": 0.03486335277557373,
+        "threat": 0.006161836441606283,
+        "insult": 0.025873541831970215,
+        "identity_hate": 0.017086470499634743
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_23",
+      "text": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b\n\nTo the person who created that trash",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.2228703498840332,
+        "severe_toxic": 0.0002986518375109881,
+        "obscene": 0.011057879775762558,
+        "threat": 0.0003373624640516937,
+        "insult": 0.010971481911838055,
+        "identity_hate": 0.0006522925687022507
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+          "normalized_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+          "final_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: redd.it",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_24",
+      "text": "“Peter that’s not a meme, that’s..that’s just porn Peter”",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, unverifiable evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "Yes",
+      "evidence_verified": "No",
+      "toxicity_scores": {
+        "toxic": 0.5856311321258545,
+        "severe_toxic": 0.00158774817828089,
+        "obscene": 0.134008526802063,
+        "threat": 0.0008061754051595926,
+        "insult": 0.017643528059124947,
+        "identity_hate": 0.0023461729288101196
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Unverified",
+      "evidence_urls": [
+        "https://s..that"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://s..that",
+          "normalized_url": "https://s..that",
+          "final_url": null,
+          "domain": "s..that",
+          "ips": [],
+          "public_dns_ok": false,
+          "http_ok": null,
+          "status": null,
+          "content_type": null,
+          "category": null,
+          "confidence": 0.0,
+          "verified": false,
+          "reason": "invalid_domain_encoding:encoding with 'idna' codec failed (UnicodeError: label empty or too long)",
+          "signals": {}
+        }
+      ],
+      "evidence_TL3_detail": "Unverified source: s..that",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_25",
+      "text": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.001415943494066596,
+        "severe_toxic": 9.719461377244443e-05,
+        "obscene": 0.00022444568458013237,
+        "threat": 0.00010543609823798761,
+        "insult": 0.0001985316484933719,
+        "identity_hate": 0.000141792930662632
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+          "normalized_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+          "final_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: redd.it",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_26",
+      "text": "she's got impressively fit legs, that shit takes time to accomplish.",
+      "TL1_badge": "🔴",
+      "TL2_tooltip": "Strong language, no evidence",
+      "toxicity_level": "Toxic",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.9465899467468262,
+        "severe_toxic": 0.020710067823529243,
+        "obscene": 0.8567261099815369,
+        "threat": 0.0011347347171977162,
+        "insult": 0.15323421359062195,
+        "identity_hate": 0.00215163710527122
+      },
+      "toxicity_predictions": {
+        "toxic": 1,
+        "severe_toxic": 0,
+        "obscene": 1,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "Opinion only; no evidence detected",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_27",
+      "text": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0018961464520543814,
+        "severe_toxic": 9.648550621932372e-05,
+        "obscene": 0.00026169855846092105,
+        "threat": 0.00011164243915118277,
+        "insult": 0.00021979802113492042,
+        "identity_hate": 0.00014975783415138721
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+          "normalized_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+          "final_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+          "domain": "redd.it",
+          "ips": [
+            "199.232.65.140",
+            "2a04:4e42:50::396"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "image/jpeg",
+          "category": "website",
+          "confidence": 0.5,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "content_type": "image/jpeg"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified source: redd.it",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    }
+  ],
+  "raw_data": {
+    "toxicity": {
+      "labels": [
+        "toxic",
+        "severe_toxic",
+        "obscene",
+        "threat",
+        "insult",
+        "identity_hate"
+      ],
+      "probabilities": [
+        [
+          0.32398006319999695,
+          0.0012840720592066646,
+          0.1680440753698349,
+          0.0007160112727433443,
+          0.013140741735696793,
+          0.0008993384544737637
+        ],
+        [
+          0.0015195850282907486,
+          9.898599091684446e-05,
+          0.0002429774176562205,
+          0.00011249896488152444,
+          0.00020675711857620627,
+          0.00014562340220436454
+        ],
+        [
+          0.06446108967065811,
+          0.00014581279538106173,
+          0.0013522362569347024,
+          0.00022918898321222514,
+          0.0017921430990099907,
+          0.0005831000744365156
+        ],
+        [
+          0.35179823637008667,
+          0.0005097363027743995,
+          0.0031421922612935305,
+          0.0011080533731728792,
+          0.007471664343029261,
+          0.013930542394518852
+        ],
+        [
+          0.0047467672266066074,
+          9.126655641011894e-05,
+          0.00034063629573211074,
+          9.301678073825315e-05,
+          0.0002891128824558109,
+          0.0001673336373642087
+        ],
+        [
+          0.005492094438523054,
+          9.349859465146437e-05,
+          0.00040207779966294765,
+          0.00012821292330045253,
+          0.0003006596234627068,
+          0.00016556655464228243
+        ],
+        [
+          0.001413840800523758,
+          9.444171882933006e-05,
+          0.00018137189908884466,
+          0.00010756844858406112,
+          0.00019655149662867188,
+          0.00015269522555172443
+        ],
+        [
+          0.0009408519836142659,
+          0.0001122151588788256,
+          0.0002041591505985707,
+          0.00010002688941312954,
+          0.00018620195623952895,
+          0.0001466468966100365
+        ],
+        [
+          0.315879762172699,
+          0.0006723243277519941,
+          0.005405156407505274,
+          0.001264101010747254,
+          0.00549636734649539,
+          0.015926670283079147
+        ],
+        [
+          0.0006935630808584392,
+          0.00011631895904429257,
+          0.00017536642553750426,
+          0.00011954030924243852,
+          0.00017920011305250227,
+          0.00014379005006048828
+        ],
+        [
+          0.04792578145861626,
+          0.00016112721641547978,
+          0.0007826041546650231,
+          0.0007832342525944114,
+          0.0013923946535214782,
+          0.0005667076911777258
+        ],
+        [
+          0.0018221447244286537,
+          9.750616300152615e-05,
+          0.0002619994047563523,
+          0.00011045760766137391,
+          0.00021730312437284738,
+          0.00014948633906897157
+        ],
+        [
+          0.7749817371368408,
+          0.0012510874075815082,
+          0.025912867859005928,
+          0.0032388961408287287,
+          0.1749623417854309,
+          0.004912087693810463
+        ],
+        [
+          0.3677093982696533,
+          0.0006890416843816638,
+          0.023974211886525154,
+          0.0007325089536607265,
+          0.00556145329028368,
+          0.0011906838044524193
+        ],
+        [
+          0.004512803629040718,
+          9.580996993463486e-05,
+          0.00028534812736324966,
+          0.00015347384032793343,
+          0.00026973491185344756,
+          0.00019917686586268246
+        ],
+        [
+          0.0005803646054118872,
+          0.00013331446098163724,
+          0.000199682850507088,
+          0.0001232717913808301,
+          0.00018663764058146626,
+          0.00014644874318037182
+        ],
+        [
+          0.0011238722363486886,
+          0.00010550851584412158,
+          0.00020526173466350883,
+          0.00010037526953965425,
+          0.0001854788133641705,
+          0.00013947598927188665
+        ],
+        [
+          0.7534053921699524,
+          0.001681249006651342,
+          0.07827986031770706,
+          0.0012673716992139816,
+          0.029091060161590576,
+          0.003520222380757332
+        ],
+        [
+          0.005230684764683247,
+          0.00010386243229731917,
+          0.00037949197576381266,
+          0.00011249703675275669,
+          0.00028160118381492794,
+          0.00017145034507848322
+        ],
+        [
+          0.0009502345928922296,
+          0.00010173193732043728,
+          0.00018194418225903064,
+          0.00010401051258668303,
+          0.00017958873650059104,
+          0.00013583774853032082
+        ],
+        [
+          0.03523556515574455,
+          0.00016793946269899607,
+          0.0014802055666223168,
+          0.00021791207836940885,
+          0.0012832718202844262,
+          0.0005054447683505714
+        ],
+        [
+          0.013020348735153675,
+          0.0001177662707050331,
+          0.0004272524965927005,
+          0.00034154404420405626,
+          0.0005537159740924835,
+          0.00031916736043058336
+        ],
+        [
+          0.7745118141174316,
+          0.0027621001936495304,
+          0.03486335277557373,
+          0.006161836441606283,
+          0.025873541831970215,
+          0.017086470499634743
+        ],
+        [
+          0.2228703498840332,
+          0.0002986518375109881,
+          0.011057879775762558,
+          0.0003373624640516937,
+          0.010971481911838055,
+          0.0006522925687022507
+        ],
+        [
+          0.5856311321258545,
+          0.00158774817828089,
+          0.134008526802063,
+          0.0008061754051595926,
+          0.017643528059124947,
+          0.0023461729288101196
+        ],
+        [
+          0.001415943494066596,
+          9.719461377244443e-05,
+          0.00022444568458013237,
+          0.00010543609823798761,
+          0.0001985316484933719,
+          0.000141792930662632
+        ],
+        [
+          0.9465899467468262,
+          0.020710067823529243,
+          0.8567261099815369,
+          0.0011347347171977162,
+          0.15323421359062195,
+          0.00215163710527122
+        ],
+        [
+          0.0018961464520543814,
+          9.648550621932372e-05,
+          0.00026169855846092105,
+          0.00011164243915118277,
+          0.00021979802113492042,
+          0.00014975783415138721
+        ]
+      ],
+      "predictions": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "badge_colors": [
+        "yellow",
+        "green",
+        "green",
+        "yellow",
+        "green",
+        "green",
+        "green",
+        "green",
+        "yellow",
+        "green",
+        "green",
+        "green",
+        "red",
+        "yellow",
+        "green",
+        "green",
+        "green",
+        "red",
+        "green",
+        "green",
+        "green",
+        "green",
+        "red",
+        "green",
+        "red",
+        "green",
+        "red",
+        "green"
+      ],
+      "detailed": [
+        {
+          "text": "Welcome to r/terriblefacebookmemes! It sucks, but it is ours.\n\n [Please click on this link to be informed of a critical change in our rules.](https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/)\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/terriblefacebookmemes) if you have any questions or concerns.*",
+          "scores": {
+            "toxic": 0.32398006319999695,
+            "severe_toxic": 0.0012840720592066646,
+            "obscene": 0.1680440753698349,
+            "threat": 0.0007160112727433443,
+            "insult": 0.013140741735696793,
+            "identity_hate": 0.0008993384544737637
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+          "scores": {
+            "toxic": 0.0015195850282907486,
+            "severe_toxic": 9.898599091684446e-05,
+            "obscene": 0.0002429774176562205,
+            "threat": 0.00011249896488152444,
+            "insult": 0.00020675711857620627,
+            "identity_hate": 0.00014562340220436454
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I thought twitter was the racist app...",
+          "scores": {
+            "toxic": 0.06446108967065811,
+            "severe_toxic": 0.00014581279538106173,
+            "obscene": 0.0013522362569347024,
+            "threat": 0.00022918898321222514,
+            "insult": 0.0017921430990099907,
+            "identity_hate": 0.0005831000744365156
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Reddit is casual racism and Twitter is competitive racism",
+          "scores": {
+            "toxic": 0.35179823637008667,
+            "severe_toxic": 0.0005097363027743995,
+            "obscene": 0.0031421922612935305,
+            "threat": 0.0011080533731728792,
+            "insult": 0.007471664343029261,
+            "identity_hate": 0.013930542394518852
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "4chan is the Olympics",
+          "scores": {
+            "toxic": 0.0047467672266066074,
+            "severe_toxic": 9.126655641011894e-05,
+            "obscene": 0.00034063629573211074,
+            "threat": 9.301678073825315e-05,
+            "insult": 0.0002891128824558109,
+            "identity_hate": 0.0001673336373642087
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Facebook is the hall of fame",
+          "scores": {
+            "toxic": 0.005492094438523054,
+            "severe_toxic": 9.349859465146437e-05,
+            "obscene": 0.00040207779966294765,
+            "threat": 0.00012821292330045253,
+            "insult": 0.0003006596234627068,
+            "identity_hate": 0.00016556655464228243
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Whata bout IFunny?",
+          "scores": {
+            "toxic": 0.001413840800523758,
+            "severe_toxic": 9.444171882933006e-05,
+            "obscene": 0.00018137189908884466,
+            "threat": 0.00010756844858406112,
+            "insult": 0.00019655149662867188,
+            "identity_hate": 0.00015269522555172443
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Yes",
+          "scores": {
+            "toxic": 0.0009408519836142659,
+            "severe_toxic": 0.0001122151588788256,
+            "obscene": 0.0002041591505985707,
+            "threat": 0.00010002688941312954,
+            "insult": 0.00018620195623952895,
+            "identity_hate": 0.0001466468966100365
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "And Instagram is straight up GODHOOD of racism",
+          "scores": {
+            "toxic": 0.315879762172699,
+            "severe_toxic": 0.0006723243277519941,
+            "obscene": 0.005405156407505274,
+            "threat": 0.001264101010747254,
+            "insult": 0.00549636734649539,
+            "identity_hate": 0.015926670283079147
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "Honey I think our role plays are getting a little too elaborate.\n\nLike it was fun at first but can’t we just like pretend we don’t know each other and meet at a bar?",
+          "scores": {
+            "toxic": 0.0006935630808584392,
+            "severe_toxic": 0.00011631895904429257,
+            "obscene": 0.00017536642553750426,
+            "threat": 0.00011954030924243852,
+            "insult": 0.00017920011305250227,
+            "identity_hate": 0.00014379005006048828
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Best way to deal with the fire would be to shut the oven door and that apron looks highly flamable and totally unsuitable for use near flames",
+          "scores": {
+            "toxic": 0.04792578145861626,
+            "severe_toxic": 0.00016112721641547978,
+            "obscene": 0.0007826041546650231,
+            "threat": 0.0007832342525944114,
+            "insult": 0.0013923946535214782,
+            "identity_hate": 0.0005667076911777258
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+          "scores": {
+            "toxic": 0.0018221447244286537,
+            "severe_toxic": 9.750616300152615e-05,
+            "obscene": 0.0002619994047563523,
+            "threat": 0.00011045760766137391,
+            "insult": 0.00021730312437284738,
+            "identity_hate": 0.00014948633906897157
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Even worse, it could be starring your mother",
+          "scores": {
+            "toxic": 0.7749817371368408,
+            "severe_toxic": 0.0012510874075815082,
+            "obscene": 0.025912867859005928,
+            "threat": 0.0032388961408287287,
+            "insult": 0.1749623417854309,
+            "identity_hate": 0.004912087693810463
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "Or she could just pee on it. That wouldn't be porn right?",
+          "scores": {
+            "toxic": 0.3677093982696533,
+            "severe_toxic": 0.0006890416843816638,
+            "obscene": 0.023974211886525154,
+            "threat": 0.0007325089536607265,
+            "insult": 0.00556145329028368,
+            "identity_hate": 0.0011906838044524193
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "Depends if someone is in the fire, they'd be getting a golden shower",
+          "scores": {
+            "toxic": 0.004512803629040718,
+            "severe_toxic": 9.580996993463486e-05,
+            "obscene": 0.00028534812736324966,
+            "threat": 0.00015347384032793343,
+            "insult": 0.00026973491185344756,
+            "identity_hate": 0.00019917686586268246
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "A modest proposal.",
+          "scores": {
+            "toxic": 0.0005803646054118872,
+            "severe_toxic": 0.00013331446098163724,
+            "obscene": 0.000199682850507088,
+            "threat": 0.0001232717913808301,
+            "insult": 0.00018663764058146626,
+            "identity_hate": 0.00014644874318037182
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "It practically already is even without taking off the apron",
+          "scores": {
+            "toxic": 0.0011238722363486886,
+            "severe_toxic": 0.00010550851584412158,
+            "obscene": 0.00020526173466350883,
+            "threat": 0.00010037526953965425,
+            "insult": 0.0001854788133641705,
+            "identity_hate": 0.00013947598927188665
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "If you think that's porn you need to update your education.",
+          "scores": {
+            "toxic": 0.7534053921699524,
+            "severe_toxic": 0.001681249006651342,
+            "obscene": 0.07827986031770706,
+            "threat": 0.0012673716992139816,
+            "insult": 0.029091060161590576,
+            "identity_hate": 0.003520222380757332
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "𝑒𝓇𝑜𝓉𝒾𝒸𝒶",
+          "scores": {
+            "toxic": 0.005230684764683247,
+            "severe_toxic": 0.00010386243229731917,
+            "obscene": 0.00037949197576381266,
+            "threat": 0.00011249703675275669,
+            "insult": 0.00028160118381492794,
+            "identity_hate": 0.00017145034507848322
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "What is an apron?",
+          "scores": {
+            "toxic": 0.0009502345928922296,
+            "severe_toxic": 0.00010173193732043728,
+            "obscene": 0.00018194418225903064,
+            "threat": 0.00010401051258668303,
+            "insult": 0.00017958873650059104,
+            "identity_hate": 0.00013583774853032082
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "The thing cooks put on so they don't get their clothes dirty. It looks like one on the woman. Also, as with most things at this point, some people have kink/fetish for them.\n\nEdit:Okay most of them are much bigger than what is in the picture.",
+          "scores": {
+            "toxic": 0.03523556515574455,
+            "severe_toxic": 0.00016793946269899607,
+            "obscene": 0.0014802055666223168,
+            "threat": 0.00021791207836940885,
+            "insult": 0.0012832718202844262,
+            "identity_hate": 0.0005054447683505714
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "That apron is terrible, it does not cover the midsection and upper legs where you are most likely to make contact with surfaces and spills.",
+          "scores": {
+            "toxic": 0.013020348735153675,
+            "severe_toxic": 0.0001177662707050331,
+            "obscene": 0.0004272524965927005,
+            "threat": 0.00034154404420405626,
+            "insult": 0.0005537159740924835,
+            "identity_hate": 0.00031916736043058336
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Got the joke?? She's hot so she should be naked!!",
+          "scores": {
+            "toxic": 0.7745118141174316,
+            "severe_toxic": 0.0027621001936495304,
+            "obscene": 0.03486335277557373,
+            "threat": 0.006161836441606283,
+            "insult": 0.025873541831970215,
+            "identity_hate": 0.017086470499634743
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b\n\nTo the person who created that trash",
+          "scores": {
+            "toxic": 0.2228703498840332,
+            "severe_toxic": 0.0002986518375109881,
+            "obscene": 0.011057879775762558,
+            "threat": 0.0003373624640516937,
+            "insult": 0.010971481911838055,
+            "identity_hate": 0.0006522925687022507
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "“Peter that’s not a meme, that’s..that’s just porn Peter”",
+          "scores": {
+            "toxic": 0.5856311321258545,
+            "severe_toxic": 0.00158774817828089,
+            "obscene": 0.134008526802063,
+            "threat": 0.0008061754051595926,
+            "insult": 0.017643528059124947,
+            "identity_hate": 0.0023461729288101196
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+          "scores": {
+            "toxic": 0.001415943494066596,
+            "severe_toxic": 9.719461377244443e-05,
+            "obscene": 0.00022444568458013237,
+            "threat": 0.00010543609823798761,
+            "insult": 0.0001985316484933719,
+            "identity_hate": 0.000141792930662632
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "she's got impressively fit legs, that shit takes time to accomplish.",
+          "scores": {
+            "toxic": 0.9465899467468262,
+            "severe_toxic": 0.020710067823529243,
+            "obscene": 0.8567261099815369,
+            "threat": 0.0011347347171977162,
+            "insult": 0.15323421359062195,
+            "identity_hate": 0.00215163710527122
+          },
+          "predictions": {
+            "toxic": 1,
+            "severe_toxic": 0,
+            "obscene": 1,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "red"
+        },
+        {
+          "text": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+          "scores": {
+            "toxic": 0.0018961464520543814,
+            "severe_toxic": 9.648550621932372e-05,
+            "obscene": 0.00026169855846092105,
+            "threat": 0.00011164243915118277,
+            "insult": 0.00021979802113492042,
+            "identity_hate": 0.00014975783415138721
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "comment_id": "comment_0",
+        "text": "Welcome to r/terriblefacebookmemes! It sucks, but it is ours.\n\n [Please click on this link to be informed of a critical change in our rules.](https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/)\n\n\n*I am a bot, and this action was performed automatically. Please [contact the moderators of this subreddit](/message/compose/?to=/r/terriblefacebookmemes) if you have any questions or concerns.*",
+        "urls": [
+          "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+            "normalized_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+            "final_url": "https://www.reddit.com/r/terriblefacebookmemes/comments/126zu46/return_to_our_roots/",
+            "domain": "reddit.com",
+            "ips": [
+              "199.232.65.140"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: reddit.com"
+      },
+      {
+        "comment_id": "comment_1",
+        "text": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+        "urls": [
+          "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+            "normalized_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+            "final_url": "https://preview.redd.it/83rcz60qx2mc1.jpeg?width=1125&format=pjpg&auto=webp&s=c1ec64f171578cdd10360a66c4081a0f36b283e0",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: redd.it"
+      },
+      {
+        "comment_id": "comment_2",
+        "text": "I thought twitter was the racist app...",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_3",
+        "text": "Reddit is casual racism and Twitter is competitive racism",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_4",
+        "text": "4chan is the Olympics",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_5",
+        "text": "Facebook is the hall of fame",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_6",
+        "text": "Whata bout IFunny?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_7",
+        "text": "Yes",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_8",
+        "text": "And Instagram is straight up GODHOOD of racism",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_9",
+        "text": "Honey I think our role plays are getting a little too elaborate.\n\nLike it was fun at first but can’t we just like pretend we don’t know each other and meet at a bar?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_10",
+        "text": "Best way to deal with the fire would be to shut the oven door and that apron looks highly flamable and totally unsuitable for use near flames",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_11",
+        "text": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+        "urls": [
+          "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+            "normalized_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+            "final_url": "https://preview.redd.it/jn6hxzgoj6mc1.jpeg?width=828&format=pjpg&auto=webp&s=bfdfb55c9bc2129f709f84339af9438d2b359a75",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: redd.it"
+      },
+      {
+        "comment_id": "comment_12",
+        "text": "Even worse, it could be starring your mother",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_13",
+        "text": "Or she could just pee on it. That wouldn't be porn right?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_14",
+        "text": "Depends if someone is in the fire, they'd be getting a golden shower",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_15",
+        "text": "A modest proposal.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_16",
+        "text": "It practically already is even without taking off the apron",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_17",
+        "text": "If you think that's porn you need to update your education.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_18",
+        "text": "𝑒𝓇𝑜𝓉𝒾𝒸𝒶",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_19",
+        "text": "What is an apron?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_20",
+        "text": "The thing cooks put on so they don't get their clothes dirty. It looks like one on the woman. Also, as with most things at this point, some people have kink/fetish for them.\n\nEdit:Okay most of them are much bigger than what is in the picture.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_21",
+        "text": "That apron is terrible, it does not cover the midsection and upper legs where you are most likely to make contact with surfaces and spills.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_22",
+        "text": "Got the joke?? She's hot so she should be naked!!",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_23",
+        "text": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b\n\nTo the person who created that trash",
+        "urls": [
+          "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+            "normalized_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+            "final_url": "https://preview.redd.it/wpprrf9lremc1.jpeg?width=750&format=pjpg&auto=webp&s=cf58d21e8b67eae3649b1c4f52086223ce9cfe5b",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: redd.it"
+      },
+      {
+        "comment_id": "comment_24",
+        "text": "“Peter that’s not a meme, that’s..that’s just porn Peter”",
+        "urls": [
+          "https://s..that"
+        ],
+        "status": "Unverified",
+        "evidence_present": true,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://s..that",
+            "normalized_url": "https://s..that",
+            "final_url": null,
+            "domain": "s..that",
+            "ips": [],
+            "public_dns_ok": false,
+            "http_ok": null,
+            "status": null,
+            "content_type": null,
+            "category": null,
+            "confidence": 0.0,
+            "verified": false,
+            "reason": "invalid_domain_encoding:encoding with 'idna' codec failed (UnicodeError: label empty or too long)",
+            "signals": {}
+          }
+        ],
+        "TL2_tooltip": "Unverified source ⚠️",
+        "TL3_detail": "Unverified source: s..that"
+      },
+      {
+        "comment_id": "comment_25",
+        "text": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+        "urls": [
+          "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+            "normalized_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+            "final_url": "https://preview.redd.it/p8d1kspbvyed1.png?width=720&format=pjpg&auto=webp&s=ecc4612cdacc41a81714209a604af35cf178a57b",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: redd.it"
+      },
+      {
+        "comment_id": "comment_26",
+        "text": "she's got impressively fit legs, that shit takes time to accomplish.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence detected",
+        "TL3_detail": "Opinion only; no evidence detected"
+      },
+      {
+        "comment_id": "comment_27",
+        "text": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+        "urls": [
+          "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+            "normalized_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+            "final_url": "https://preview.redd.it/sh2mslat7bmc1.jpeg?width=750&format=pjpg&auto=webp&s=e3bca54dbc41006f7036e82be64f95eb98b179db",
+            "domain": "redd.it",
+            "ips": [
+              "199.232.65.140",
+              "2a04:4e42:50::396"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "image/jpeg",
+            "category": "website",
+            "confidence": 0.5,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "content_type": "image/jpeg"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verified source",
+        "TL3_detail": "Verified source: redd.it"
+      }
+    ]
+  },
+  "performance_metrics": {
+    "timestamp": "2025-11-16T17:03:36.477809",
+    "session_duration_seconds": 0.0,
+    "total_comments_processed": 0,
+    "total_urls_verified": 0,
+    "successful_verifications": 0,
+    "failed_verifications": 0,
+    "verification_success_rate": 0,
+    "overall_throughput_comments_per_sec": 0.0,
+    "operations": {
+      "pattern_detection": {
+        "operation": "pattern_detection",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_extraction": {
+        "operation": "url_extraction",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_verification": {
+        "operation": "url_verification",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "full_analysis": {
+        "operation": "full_analysis",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      }
+    }
+  }
+}

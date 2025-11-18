@@ -1,0 +1,3812 @@
+{
+  "source_filename": "What is the best coding bootcamp to attend in 2025?",
+  "total_comments": 39,
+  "summary": {
+    "toxicity": {
+      "toxic": 0,
+      "mild": 1,
+      "neutral": 38
+    },
+    "evidence": {
+      "verified": 2,
+      "unverified": 0,
+      "partial": 0,
+      "none": 37
+    }
+  },
+  "comments": [
+    {
+      "comment_id": "comment_0",
+      "text": "You're not getting into tech with a boot camp in 2025; you need to look at getting a CS degree.  And in the current market, even a degree isn't going to get you in the field immediately; it'll just give you a fighting chance.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0017086440930142999,
+        "severe_toxic": 9.147271339315921e-05,
+        "obscene": 0.00017228959768544883,
+        "threat": 0.00011598414130276069,
+        "insult": 0.00023617995611857623,
+        "identity_hate": 0.000165064018801786
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_1",
+      "text": "Coding boot camp is a joke.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.008577294647693634,
+        "severe_toxic": 0.00010749696957645938,
+        "obscene": 0.0006120676407590508,
+        "threat": 0.00011407984857214615,
+        "insult": 0.00042534840758889914,
+        "identity_hate": 0.00018618350441101938
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_2",
+      "text": "why is that",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0016479878686368465,
+        "severe_toxic": 0.00010331411613151431,
+        "obscene": 0.00021630445553455502,
+        "threat": 9.662315278546885e-05,
+        "insult": 0.00021317759819794446,
+        "identity_hate": 0.0001585490972502157
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_3",
+      "text": "Good luck getting into tech \" immediately\" but start with learning python",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006441044388338923,
+        "severe_toxic": 0.00012469770445022732,
+        "obscene": 0.00016896131273824722,
+        "threat": 0.00013991583546157926,
+        "insult": 0.00018125641508959234,
+        "identity_hate": 0.00014557385293301195
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_4",
+      "text": "Why Python???",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0013911763671785593,
+        "severe_toxic": 9.369245526613668e-05,
+        "obscene": 0.00019087904365733266,
+        "threat": 0.00010207942978013307,
+        "insult": 0.00018816342344507575,
+        "identity_hate": 0.00014808762352913618
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_5",
+      "text": "[deleted]",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006795766530558467,
+        "severe_toxic": 0.00011499355605337769,
+        "obscene": 0.00018223727238364518,
+        "threat": 0.00011343560618115589,
+        "insult": 0.00018161798652727157,
+        "identity_hate": 0.00013843851047568023
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_6",
+      "text": "Where did you hear that?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007529892609454691,
+        "severe_toxic": 0.00011250015086261556,
+        "obscene": 0.00017984083388000727,
+        "threat": 0.00010620380635373294,
+        "insult": 0.0001787657820386812,
+        "identity_hate": 0.00013768652570433915
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_7",
+      "text": "lol please be serious",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0016314579406753182,
+        "severe_toxic": 9.131435217568651e-05,
+        "obscene": 0.00018172366253565997,
+        "threat": 9.724793198984116e-05,
+        "insult": 0.000208340075914748,
+        "identity_hate": 0.00015406604507006705
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_8",
+      "text": "I don't think there is a good coding bootcamp (in the classic sense) at this time.\n\nBut depending on your background - there are some other options. It also depends what your expectations of \"getting into the field immediately\" are. Give us more info and I can give you some good options/paths.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0005308846011757851,
+        "severe_toxic": 0.00013561281957663596,
+        "obscene": 0.00018804809951689094,
+        "threat": 0.00013838084123563021,
+        "insult": 0.0001780514867277816,
+        "identity_hate": 0.00014538850518874824
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_9",
+      "text": "I am 25 years old and I was studying finance in college but I left as a third year junior student and it's too late to switch to a CS degree unfortunately. I don't have much experience in tech as well and not in any career as of yet.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007010003319010139,
+        "severe_toxic": 0.0001170056639239192,
+        "obscene": 0.00017708369705360383,
+        "threat": 0.00012084250192856416,
+        "insult": 0.00018045832985080779,
+        "identity_hate": 0.00014363574155140668
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_10",
+      "text": "I'm looking for a lot more information than that. What makes you think a coding boot camp is a good fit for you? What type of job are you trying to get (specifically)? and why --- and how do your current skills and experience fit in -?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007160200621001422,
+        "severe_toxic": 0.00011558103142306209,
+        "obscene": 0.0001722008892102167,
+        "threat": 0.00012708871508948505,
+        "insult": 0.00018555045244283974,
+        "identity_hate": 0.0001397928863298148
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_11",
+      "text": "To be perfectly honest, you'd be better off finishing that degree. Preferably get at least a CS minor if possible.\n\n\nBootcamp is no longer a viable path to get an entry-level tech job in 2025. Even back when it was, most employers still want at least an undergrad degree (even if unrelated) to take a chance on you. Getting a job in tech with just bootcamp and no degree or prior tech experience is already tough back then; today the chances are slim to none I'm afraid",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007428928511217237,
+        "severe_toxic": 0.00011266127694398165,
+        "obscene": 0.0001675848034210503,
+        "threat": 0.00013084600504953414,
+        "insult": 0.0001882443466456607,
+        "identity_hate": 0.0001429272087989375
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_12",
+      "text": "None. You’re better off getting a CS degree. The era of bootcamps is pretty much dead, and those getting jobs are either very lucky or have previous CS experience",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.01096173282712698,
+        "severe_toxic": 8.663915650686249e-05,
+        "obscene": 0.0003792567295022309,
+        "threat": 0.00015089653606992215,
+        "insult": 0.0007631766493432224,
+        "identity_hate": 0.00023850463912822306
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_13",
+      "text": "Focus on AI, problem solving, and business analysis. The webdev bootcamp train left around 2021.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006087857182137668,
+        "severe_toxic": 0.00012466596672311425,
+        "obscene": 0.00017867443966679275,
+        "threat": 0.0001301178999710828,
+        "insult": 0.00018425042799208313,
+        "identity_hate": 0.00014470817404799163
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_14",
+      "text": "Probably Launch School, but I do not know Launch School's latest outcomes statistics.\n\nGet a CS degree.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0032208445481956005,
+        "severe_toxic": 8.434277697233483e-05,
+        "obscene": 0.00023769510153215379,
+        "threat": 0.00011742459173547104,
+        "insult": 0.0002745551464613527,
+        "identity_hate": 0.00016114073514472693
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_15",
+      "text": "Launch School. But you won’t start in 2025. It’s a deliberately slow program to turn you into a software engineer vs. some bootcamp that won’t get you a job in 2025.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0010676764650270343,
+        "severe_toxic": 9.913410758599639e-05,
+        "obscene": 0.00017500996182207018,
+        "threat": 0.00011575686221476644,
+        "insult": 0.00020736857550218701,
+        "identity_hate": 0.00013954410678707063
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_16",
+      "text": "What's your background with programming, and your past career and professional work experience?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006406856700778008,
+        "severe_toxic": 0.00012837919348385185,
+        "obscene": 0.00018253222515340894,
+        "threat": 0.00013353493704926223,
+        "insult": 0.0001980557426577434,
+        "identity_hate": 0.00015000592975411564
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_17",
+      "text": "I actually don't have much experience in programming. I was studying a different degree in college and I don't have time to switch to a CS degree, unfortunately. That degree was finance. I only have experience in minimum wage jobs for now. I left college as an upper junior in finance and I don't have much time to switch as it might take up financial aid.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0005936679663136601,
+        "severe_toxic": 0.0001265925820916891,
+        "obscene": 0.0001839653414208442,
+        "threat": 0.0001300953299505636,
+        "insult": 0.0001805600622901693,
+        "identity_hate": 0.00014420719526242465
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_18",
+      "text": "Could consider finishing out your finance degree and minoring in  CS. Fintech is a great field to get into",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006293556652963161,
+        "severe_toxic": 0.00012958029401488602,
+        "obscene": 0.00018151239783037454,
+        "threat": 0.0001437585160601884,
+        "insult": 0.00019699071708600968,
+        "identity_hate": 0.00015644097584299743
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_19",
+      "text": "Yeah would consider trying to have a job leveraging your strengths but in tech or a tech company to try to bridge the gap, and learn on the job or leverage internal resources to learn programming.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006151235429570079,
+        "severe_toxic": 0.00012384983710944653,
+        "obscene": 0.00017714568821247667,
+        "threat": 0.00013194205530453473,
+        "insult": 0.00018456022371537983,
+        "identity_hate": 0.00014508521417155862
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_20",
+      "text": "How many engineers with around 1-2 years of experience generally find a new swe in your program, and what would be the average time it takes for that demographic? \n\nI've been eyeing on the programming and fall under that demographic.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006697499193251133,
+        "severe_toxic": 0.00011564895248739049,
+        "obscene": 0.00017421045049559325,
+        "threat": 0.0001230140624102205,
+        "insult": 0.00018097441352438182,
+        "identity_hate": 0.00013782169844489545
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_21",
+      "text": "1 YOE is taking a long time right now overall in the market and at Formation but I don't have exact averages because each person has different commitments and goals and it's not meaningful to average all people.\n\nAdditionally, we have people that had 1 YOE that joined like 2 years ago that it took 2 years to get a job... but the market when they joined was different then. So it's even harder to try to average people who started at different time because the market has been changing. It's like a bootcamps touring 2023 CIRR number when they very well know things are different now... I feel that kind of thing is misleading.\n\nSo to help advise I would need to know:\n1. what is the 1-2 years of experience and what kind of company?\n2. have you been promoted yet?\n3. are you getting interviews either directly from recruiters or from applications?\n\nIf you work at a solid company, commit fully to Formation, and the answer to 2 and 3 is yes, I'm very roughly just guessing 6 months.\n\nIf number 3 is no, then it's a very wide range. We will get your interview skills up to the bar so you make the most of your interviews but there's luck involved in getting the interviews even if you do everything right.\n\nIf number 3 is no and 1 and 2 are good, then it still has variance  but you are a better candidate for referrals working more effectively to improve your luck.\n\nIf none of the answers are positive I would recommend either not doing Formation or expecting it to take a very long time and focusing on getting promoted first at your job.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007446552626788616,
+        "severe_toxic": 0.00011138999980175868,
+        "obscene": 0.00019890906696673483,
+        "threat": 0.00010949291754513979,
+        "insult": 0.00017696131544653326,
+        "identity_hate": 0.00013274782395455986
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_22",
+      "text": "Dont have time to switch majors.... instead you will pay for a bootcamp and sit jobless for years?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.010905520990490913,
+        "severe_toxic": 9.503951878286898e-05,
+        "obscene": 0.00045101280556991696,
+        "threat": 0.00018228733097203076,
+        "insult": 0.0004959785146638751,
+        "identity_hate": 0.00021329347509890795
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_23",
+      "text": "Whichever is free. If you find any",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0008766237879171968,
+        "severe_toxic": 0.00011308579269098118,
+        "obscene": 0.00018395375809632242,
+        "threat": 0.00013502211368177086,
+        "insult": 0.000186359160579741,
+        "identity_hate": 0.000142961842357181
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_24",
+      "text": "Whatever is free -- is the best option? Can you tell me more?",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006175277521833777,
+        "severe_toxic": 0.0001237592805409804,
+        "obscene": 0.00017544117872603238,
+        "threat": 0.00013228596071712673,
+        "insult": 0.00017637491691857576,
+        "identity_hate": 0.00014154207019601017
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_25",
+      "text": "There isn't a way to get into the field quickly. Like all fields that pay well it does so because it takes years of effort to get sufficient skills. The bootcamp era was an anomaly it isn't a normal state of the market",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007571876049041748,
+        "severe_toxic": 0.00011230946984142065,
+        "obscene": 0.00017508772725705057,
+        "threat": 0.00011781152716139331,
+        "insult": 0.00018295912013854831,
+        "identity_hate": 0.00013781565940007567
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_26",
+      "text": "\"immediately\" doesn't exist. Think in terms of years.\n\nThere are people that did 4 year degrees and masters still trying to break in, its unlikely you will get hired over them.\n\nGoing into a CS degree is probably your best shot.\n\nBut yeah bootcamps are a scam, and employers will specifically reject you *because* you went to a bootcamp",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.032602451741695404,
+        "severe_toxic": 0.00012411762145347893,
+        "obscene": 0.0014909044839441776,
+        "threat": 0.00021645818196702749,
+        "insult": 0.0019017633749172091,
+        "identity_hate": 0.0003054441185668111
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_27",
+      "text": "But after 25 for 4 years it wouldn't be to long",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0007122670649550855,
+        "severe_toxic": 0.0001137504877988249,
+        "obscene": 0.00017705482605379075,
+        "threat": 0.00011863843246828765,
+        "insult": 0.00017824732640292495,
+        "identity_hate": 0.00013781066809315234
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_28",
+      "text": "\"there are people who failed... so you will fail... bla bla bla...... scam..... you'll be rejected...... \"   \n  \n\\~ classic projection",
+      "TL1_badge": "🟡",
+      "TL2_tooltip": "Slightly strong language, no evidence",
+      "toxicity_level": "Mild",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.38885605335235596,
+        "severe_toxic": 0.0008334784652106464,
+        "obscene": 0.039460599422454834,
+        "threat": 0.0015553509583696723,
+        "insult": 0.02897045575082302,
+        "identity_hate": 0.0025175069458782673
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_29",
+      "text": "No, it's just a realistic depiction of the current job market. That doesn't mean it's impossible to quickly land a job without a CS degree, but it is objectively difficult and unlikely.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0005925328587181866,
+        "severe_toxic": 0.00012491359666455537,
+        "obscene": 0.00018451797950547189,
+        "threat": 0.00012596738815773278,
+        "insult": 0.00017774208390619606,
+        "identity_hate": 0.0001417691382812336
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_30",
+      "text": "Your answer is: *none of them*",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.04422018676996231,
+        "severe_toxic": 0.00010658466635504737,
+        "obscene": 0.0008901308756321669,
+        "threat": 0.0002769269922282547,
+        "insult": 0.0014622121816501021,
+        "identity_hate": 0.00031910621328279376
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_31",
+      "text": "Based on my experience in Europe I can recommend arol.dev. They have helped me get into the field and I really respect the way they work - having small classes and focusing more on mentoring individually each student.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.0004977177595719695,
+        "severe_toxic": 0.00014508880849462003,
+        "obscene": 0.0002006654249271378,
+        "threat": 0.00014634655963163823,
+        "insult": 0.000177276975591667,
+        "identity_hate": 0.00014850590378046036
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://arol.dev"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://arol.dev",
+          "normalized_url": "https://arol.dev",
+          "final_url": "https://www.arol.dev/",
+          "domain": "arol.dev",
+          "ips": [
+            "35.71.142.77",
+            "52.223.52.2"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "website",
+          "confidence": 0.55,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "fallback": "generic"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://www.arol.dev/",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_32",
+      "text": "YouTube",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0015314186457544565,
+        "severe_toxic": 9.902357123792171e-05,
+        "obscene": 0.00023540119582321495,
+        "threat": 9.808022150536999e-05,
+        "insult": 0.00018470475333742797,
+        "identity_hate": 0.0001418936881236732
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_33",
+      "text": "Degree + create applications on the side for practice. There is not a bootcamp on the planet that will assist anyone in getting a programming job today. Truth.",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0008324593072757125,
+        "severe_toxic": 0.00010728048800956458,
+        "obscene": 0.00017349534027744085,
+        "threat": 0.00011778085900004953,
+        "insult": 0.00017731517436914146,
+        "identity_hate": 0.00013916777970734984
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_34",
+      "text": "Watch this video and self study with this guys program for 3 months. Then consider a CS degree. https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, verifiable evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "Yes",
+      "evidence_verified": "Yes",
+      "toxicity_scores": {
+        "toxic": 0.001782517065294087,
+        "severe_toxic": 9.229122224496678e-05,
+        "obscene": 0.00023220834555104375,
+        "threat": 0.00010409682727186009,
+        "insult": 0.00021896656835451722,
+        "identity_hate": 0.00014552388165611774
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "Verified",
+      "evidence_urls": [
+        "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o"
+      ],
+      "evidence_results": [
+        {
+          "input_url": "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+          "normalized_url": "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+          "final_url": "https://www.youtube.com/watch?si=_haDtixzJ8eGhr3o&v=OVwJ5EMTSK0&feature=youtu.be",
+          "domain": "youtu.be",
+          "ips": [
+            "142.250.72.206",
+            "2607:f8b0:400f:802::200e"
+          ],
+          "public_dns_ok": true,
+          "http_ok": true,
+          "status": 200,
+          "content_type": "text/html",
+          "category": "video",
+          "confidence": 0.8,
+          "verified": true,
+          "reason": "reachable",
+          "signals": {
+            "og:type": "video.other"
+          }
+        }
+      ],
+      "evidence_TL3_detail": "Verified sources: https://www.youtube.com/watch?si=_haDtixzJ8eGhr3o&v=OVwJ5EMTSK0&feature=youtu.be",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_35",
+      "text": "I wouldn’t recommend a coding bootcamp but comfy with ai, maybe start with code flight",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006146309897303581,
+        "severe_toxic": 0.00012111566320527345,
+        "obscene": 0.00017915517673827708,
+        "threat": 0.0001304260949837044,
+        "insult": 0.00017501128604635596,
+        "identity_hate": 0.00013884979125577956
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_36",
+      "text": "None. Do free AI courses and self teach",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0018525656778365374,
+        "severe_toxic": 8.97335703484714e-05,
+        "obscene": 0.00018359559180680662,
+        "threat": 0.00012213637819513679,
+        "insult": 0.00022744743910152465,
+        "identity_hate": 0.00015671986329834908
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_37",
+      "text": "Are you in the United States? I would recommend looking into a RAP (Registered Apprentice Program) over a bootcamp. Bootcamps are great in the sense that they are fast pace and you get skills fast, but you will spend around $10k-$20k and get no technical experience. To join this field, you need to get experience because even those $60k-$80k entry level jobs require experience. \n\nNow, these RAP opportunities usually are 6 month to 1 year contracts, but there are companies that hire their apprentices and their clients also will hire the apprentices sometimes since they are familiarized with their applications. \n\nIf you don't have much experience, RAP may not work out immediately and you may need a bootcamp/coding course, and you can see about finding one through the ETPL in your state to minimize your financial stress.\n\nHope this helps!",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0006615826860070229,
+        "severe_toxic": 0.00011904491839231923,
+        "obscene": 0.0001789497910067439,
+        "threat": 0.0001221931161126122,
+        "insult": 0.00017508675227873027,
+        "identity_hate": 0.0001447962422389537
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    },
+    {
+      "comment_id": "comment_38",
+      "text": "Neither ",
+      "TL1_badge": "🟢",
+      "TL2_tooltip": "Balanced or neutral tone, no evidence",
+      "toxicity_level": "Neutral",
+      "evidence_present": "No",
+      "evidence_verified": "N/A",
+      "toxicity_scores": {
+        "toxic": 0.0016430949326604605,
+        "severe_toxic": 0.00010752833622973412,
+        "obscene": 0.0002449720923323184,
+        "threat": 9.470297663938254e-05,
+        "insult": 0.00021603859204333276,
+        "identity_hate": 0.0001624997821636498
+      },
+      "toxicity_predictions": {
+        "toxic": 0,
+        "severe_toxic": 0,
+        "obscene": 0,
+        "threat": 0,
+        "insult": 0,
+        "identity_hate": 0
+      },
+      "evidence_status": "None",
+      "evidence_urls": [],
+      "evidence_results": [],
+      "evidence_TL3_detail": "URL is not present",
+      "pattern_detection": {
+        "has_evidence_patterns": false,
+        "simple_keyword_matches": [],
+        "sentence_pattern_matches": [],
+        "phrase_matches": [],
+        "credibility_matches": [],
+        "confidence": "none"
+      }
+    }
+  ],
+  "raw_data": {
+    "toxicity": {
+      "labels": [
+        "toxic",
+        "severe_toxic",
+        "obscene",
+        "threat",
+        "insult",
+        "identity_hate"
+      ],
+      "probabilities": [
+        [
+          0.0017086440930142999,
+          9.147271339315921e-05,
+          0.00017228959768544883,
+          0.00011598414130276069,
+          0.00023617995611857623,
+          0.000165064018801786
+        ],
+        [
+          0.008577294647693634,
+          0.00010749696957645938,
+          0.0006120676407590508,
+          0.00011407984857214615,
+          0.00042534840758889914,
+          0.00018618350441101938
+        ],
+        [
+          0.0016479878686368465,
+          0.00010331411613151431,
+          0.00021630445553455502,
+          9.662315278546885e-05,
+          0.00021317759819794446,
+          0.0001585490972502157
+        ],
+        [
+          0.0006441044388338923,
+          0.00012469770445022732,
+          0.00016896131273824722,
+          0.00013991583546157926,
+          0.00018125641508959234,
+          0.00014557385293301195
+        ],
+        [
+          0.0013911763671785593,
+          9.369245526613668e-05,
+          0.00019087904365733266,
+          0.00010207942978013307,
+          0.00018816342344507575,
+          0.00014808762352913618
+        ],
+        [
+          0.0006795766530558467,
+          0.00011499355605337769,
+          0.00018223727238364518,
+          0.00011343560618115589,
+          0.00018161798652727157,
+          0.00013843851047568023
+        ],
+        [
+          0.0007529892609454691,
+          0.00011250015086261556,
+          0.00017984083388000727,
+          0.00010620380635373294,
+          0.0001787657820386812,
+          0.00013768652570433915
+        ],
+        [
+          0.0016314579406753182,
+          9.131435217568651e-05,
+          0.00018172366253565997,
+          9.724793198984116e-05,
+          0.000208340075914748,
+          0.00015406604507006705
+        ],
+        [
+          0.0005308846011757851,
+          0.00013561281957663596,
+          0.00018804809951689094,
+          0.00013838084123563021,
+          0.0001780514867277816,
+          0.00014538850518874824
+        ],
+        [
+          0.0007010003319010139,
+          0.0001170056639239192,
+          0.00017708369705360383,
+          0.00012084250192856416,
+          0.00018045832985080779,
+          0.00014363574155140668
+        ],
+        [
+          0.0007160200621001422,
+          0.00011558103142306209,
+          0.0001722008892102167,
+          0.00012708871508948505,
+          0.00018555045244283974,
+          0.0001397928863298148
+        ],
+        [
+          0.0007428928511217237,
+          0.00011266127694398165,
+          0.0001675848034210503,
+          0.00013084600504953414,
+          0.0001882443466456607,
+          0.0001429272087989375
+        ],
+        [
+          0.01096173282712698,
+          8.663915650686249e-05,
+          0.0003792567295022309,
+          0.00015089653606992215,
+          0.0007631766493432224,
+          0.00023850463912822306
+        ],
+        [
+          0.0006087857182137668,
+          0.00012466596672311425,
+          0.00017867443966679275,
+          0.0001301178999710828,
+          0.00018425042799208313,
+          0.00014470817404799163
+        ],
+        [
+          0.0032208445481956005,
+          8.434277697233483e-05,
+          0.00023769510153215379,
+          0.00011742459173547104,
+          0.0002745551464613527,
+          0.00016114073514472693
+        ],
+        [
+          0.0010676764650270343,
+          9.913410758599639e-05,
+          0.00017500996182207018,
+          0.00011575686221476644,
+          0.00020736857550218701,
+          0.00013954410678707063
+        ],
+        [
+          0.0006406856700778008,
+          0.00012837919348385185,
+          0.00018253222515340894,
+          0.00013353493704926223,
+          0.0001980557426577434,
+          0.00015000592975411564
+        ],
+        [
+          0.0005936679663136601,
+          0.0001265925820916891,
+          0.0001839653414208442,
+          0.0001300953299505636,
+          0.0001805600622901693,
+          0.00014420719526242465
+        ],
+        [
+          0.0006293556652963161,
+          0.00012958029401488602,
+          0.00018151239783037454,
+          0.0001437585160601884,
+          0.00019699071708600968,
+          0.00015644097584299743
+        ],
+        [
+          0.0006151235429570079,
+          0.00012384983710944653,
+          0.00017714568821247667,
+          0.00013194205530453473,
+          0.00018456022371537983,
+          0.00014508521417155862
+        ],
+        [
+          0.0006697499193251133,
+          0.00011564895248739049,
+          0.00017421045049559325,
+          0.0001230140624102205,
+          0.00018097441352438182,
+          0.00013782169844489545
+        ],
+        [
+          0.0007446552626788616,
+          0.00011138999980175868,
+          0.00019890906696673483,
+          0.00010949291754513979,
+          0.00017696131544653326,
+          0.00013274782395455986
+        ],
+        [
+          0.010905520990490913,
+          9.503951878286898e-05,
+          0.00045101280556991696,
+          0.00018228733097203076,
+          0.0004959785146638751,
+          0.00021329347509890795
+        ],
+        [
+          0.0008766237879171968,
+          0.00011308579269098118,
+          0.00018395375809632242,
+          0.00013502211368177086,
+          0.000186359160579741,
+          0.000142961842357181
+        ],
+        [
+          0.0006175277521833777,
+          0.0001237592805409804,
+          0.00017544117872603238,
+          0.00013228596071712673,
+          0.00017637491691857576,
+          0.00014154207019601017
+        ],
+        [
+          0.0007571876049041748,
+          0.00011230946984142065,
+          0.00017508772725705057,
+          0.00011781152716139331,
+          0.00018295912013854831,
+          0.00013781565940007567
+        ],
+        [
+          0.032602451741695404,
+          0.00012411762145347893,
+          0.0014909044839441776,
+          0.00021645818196702749,
+          0.0019017633749172091,
+          0.0003054441185668111
+        ],
+        [
+          0.0007122670649550855,
+          0.0001137504877988249,
+          0.00017705482605379075,
+          0.00011863843246828765,
+          0.00017824732640292495,
+          0.00013781066809315234
+        ],
+        [
+          0.38885605335235596,
+          0.0008334784652106464,
+          0.039460599422454834,
+          0.0015553509583696723,
+          0.02897045575082302,
+          0.0025175069458782673
+        ],
+        [
+          0.0005925328587181866,
+          0.00012491359666455537,
+          0.00018451797950547189,
+          0.00012596738815773278,
+          0.00017774208390619606,
+          0.0001417691382812336
+        ],
+        [
+          0.04422018676996231,
+          0.00010658466635504737,
+          0.0008901308756321669,
+          0.0002769269922282547,
+          0.0014622121816501021,
+          0.00031910621328279376
+        ],
+        [
+          0.0004977177595719695,
+          0.00014508880849462003,
+          0.0002006654249271378,
+          0.00014634655963163823,
+          0.000177276975591667,
+          0.00014850590378046036
+        ],
+        [
+          0.0015314186457544565,
+          9.902357123792171e-05,
+          0.00023540119582321495,
+          9.808022150536999e-05,
+          0.00018470475333742797,
+          0.0001418936881236732
+        ],
+        [
+          0.0008324593072757125,
+          0.00010728048800956458,
+          0.00017349534027744085,
+          0.00011778085900004953,
+          0.00017731517436914146,
+          0.00013916777970734984
+        ],
+        [
+          0.001782517065294087,
+          9.229122224496678e-05,
+          0.00023220834555104375,
+          0.00010409682727186009,
+          0.00021896656835451722,
+          0.00014552388165611774
+        ],
+        [
+          0.0006146309897303581,
+          0.00012111566320527345,
+          0.00017915517673827708,
+          0.0001304260949837044,
+          0.00017501128604635596,
+          0.00013884979125577956
+        ],
+        [
+          0.0018525656778365374,
+          8.97335703484714e-05,
+          0.00018359559180680662,
+          0.00012213637819513679,
+          0.00022744743910152465,
+          0.00015671986329834908
+        ],
+        [
+          0.0006615826860070229,
+          0.00011904491839231923,
+          0.0001789497910067439,
+          0.0001221931161126122,
+          0.00017508675227873027,
+          0.0001447962422389537
+        ],
+        [
+          0.0016430949326604605,
+          0.00010752833622973412,
+          0.0002449720923323184,
+          9.470297663938254e-05,
+          0.00021603859204333276,
+          0.0001624997821636498
+        ]
+      ],
+      "predictions": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "badge_colors": [
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "yellow",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green"
+      ],
+      "detailed": [
+        {
+          "text": "You're not getting into tech with a boot camp in 2025; you need to look at getting a CS degree.  And in the current market, even a degree isn't going to get you in the field immediately; it'll just give you a fighting chance.",
+          "scores": {
+            "toxic": 0.0017086440930142999,
+            "severe_toxic": 9.147271339315921e-05,
+            "obscene": 0.00017228959768544883,
+            "threat": 0.00011598414130276069,
+            "insult": 0.00023617995611857623,
+            "identity_hate": 0.000165064018801786
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Coding boot camp is a joke.",
+          "scores": {
+            "toxic": 0.008577294647693634,
+            "severe_toxic": 0.00010749696957645938,
+            "obscene": 0.0006120676407590508,
+            "threat": 0.00011407984857214615,
+            "insult": 0.00042534840758889914,
+            "identity_hate": 0.00018618350441101938
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "why is that",
+          "scores": {
+            "toxic": 0.0016479878686368465,
+            "severe_toxic": 0.00010331411613151431,
+            "obscene": 0.00021630445553455502,
+            "threat": 9.662315278546885e-05,
+            "insult": 0.00021317759819794446,
+            "identity_hate": 0.0001585490972502157
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Good luck getting into tech \" immediately\" but start with learning python",
+          "scores": {
+            "toxic": 0.0006441044388338923,
+            "severe_toxic": 0.00012469770445022732,
+            "obscene": 0.00016896131273824722,
+            "threat": 0.00013991583546157926,
+            "insult": 0.00018125641508959234,
+            "identity_hate": 0.00014557385293301195
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Why Python???",
+          "scores": {
+            "toxic": 0.0013911763671785593,
+            "severe_toxic": 9.369245526613668e-05,
+            "obscene": 0.00019087904365733266,
+            "threat": 0.00010207942978013307,
+            "insult": 0.00018816342344507575,
+            "identity_hate": 0.00014808762352913618
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "[deleted]",
+          "scores": {
+            "toxic": 0.0006795766530558467,
+            "severe_toxic": 0.00011499355605337769,
+            "obscene": 0.00018223727238364518,
+            "threat": 0.00011343560618115589,
+            "insult": 0.00018161798652727157,
+            "identity_hate": 0.00013843851047568023
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Where did you hear that?",
+          "scores": {
+            "toxic": 0.0007529892609454691,
+            "severe_toxic": 0.00011250015086261556,
+            "obscene": 0.00017984083388000727,
+            "threat": 0.00010620380635373294,
+            "insult": 0.0001787657820386812,
+            "identity_hate": 0.00013768652570433915
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "lol please be serious",
+          "scores": {
+            "toxic": 0.0016314579406753182,
+            "severe_toxic": 9.131435217568651e-05,
+            "obscene": 0.00018172366253565997,
+            "threat": 9.724793198984116e-05,
+            "insult": 0.000208340075914748,
+            "identity_hate": 0.00015406604507006705
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I don't think there is a good coding bootcamp (in the classic sense) at this time.\n\nBut depending on your background - there are some other options. It also depends what your expectations of \"getting into the field immediately\" are. Give us more info and I can give you some good options/paths.",
+          "scores": {
+            "toxic": 0.0005308846011757851,
+            "severe_toxic": 0.00013561281957663596,
+            "obscene": 0.00018804809951689094,
+            "threat": 0.00013838084123563021,
+            "insult": 0.0001780514867277816,
+            "identity_hate": 0.00014538850518874824
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I am 25 years old and I was studying finance in college but I left as a third year junior student and it's too late to switch to a CS degree unfortunately. I don't have much experience in tech as well and not in any career as of yet.",
+          "scores": {
+            "toxic": 0.0007010003319010139,
+            "severe_toxic": 0.0001170056639239192,
+            "obscene": 0.00017708369705360383,
+            "threat": 0.00012084250192856416,
+            "insult": 0.00018045832985080779,
+            "identity_hate": 0.00014363574155140668
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I'm looking for a lot more information than that. What makes you think a coding boot camp is a good fit for you? What type of job are you trying to get (specifically)? and why --- and how do your current skills and experience fit in -?",
+          "scores": {
+            "toxic": 0.0007160200621001422,
+            "severe_toxic": 0.00011558103142306209,
+            "obscene": 0.0001722008892102167,
+            "threat": 0.00012708871508948505,
+            "insult": 0.00018555045244283974,
+            "identity_hate": 0.0001397928863298148
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "To be perfectly honest, you'd be better off finishing that degree. Preferably get at least a CS minor if possible.\n\n\nBootcamp is no longer a viable path to get an entry-level tech job in 2025. Even back when it was, most employers still want at least an undergrad degree (even if unrelated) to take a chance on you. Getting a job in tech with just bootcamp and no degree or prior tech experience is already tough back then; today the chances are slim to none I'm afraid",
+          "scores": {
+            "toxic": 0.0007428928511217237,
+            "severe_toxic": 0.00011266127694398165,
+            "obscene": 0.0001675848034210503,
+            "threat": 0.00013084600504953414,
+            "insult": 0.0001882443466456607,
+            "identity_hate": 0.0001429272087989375
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "None. You’re better off getting a CS degree. The era of bootcamps is pretty much dead, and those getting jobs are either very lucky or have previous CS experience",
+          "scores": {
+            "toxic": 0.01096173282712698,
+            "severe_toxic": 8.663915650686249e-05,
+            "obscene": 0.0003792567295022309,
+            "threat": 0.00015089653606992215,
+            "insult": 0.0007631766493432224,
+            "identity_hate": 0.00023850463912822306
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Focus on AI, problem solving, and business analysis. The webdev bootcamp train left around 2021.",
+          "scores": {
+            "toxic": 0.0006087857182137668,
+            "severe_toxic": 0.00012466596672311425,
+            "obscene": 0.00017867443966679275,
+            "threat": 0.0001301178999710828,
+            "insult": 0.00018425042799208313,
+            "identity_hate": 0.00014470817404799163
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Probably Launch School, but I do not know Launch School's latest outcomes statistics.\n\nGet a CS degree.",
+          "scores": {
+            "toxic": 0.0032208445481956005,
+            "severe_toxic": 8.434277697233483e-05,
+            "obscene": 0.00023769510153215379,
+            "threat": 0.00011742459173547104,
+            "insult": 0.0002745551464613527,
+            "identity_hate": 0.00016114073514472693
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Launch School. But you won’t start in 2025. It’s a deliberately slow program to turn you into a software engineer vs. some bootcamp that won’t get you a job in 2025.",
+          "scores": {
+            "toxic": 0.0010676764650270343,
+            "severe_toxic": 9.913410758599639e-05,
+            "obscene": 0.00017500996182207018,
+            "threat": 0.00011575686221476644,
+            "insult": 0.00020736857550218701,
+            "identity_hate": 0.00013954410678707063
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "What's your background with programming, and your past career and professional work experience?",
+          "scores": {
+            "toxic": 0.0006406856700778008,
+            "severe_toxic": 0.00012837919348385185,
+            "obscene": 0.00018253222515340894,
+            "threat": 0.00013353493704926223,
+            "insult": 0.0001980557426577434,
+            "identity_hate": 0.00015000592975411564
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I actually don't have much experience in programming. I was studying a different degree in college and I don't have time to switch to a CS degree, unfortunately. That degree was finance. I only have experience in minimum wage jobs for now. I left college as an upper junior in finance and I don't have much time to switch as it might take up financial aid.",
+          "scores": {
+            "toxic": 0.0005936679663136601,
+            "severe_toxic": 0.0001265925820916891,
+            "obscene": 0.0001839653414208442,
+            "threat": 0.0001300953299505636,
+            "insult": 0.0001805600622901693,
+            "identity_hate": 0.00014420719526242465
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Could consider finishing out your finance degree and minoring in  CS. Fintech is a great field to get into",
+          "scores": {
+            "toxic": 0.0006293556652963161,
+            "severe_toxic": 0.00012958029401488602,
+            "obscene": 0.00018151239783037454,
+            "threat": 0.0001437585160601884,
+            "insult": 0.00019699071708600968,
+            "identity_hate": 0.00015644097584299743
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Yeah would consider trying to have a job leveraging your strengths but in tech or a tech company to try to bridge the gap, and learn on the job or leverage internal resources to learn programming.",
+          "scores": {
+            "toxic": 0.0006151235429570079,
+            "severe_toxic": 0.00012384983710944653,
+            "obscene": 0.00017714568821247667,
+            "threat": 0.00013194205530453473,
+            "insult": 0.00018456022371537983,
+            "identity_hate": 0.00014508521417155862
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "How many engineers with around 1-2 years of experience generally find a new swe in your program, and what would be the average time it takes for that demographic? \n\nI've been eyeing on the programming and fall under that demographic.",
+          "scores": {
+            "toxic": 0.0006697499193251133,
+            "severe_toxic": 0.00011564895248739049,
+            "obscene": 0.00017421045049559325,
+            "threat": 0.0001230140624102205,
+            "insult": 0.00018097441352438182,
+            "identity_hate": 0.00013782169844489545
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "1 YOE is taking a long time right now overall in the market and at Formation but I don't have exact averages because each person has different commitments and goals and it's not meaningful to average all people.\n\nAdditionally, we have people that had 1 YOE that joined like 2 years ago that it took 2 years to get a job... but the market when they joined was different then. So it's even harder to try to average people who started at different time because the market has been changing. It's like a bootcamps touring 2023 CIRR number when they very well know things are different now... I feel that kind of thing is misleading.\n\nSo to help advise I would need to know:\n1. what is the 1-2 years of experience and what kind of company?\n2. have you been promoted yet?\n3. are you getting interviews either directly from recruiters or from applications?\n\nIf you work at a solid company, commit fully to Formation, and the answer to 2 and 3 is yes, I'm very roughly just guessing 6 months.\n\nIf number 3 is no, then it's a very wide range. We will get your interview skills up to the bar so you make the most of your interviews but there's luck involved in getting the interviews even if you do everything right.\n\nIf number 3 is no and 1 and 2 are good, then it still has variance  but you are a better candidate for referrals working more effectively to improve your luck.\n\nIf none of the answers are positive I would recommend either not doing Formation or expecting it to take a very long time and focusing on getting promoted first at your job.",
+          "scores": {
+            "toxic": 0.0007446552626788616,
+            "severe_toxic": 0.00011138999980175868,
+            "obscene": 0.00019890906696673483,
+            "threat": 0.00010949291754513979,
+            "insult": 0.00017696131544653326,
+            "identity_hate": 0.00013274782395455986
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Dont have time to switch majors.... instead you will pay for a bootcamp and sit jobless for years?",
+          "scores": {
+            "toxic": 0.010905520990490913,
+            "severe_toxic": 9.503951878286898e-05,
+            "obscene": 0.00045101280556991696,
+            "threat": 0.00018228733097203076,
+            "insult": 0.0004959785146638751,
+            "identity_hate": 0.00021329347509890795
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Whichever is free. If you find any",
+          "scores": {
+            "toxic": 0.0008766237879171968,
+            "severe_toxic": 0.00011308579269098118,
+            "obscene": 0.00018395375809632242,
+            "threat": 0.00013502211368177086,
+            "insult": 0.000186359160579741,
+            "identity_hate": 0.000142961842357181
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Whatever is free -- is the best option? Can you tell me more?",
+          "scores": {
+            "toxic": 0.0006175277521833777,
+            "severe_toxic": 0.0001237592805409804,
+            "obscene": 0.00017544117872603238,
+            "threat": 0.00013228596071712673,
+            "insult": 0.00017637491691857576,
+            "identity_hate": 0.00014154207019601017
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "There isn't a way to get into the field quickly. Like all fields that pay well it does so because it takes years of effort to get sufficient skills. The bootcamp era was an anomaly it isn't a normal state of the market",
+          "scores": {
+            "toxic": 0.0007571876049041748,
+            "severe_toxic": 0.00011230946984142065,
+            "obscene": 0.00017508772725705057,
+            "threat": 0.00011781152716139331,
+            "insult": 0.00018295912013854831,
+            "identity_hate": 0.00013781565940007567
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "\"immediately\" doesn't exist. Think in terms of years.\n\nThere are people that did 4 year degrees and masters still trying to break in, its unlikely you will get hired over them.\n\nGoing into a CS degree is probably your best shot.\n\nBut yeah bootcamps are a scam, and employers will specifically reject you *because* you went to a bootcamp",
+          "scores": {
+            "toxic": 0.032602451741695404,
+            "severe_toxic": 0.00012411762145347893,
+            "obscene": 0.0014909044839441776,
+            "threat": 0.00021645818196702749,
+            "insult": 0.0019017633749172091,
+            "identity_hate": 0.0003054441185668111
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "But after 25 for 4 years it wouldn't be to long",
+          "scores": {
+            "toxic": 0.0007122670649550855,
+            "severe_toxic": 0.0001137504877988249,
+            "obscene": 0.00017705482605379075,
+            "threat": 0.00011863843246828765,
+            "insult": 0.00017824732640292495,
+            "identity_hate": 0.00013781066809315234
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "\"there are people who failed... so you will fail... bla bla bla...... scam..... you'll be rejected...... \"   \n  \n\\~ classic projection",
+          "scores": {
+            "toxic": 0.38885605335235596,
+            "severe_toxic": 0.0008334784652106464,
+            "obscene": 0.039460599422454834,
+            "threat": 0.0015553509583696723,
+            "insult": 0.02897045575082302,
+            "identity_hate": 0.0025175069458782673
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "yellow"
+        },
+        {
+          "text": "No, it's just a realistic depiction of the current job market. That doesn't mean it's impossible to quickly land a job without a CS degree, but it is objectively difficult and unlikely.",
+          "scores": {
+            "toxic": 0.0005925328587181866,
+            "severe_toxic": 0.00012491359666455537,
+            "obscene": 0.00018451797950547189,
+            "threat": 0.00012596738815773278,
+            "insult": 0.00017774208390619606,
+            "identity_hate": 0.0001417691382812336
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Your answer is: *none of them*",
+          "scores": {
+            "toxic": 0.04422018676996231,
+            "severe_toxic": 0.00010658466635504737,
+            "obscene": 0.0008901308756321669,
+            "threat": 0.0002769269922282547,
+            "insult": 0.0014622121816501021,
+            "identity_hate": 0.00031910621328279376
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Based on my experience in Europe I can recommend arol.dev. They have helped me get into the field and I really respect the way they work - having small classes and focusing more on mentoring individually each student.",
+          "scores": {
+            "toxic": 0.0004977177595719695,
+            "severe_toxic": 0.00014508880849462003,
+            "obscene": 0.0002006654249271378,
+            "threat": 0.00014634655963163823,
+            "insult": 0.000177276975591667,
+            "identity_hate": 0.00014850590378046036
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "YouTube",
+          "scores": {
+            "toxic": 0.0015314186457544565,
+            "severe_toxic": 9.902357123792171e-05,
+            "obscene": 0.00023540119582321495,
+            "threat": 9.808022150536999e-05,
+            "insult": 0.00018470475333742797,
+            "identity_hate": 0.0001418936881236732
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Degree + create applications on the side for practice. There is not a bootcamp on the planet that will assist anyone in getting a programming job today. Truth.",
+          "scores": {
+            "toxic": 0.0008324593072757125,
+            "severe_toxic": 0.00010728048800956458,
+            "obscene": 0.00017349534027744085,
+            "threat": 0.00011778085900004953,
+            "insult": 0.00017731517436914146,
+            "identity_hate": 0.00013916777970734984
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Watch this video and self study with this guys program for 3 months. Then consider a CS degree. https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+          "scores": {
+            "toxic": 0.001782517065294087,
+            "severe_toxic": 9.229122224496678e-05,
+            "obscene": 0.00023220834555104375,
+            "threat": 0.00010409682727186009,
+            "insult": 0.00021896656835451722,
+            "identity_hate": 0.00014552388165611774
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "I wouldn’t recommend a coding bootcamp but comfy with ai, maybe start with code flight",
+          "scores": {
+            "toxic": 0.0006146309897303581,
+            "severe_toxic": 0.00012111566320527345,
+            "obscene": 0.00017915517673827708,
+            "threat": 0.0001304260949837044,
+            "insult": 0.00017501128604635596,
+            "identity_hate": 0.00013884979125577956
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "None. Do free AI courses and self teach",
+          "scores": {
+            "toxic": 0.0018525656778365374,
+            "severe_toxic": 8.97335703484714e-05,
+            "obscene": 0.00018359559180680662,
+            "threat": 0.00012213637819513679,
+            "insult": 0.00022744743910152465,
+            "identity_hate": 0.00015671986329834908
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Are you in the United States? I would recommend looking into a RAP (Registered Apprentice Program) over a bootcamp. Bootcamps are great in the sense that they are fast pace and you get skills fast, but you will spend around $10k-$20k and get no technical experience. To join this field, you need to get experience because even those $60k-$80k entry level jobs require experience. \n\nNow, these RAP opportunities usually are 6 month to 1 year contracts, but there are companies that hire their apprentices and their clients also will hire the apprentices sometimes since they are familiarized with their applications. \n\nIf you don't have much experience, RAP may not work out immediately and you may need a bootcamp/coding course, and you can see about finding one through the ETPL in your state to minimize your financial stress.\n\nHope this helps!",
+          "scores": {
+            "toxic": 0.0006615826860070229,
+            "severe_toxic": 0.00011904491839231923,
+            "obscene": 0.0001789497910067439,
+            "threat": 0.0001221931161126122,
+            "insult": 0.00017508675227873027,
+            "identity_hate": 0.0001447962422389537
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        },
+        {
+          "text": "Neither ",
+          "scores": {
+            "toxic": 0.0016430949326604605,
+            "severe_toxic": 0.00010752833622973412,
+            "obscene": 0.0002449720923323184,
+            "threat": 9.470297663938254e-05,
+            "insult": 0.00021603859204333276,
+            "identity_hate": 0.0001624997821636498
+          },
+          "predictions": {
+            "toxic": 0,
+            "severe_toxic": 0,
+            "obscene": 0,
+            "threat": 0,
+            "insult": 0,
+            "identity_hate": 0
+          },
+          "badge_color": "green"
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "comment_id": "comment_0",
+        "text": "You're not getting into tech with a boot camp in 2025; you need to look at getting a CS degree.  And in the current market, even a degree isn't going to get you in the field immediately; it'll just give you a fighting chance.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_1",
+        "text": "Coding boot camp is a joke.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_2",
+        "text": "why is that",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_3",
+        "text": "Good luck getting into tech \" immediately\" but start with learning python",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_4",
+        "text": "Why Python???",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_5",
+        "text": "[deleted]",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_6",
+        "text": "Where did you hear that?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_7",
+        "text": "lol please be serious",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_8",
+        "text": "I don't think there is a good coding bootcamp (in the classic sense) at this time.\n\nBut depending on your background - there are some other options. It also depends what your expectations of \"getting into the field immediately\" are. Give us more info and I can give you some good options/paths.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_9",
+        "text": "I am 25 years old and I was studying finance in college but I left as a third year junior student and it's too late to switch to a CS degree unfortunately. I don't have much experience in tech as well and not in any career as of yet.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_10",
+        "text": "I'm looking for a lot more information than that. What makes you think a coding boot camp is a good fit for you? What type of job are you trying to get (specifically)? and why --- and how do your current skills and experience fit in -?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_11",
+        "text": "To be perfectly honest, you'd be better off finishing that degree. Preferably get at least a CS minor if possible.\n\n\nBootcamp is no longer a viable path to get an entry-level tech job in 2025. Even back when it was, most employers still want at least an undergrad degree (even if unrelated) to take a chance on you. Getting a job in tech with just bootcamp and no degree or prior tech experience is already tough back then; today the chances are slim to none I'm afraid",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_12",
+        "text": "None. You’re better off getting a CS degree. The era of bootcamps is pretty much dead, and those getting jobs are either very lucky or have previous CS experience",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_13",
+        "text": "Focus on AI, problem solving, and business analysis. The webdev bootcamp train left around 2021.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_14",
+        "text": "Probably Launch School, but I do not know Launch School's latest outcomes statistics.\n\nGet a CS degree.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_15",
+        "text": "Launch School. But you won’t start in 2025. It’s a deliberately slow program to turn you into a software engineer vs. some bootcamp that won’t get you a job in 2025.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_16",
+        "text": "What's your background with programming, and your past career and professional work experience?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_17",
+        "text": "I actually don't have much experience in programming. I was studying a different degree in college and I don't have time to switch to a CS degree, unfortunately. That degree was finance. I only have experience in minimum wage jobs for now. I left college as an upper junior in finance and I don't have much time to switch as it might take up financial aid.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_18",
+        "text": "Could consider finishing out your finance degree and minoring in  CS. Fintech is a great field to get into",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_19",
+        "text": "Yeah would consider trying to have a job leveraging your strengths but in tech or a tech company to try to bridge the gap, and learn on the job or leverage internal resources to learn programming.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_20",
+        "text": "How many engineers with around 1-2 years of experience generally find a new swe in your program, and what would be the average time it takes for that demographic? \n\nI've been eyeing on the programming and fall under that demographic.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_21",
+        "text": "1 YOE is taking a long time right now overall in the market and at Formation but I don't have exact averages because each person has different commitments and goals and it's not meaningful to average all people.\n\nAdditionally, we have people that had 1 YOE that joined like 2 years ago that it took 2 years to get a job... but the market when they joined was different then. So it's even harder to try to average people who started at different time because the market has been changing. It's like a bootcamps touring 2023 CIRR number when they very well know things are different now... I feel that kind of thing is misleading.\n\nSo to help advise I would need to know:\n1. what is the 1-2 years of experience and what kind of company?\n2. have you been promoted yet?\n3. are you getting interviews either directly from recruiters or from applications?\n\nIf you work at a solid company, commit fully to Formation, and the answer to 2 and 3 is yes, I'm very roughly just guessing 6 months.\n\nIf number 3 is no, then it's a very wide range. We will get your interview skills up to the bar so you make the most of your interviews but there's luck involved in getting the interviews even if you do everything right.\n\nIf number 3 is no and 1 and 2 are good, then it still has variance  but you are a better candidate for referrals working more effectively to improve your luck.\n\nIf none of the answers are positive I would recommend either not doing Formation or expecting it to take a very long time and focusing on getting promoted first at your job.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_22",
+        "text": "Dont have time to switch majors.... instead you will pay for a bootcamp and sit jobless for years?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_23",
+        "text": "Whichever is free. If you find any",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_24",
+        "text": "Whatever is free -- is the best option? Can you tell me more?",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_25",
+        "text": "There isn't a way to get into the field quickly. Like all fields that pay well it does so because it takes years of effort to get sufficient skills. The bootcamp era was an anomaly it isn't a normal state of the market",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_26",
+        "text": "\"immediately\" doesn't exist. Think in terms of years.\n\nThere are people that did 4 year degrees and masters still trying to break in, its unlikely you will get hired over them.\n\nGoing into a CS degree is probably your best shot.\n\nBut yeah bootcamps are a scam, and employers will specifically reject you *because* you went to a bootcamp",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_27",
+        "text": "But after 25 for 4 years it wouldn't be to long",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_28",
+        "text": "\"there are people who failed... so you will fail... bla bla bla...... scam..... you'll be rejected...... \"   \n  \n\\~ classic projection",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_29",
+        "text": "No, it's just a realistic depiction of the current job market. That doesn't mean it's impossible to quickly land a job without a CS degree, but it is objectively difficult and unlikely.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_30",
+        "text": "Your answer is: *none of them*",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_31",
+        "text": "Based on my experience in Europe I can recommend arol.dev. They have helped me get into the field and I really respect the way they work - having small classes and focusing more on mentoring individually each student.",
+        "urls": [
+          "https://arol.dev"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://arol.dev",
+            "normalized_url": "https://arol.dev",
+            "final_url": "https://www.arol.dev/",
+            "domain": "arol.dev",
+            "ips": [
+              "35.71.142.77",
+              "52.223.52.2"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "website",
+            "confidence": 0.55,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "fallback": "generic"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://www.arol.dev/"
+      },
+      {
+        "comment_id": "comment_32",
+        "text": "YouTube",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_33",
+        "text": "Degree + create applications on the side for practice. There is not a bootcamp on the planet that will assist anyone in getting a programming job today. Truth.",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_34",
+        "text": "Watch this video and self study with this guys program for 3 months. Then consider a CS degree. https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+        "urls": [
+          "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o"
+        ],
+        "status": "Verified",
+        "evidence_present": true,
+        "verified": true,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [
+          {
+            "input_url": "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+            "normalized_url": "https://youtu.be/OVwJ5EMTSK0?si=_haDtixzJ8eGhr3o",
+            "final_url": "https://www.youtube.com/watch?si=_haDtixzJ8eGhr3o&v=OVwJ5EMTSK0&feature=youtu.be",
+            "domain": "youtu.be",
+            "ips": [
+              "142.250.72.206",
+              "2607:f8b0:400f:802::200e"
+            ],
+            "public_dns_ok": true,
+            "http_ok": true,
+            "status": 200,
+            "content_type": "text/html",
+            "category": "video",
+            "confidence": 0.8,
+            "verified": true,
+            "reason": "reachable",
+            "signals": {
+              "og:type": "video.other"
+            }
+          }
+        ],
+        "TL2_tooltip": "Verifiable evidence present",
+        "TL3_detail": "Verified sources: https://www.youtube.com/watch?si=_haDtixzJ8eGhr3o&v=OVwJ5EMTSK0&feature=youtu.be"
+      },
+      {
+        "comment_id": "comment_35",
+        "text": "I wouldn’t recommend a coding bootcamp but comfy with ai, maybe start with code flight",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_36",
+        "text": "None. Do free AI courses and self teach",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_37",
+        "text": "Are you in the United States? I would recommend looking into a RAP (Registered Apprentice Program) over a bootcamp. Bootcamps are great in the sense that they are fast pace and you get skills fast, but you will spend around $10k-$20k and get no technical experience. To join this field, you need to get experience because even those $60k-$80k entry level jobs require experience. \n\nNow, these RAP opportunities usually are 6 month to 1 year contracts, but there are companies that hire their apprentices and their clients also will hire the apprentices sometimes since they are familiarized with their applications. \n\nIf you don't have much experience, RAP may not work out immediately and you may need a bootcamp/coding course, and you can see about finding one through the ETPL in your state to minimize your financial stress.\n\nHope this helps!",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      },
+      {
+        "comment_id": "comment_38",
+        "text": "Neither ",
+        "urls": [],
+        "status": "None",
+        "evidence_present": false,
+        "verified": false,
+        "pattern_detection": {
+          "has_evidence_patterns": false,
+          "simple_keyword_matches": [],
+          "sentence_pattern_matches": [],
+          "phrase_matches": [],
+          "credibility_matches": [],
+          "confidence": "none"
+        },
+        "results": [],
+        "TL2_tooltip": "No evidence",
+        "TL3_detail": "URL is not present"
+      }
+    ]
+  },
+  "performance_metrics": {
+    "timestamp": "2025-11-17T23:49:04.527554",
+    "session_duration_seconds": 84.35,
+    "total_comments_processed": 0,
+    "total_urls_verified": 0,
+    "successful_verifications": 0,
+    "failed_verifications": 0,
+    "verification_success_rate": 0,
+    "overall_throughput_comments_per_sec": 0.0,
+    "operations": {
+      "pattern_detection": {
+        "operation": "pattern_detection",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_extraction": {
+        "operation": "url_extraction",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "url_verification": {
+        "operation": "url_verification",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      },
+      "full_analysis": {
+        "operation": "full_analysis",
+        "sample_size": 0,
+        "avg_latency_ms": 0,
+        "median_latency_ms": 0,
+        "min_latency_ms": 0,
+        "max_latency_ms": 0,
+        "throughput_ops_per_sec": 0
+      }
+    }
+  }
+}

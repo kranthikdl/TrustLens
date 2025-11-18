@@ -349,23 +349,30 @@ def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
 
     # Build TL2/TL3 tooltips based on status
     if status == "Verified":
-        tl2 = "Verified source"
-        # TL3 shows domains
+        tl2 = "Verifiable evidence present"
+        # TL3 shows domains and URLs
+        verified_urls = [r.get('final_url') or r.get('normalized_url') or r.get('input_url', '') for r in link_results if r["verified"]]
         verified_domains = [r.get('domain', '') for r in link_results if r["verified"]]
-        tl3 = f"Verified source: {', '.join(verified_domains)}" if verified_domains else "Verified source"
+        if verified_urls:
+            tl3 = f"Verified sources: {', '.join(verified_urls[:3])}"  # Show first 3 URLs
+        else:
+            tl3 = f"Verified source: {', '.join(verified_domains)}" if verified_domains else "Verified source"
     elif status == "Mixed":
-        tl2 = "Mixed evidence"
+        tl2 = "Partially verifiable evidence"
         verified_count = sum(r['verified'] for r in link_results)
         unverified_count = sum(not r['verified'] for r in link_results)
         verified_domains = [r.get('domain', '') for r in link_results if r["verified"]]
         unverified_domains = [r.get('domain', '') for r in link_results if not r["verified"]]
-        tl3 = f"Mixed evidence: {verified_count} verified ({', '.join(verified_domains)}), {unverified_count} unverified ({', '.join(unverified_domains)})"
+        tl3 = f"Mixed evidence: {verified_count} verified ({', '.join(verified_domains[:2])}), {unverified_count} unverified ({', '.join(unverified_domains[:2])})"
     elif status == "Unverified":
-        tl2 = "Unverified source ⚠️"
-        unverified_domains = [r.get('domain', '') for r in link_results if not r["verified"]]
-        tl3 = f"Unverified source: {', '.join(unverified_domains)}" if unverified_domains else "Unverified: links unreachable or error"
+        tl2 = "Unverifiable evidence"
+        unverified_urls = [r.get('input_url', '') for r in link_results if not r["verified"]]
+        if unverified_urls:
+            tl3 = f"URL is not verified: {', '.join(unverified_urls[:2])}"
+        else:
+            tl3 = "URL is not verified: links unreachable or error"
     elif status == "Evidence present, unverified":
-        tl2 = "Evidence present, unverified"
+        tl2 = "Unverifiable evidence"
         # Show what patterns were detected
         pattern_summary = []
         if pattern_detection["sentence_pattern_matches"]:
@@ -376,8 +383,8 @@ def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
             pattern_summary.append(f"{len(pattern_detection['credibility_matches'])} credibility indicators")
         tl3 = f"Evidence cues detected ({', '.join(pattern_summary)}) but no verifiable sources linked"
     else:
-        tl2 = "No evidence detected"
-        tl3 = "Opinion only; no evidence detected"
+        tl2 = "No evidence"
+        tl3 = "URL is not present"
 
     return {
         "comment_id": comment_id,

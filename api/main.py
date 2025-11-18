@@ -195,65 +195,89 @@ def predict_output(comments: Texts):
     return result
 
 
+def determine_badge_color(toxicity_color: str, evidence_status: str) -> str:
+    """
+    Determine final badge color based on TL1-TL2-TL3 specification.
+
+    Logic per design spec:
+    - Red badge: Toxic (any evidence state)
+    - Green badge: Neutral + (Verified OR No evidence)
+    - Yellow badge: Neutral + Unverified/Mixed OR Mild (any evidence)
+
+    Args:
+        toxicity_color: "red" (Toxic), "yellow" (Mild), or "green" (Neutral)
+        evidence_status: "Verified", "Unverified", "Mixed", "None", or "Evidence present, unverified"
+
+    Returns:
+        Badge color: "red", "green", or "yellow"
+    """
+    # Map toxicity color to level
+    if toxicity_color == "red":
+        # Toxic: Always red regardless of evidence
+        return "red"
+
+    elif toxicity_color == "yellow":
+        # Mild: Always yellow regardless of evidence
+        return "yellow"
+
+    else:  # toxicity_color == "green" (Neutral)
+        # Neutral: Color depends on evidence
+        if evidence_status in ["Verified"]:
+            return "green"
+        elif evidence_status in ["None"]:
+            # No evidence with neutral tone = green
+            return "green"
+        else:  # "Unverified", "Mixed", or "Evidence present, unverified"
+            # Neutral with unverified evidence = yellow
+            return "yellow"
+
+
 @app.post("/analyze-evidence")
 def analyze_evidence_single(comment: SingleComment):
-    """Analyze evidence AND toxicity for a single comment - for frontend use."""
+    """Analyze evidence for a single comment - for frontend use."""
     import uuid
-    from output_formatter import get_toxicity_level, get_evidence_fields, get_tl1_badge, get_tl2_tooltip
-
     try:
         comment_id = f"comment_{uuid.uuid4().hex[:8]}"
 
-        # 1. Analyze toxicity
+        # 1) Analyze evidence
+        result = analyze_comment(comment_id, comment.text)
+
+        # 2) Get toxicity level
         toxicity_result = toxicity_predict(Texts(texts=[comment.text]))
-        badge_color = toxicity_result["badge_colors"][0]  # red/yellow/green
-        toxicity_level = get_toxicity_level(badge_color)  # Toxic/Mild/Neutral
+        toxicity_color = toxicity_result.get("badge_colors", ["yellow"])[0]
+        toxicity_details = toxicity_result.get("detailed", [{}])[0]
 
-        # 2. Analyze evidence
-        evidence_result = analyze_comment(comment_id, comment.text)
-        evidence_fields = get_evidence_fields(evidence_result["status"])
+        # 3) Determine final badge color based on toxicity + evidence
+        badge_color = determine_badge_color(toxicity_color, result["status"])
 
-        # 3. Get correct TL1 badge based on BOTH toxicity and evidence
-        tl1_badge = get_tl1_badge(
-            toxicity_level,
-            evidence_fields["evidence_present"],
-            evidence_fields["evidence_verified"]
-        )
-
-        # 4. Get TL2 tooltip
-        tl2_tooltip = get_tl2_tooltip(
-            toxicity_level,
-            evidence_fields["evidence_present"],
-            evidence_fields["evidence_verified"]
-        )
-
-        # 5. Map badge emoji to level for frontend
-        badge_to_level = {
-            "🔴": "toxic",
-            "🟡": "mild",
-            "🟢": "neutral"
-        }
-        level = badge_to_level.get(tl1_badge, "mild")
-
+        # 4) Build response
         return {
-            "status": evidence_result["status"],
-            "badge_color": badge_color,  # Keep for backwards compatibility
-            "toxicity_level": toxicity_level,  # Toxic/Mild/Neutral
-            "level": level,  # toxic/mild/neutral for frontend CSS
-            "TL1_badge": tl1_badge,  # Emoji badge
-            "evidence": evidence_result,
-            "TL2_tooltip": tl2_tooltip,
-            "TL3_detail": evidence_result.get("TL3_detail", ""),
-            "evidence_present": evidence_fields["evidence_present"],
-            "evidence_verified": evidence_fields["evidence_verified"]
+            "status": result["status"],
+            "badge_color": badge_color,
+            "toxicity_color": toxicity_color,  # Include toxicity info for debugging
+            "toxicity_scores": toxicity_details.get("scores", {}),
+            "evidence": result,
+            "TL2_tooltip": result.get("TL2_tooltip", ""),
+            "TL3_detail": result.get("TL3_detail", "")
         }
     except (UnicodeError, ValueError, OSError) as e:
         # Handle DNS/URL resolution errors gracefully (e.g., invalid hostnames)
         # These are expected for malformed URLs and should not crash the server
         print(f"Warning: Could not analyze evidence for comment (invalid URL/hostname): {type(e).__name__}", file=sys.stderr, flush=True)
+
+        # Still get toxicity for error case
+        try:
+            toxicity_result = toxicity_predict(Texts(texts=[comment.text]))
+            toxicity_color = toxicity_result.get("badge_colors", ["yellow"])[0]
+            badge_color = determine_badge_color(toxicity_color, "None")
+        except:
+            toxicity_color = "yellow"
+            badge_color = "yellow"
+
         return {
             "status": "None",
-            "badge_color": "yellow",
+            "badge_color": badge_color,
+            "toxicity_color": toxicity_color,
             "evidence": {
                 "comment_id": "",
                 "text": comment.text,
@@ -269,9 +293,20 @@ def analyze_evidence_single(comment: SingleComment):
     except Exception as e:
         # Handle any other unexpected errors
         print(f"Error in analyze_evidence_single: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+
+        # Still get toxicity for error case
+        try:
+            toxicity_result = toxicity_predict(Texts(texts=[comment.text]))
+            toxicity_color = toxicity_result.get("badge_colors", ["yellow"])[0]
+            badge_color = determine_badge_color(toxicity_color, "None")
+        except:
+            toxicity_color = "yellow"
+            badge_color = "yellow"
+
         return {
             "status": "None",
-            "badge_color": "yellow",
+            "badge_color": badge_color,
+            "toxicity_color": toxicity_color,
             "evidence": {
                 "comment_id": "",
                 "text": comment.text,

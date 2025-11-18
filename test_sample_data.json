@@ -1,0 +1,313 @@
+{
+  "description": "Comprehensive test samples covering all toxicity levels, evidence statuses, and source scenarios",
+  "test_cases": [
+    {
+      "id": 1,
+      "category": "Neutral + Verified URL",
+      "comment": "This is a great article about climate change. According to NASA https://climate.nasa.gov/, global temperatures are rising.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://climate.nasa.gov/ (or final URL)",
+        "badge_color": "green"
+      }
+    },
+    {
+      "id": 2,
+      "category": "Neutral + No URL",
+      "comment": "I think we should focus on renewable energy. It's better for the environment.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "None",
+        "evidence_label": "No evidence",
+        "source_label": "URL is not present",
+        "badge_color": "green"
+      }
+    },
+    {
+      "id": 3,
+      "category": "Neutral + Unverified URL",
+      "comment": "I found this interesting article http://fake-news-site-12345.com/article that explains everything.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Unverified",
+        "evidence_label": "Unverifiable evidence",
+        "source_label": "URL is not verified",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 4,
+      "category": "Neutral + Mixed URLs",
+      "comment": "According to https://www.nature.com/articles/nature12345 and http://fake-source.com/, there are different perspectives.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Mixed",
+        "evidence_label": "Partially verifiable evidence",
+        "source_label": "URL is not verified (for unverified ones) or shows verified URL",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 5,
+      "category": "Mild + Verified URL",
+      "comment": "This is somewhat questionable. But according to https://www.who.int/, we need to be careful.",
+      "expected_output": {
+        "toxicity_level": "yellow (Mild - score 0.3-0.5)",
+        "toxicity_label": "Slightly strong language",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.who.int/ (or final URL)",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 6,
+      "category": "Mild + No URL",
+      "comment": "That's a bit stupid to say without thinking it through properly.",
+      "expected_output": {
+        "toxicity_level": "yellow (Mild - score 0.3-0.5)",
+        "toxicity_label": "Slightly strong language",
+        "evidence_status": "None",
+        "evidence_label": "No evidence",
+        "source_label": "URL is not present",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 7,
+      "category": "Mild + Unverified URL",
+      "comment": "You're being a bit foolish. Check http://random-blog.fake/post for more info.",
+      "expected_output": {
+        "toxicity_level": "yellow (Mild - score 0.3-0.5)",
+        "toxicity_label": "Slightly strong language",
+        "evidence_status": "Unverified",
+        "evidence_label": "Unverifiable evidence",
+        "source_label": "URL is not verified",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 8,
+      "category": "Toxic + Verified URL",
+      "comment": "You're an absolute idiot if you believe that. Even https://www.cdc.gov/ says otherwise, you moron.",
+      "expected_output": {
+        "toxicity_level": "red (Toxic - score >= 0.5)",
+        "toxicity_label": "Strong language",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.cdc.gov/ (or final URL)",
+        "badge_color": "red"
+      }
+    },
+    {
+      "id": 9,
+      "category": "Toxic + No URL",
+      "comment": "You're a complete moron and you don't know what you're talking about. Shut up!",
+      "expected_output": {
+        "toxicity_level": "red (Toxic - score >= 0.5)",
+        "toxicity_label": "Strong language",
+        "evidence_status": "None",
+        "evidence_label": "No evidence",
+        "source_label": "URL is not present",
+        "badge_color": "red"
+      }
+    },
+    {
+      "id": 10,
+      "category": "Toxic + Unverified URL",
+      "comment": "You're such a stupid person. Check this http://conspiracy-theory.fake/ for proof, idiot.",
+      "expected_output": {
+        "toxicity_level": "red (Toxic - score >= 0.5)",
+        "toxicity_label": "Strong language",
+        "evidence_status": "Unverified",
+        "evidence_label": "Unverifiable evidence",
+        "source_label": "URL is not verified",
+        "badge_color": "red"
+      }
+    },
+    {
+      "id": 11,
+      "category": "Neutral + Evidence Patterns (No URL)",
+      "comment": "According to recent studies and research from multiple sources, climate change is accelerating.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Evidence present, unverified",
+        "evidence_label": "Unverifiable evidence",
+        "source_label": "URL is not present",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 12,
+      "category": "Neutral + Multiple Verified URLs",
+      "comment": "Climate data from https://www.noaa.gov/ and https://www.nasa.gov/ confirms rising temperatures.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.noaa.gov/ (or shows multiple URLs)",
+        "badge_color": "green"
+      }
+    },
+    {
+      "id": 13,
+      "category": "Mild + Mixed URLs",
+      "comment": "That's somewhat silly. But https://www.science.org/ and http://fake-blog.test/ have different views.",
+      "expected_output": {
+        "toxicity_level": "yellow (Mild - score 0.3-0.5)",
+        "toxicity_label": "Slightly strong language",
+        "evidence_status": "Mixed",
+        "evidence_label": "Partially verifiable evidence",
+        "source_label": "URL is not verified (for some)",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 14,
+      "category": "Toxic + Mixed URLs",
+      "comment": "You're a total idiot. Look at https://www.nejm.org/ and http://quack-medicine.fake/, you fool!",
+      "expected_output": {
+        "toxicity_level": "red (Toxic - score >= 0.5)",
+        "toxicity_label": "Strong language",
+        "evidence_status": "Mixed",
+        "evidence_label": "Partially verifiable evidence",
+        "source_label": "URL is not verified (for unverified) or verified URL shown",
+        "badge_color": "red"
+      }
+    },
+    {
+      "id": 15,
+      "category": "Edge Case - Borderline Mild (0.3)",
+      "comment": "That's kind of dumb and doesn't make much sense to me.",
+      "expected_output": {
+        "toxicity_level": "yellow (Mild - score ~0.3)",
+        "toxicity_label": "Slightly strong language",
+        "evidence_status": "None",
+        "evidence_label": "No evidence",
+        "source_label": "URL is not present",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 16,
+      "category": "Edge Case - Borderline Toxic (0.5)",
+      "comment": "You're an idiot for thinking that way. Seriously.",
+      "expected_output": {
+        "toxicity_level": "red (Toxic - score ~0.5)",
+        "toxicity_label": "Strong language",
+        "evidence_status": "None",
+        "evidence_label": "No evidence",
+        "source_label": "URL is not present",
+        "badge_color": "red"
+      }
+    },
+    {
+      "id": 17,
+      "category": "Neutral + Government Source",
+      "comment": "The latest data from https://www.usa.gov/ shows economic improvement.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.usa.gov/ (verified .gov domain)",
+        "badge_color": "green"
+      }
+    },
+    {
+      "id": 18,
+      "category": "Neutral + Educational Source",
+      "comment": "Research from https://www.stanford.edu/research shows promising results.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.stanford.edu/research (verified .edu domain)",
+        "badge_color": "green"
+      }
+    },
+    {
+      "id": 19,
+      "category": "Neutral + Unreachable URL",
+      "comment": "I found this at http://localhost:8080/secret-data which explains it.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Unverified",
+        "evidence_label": "Unverifiable evidence",
+        "source_label": "URL is not verified (private IP blocked)",
+        "badge_color": "yellow"
+      }
+    },
+    {
+      "id": 20,
+      "category": "Neutral + PDF Source",
+      "comment": "The report at https://www.ipcc.ch/report/ar6/wg1/downloads/report/IPCC_AR6_WGI_Full_Report.pdf has details.",
+      "expected_output": {
+        "toxicity_level": "green (Neutral - score < 0.3)",
+        "toxicity_label": "Positive tone",
+        "evidence_status": "Verified",
+        "evidence_label": "Verifiable evidence present",
+        "source_label": "https://www.ipcc.ch/... (PDF verified)",
+        "badge_color": "green"
+      }
+    }
+  ],
+  "summary": {
+    "total_scenarios": 20,
+    "toxicity_levels": {
+      "green_neutral": 13,
+      "yellow_mild": 4,
+      "red_toxic": 5
+    },
+    "evidence_statuses": {
+      "Verified": 7,
+      "Unverified": 5,
+      "Mixed": 4,
+      "None": 6,
+      "Evidence present, unverified": 1
+    },
+    "badge_colors": {
+      "green": 5,
+      "yellow": 10,
+      "red": 5
+    }
+  },
+  "logic_mapping": {
+    "tone_labels": {
+      "red": "Strong language",
+      "yellow": "Slightly strong language",
+      "green": "Positive tone"
+    },
+    "evidence_labels": {
+      "Verified": "Verifiable evidence present",
+      "Unverified": "Unverifiable evidence",
+      "Mixed": "Partially verifiable evidence",
+      "None": "No evidence",
+      "Evidence present, unverified": "Unverifiable evidence"
+    },
+    "source_labels": {
+      "verified_with_url": "Shows the actual verified URL",
+      "unverified_with_url": "URL is not verified",
+      "no_url": "URL is not present"
+    },
+    "badge_color_logic": {
+      "rules": [
+        "If toxicity is RED → Badge is RED (regardless of evidence)",
+        "If toxicity is YELLOW → Badge is YELLOW (regardless of evidence)",
+        "If toxicity is GREEN and evidence is VERIFIED → Badge is GREEN",
+        "If toxicity is GREEN and evidence is NONE → Badge is GREEN",
+        "If toxicity is GREEN and evidence is UNVERIFIED/MIXED → Badge is YELLOW"
+      ]
+    }
+  }
+}

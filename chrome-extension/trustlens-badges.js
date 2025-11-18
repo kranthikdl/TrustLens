@@ -600,22 +600,22 @@
           <div class="trustlens-color-item">
             <div class="trustlens-color-dot green"></div>
             <div class="trustlens-color-text">
-              <div class="trustlens-color-title">Green - Verified</div>
-              <div class="trustlens-color-desc">All sources verified and reachable. High credibility with verified evidence.</div>
+              <div class="trustlens-color-title">Green - Neutral & Verified</div>
+              <div class="trustlens-color-desc">Neutral tone with verified sources or no evidence claims. Positive language with credible backing.</div>
             </div>
           </div>
           <div class="trustlens-color-item">
             <div class="trustlens-color-dot yellow"></div>
             <div class="trustlens-color-text">
-              <div class="trustlens-color-title">Yellow - Mixed/No Evidence</div>
-              <div class="trustlens-color-desc">Some sources verified or no sources found. Medium credibility with partial or no evidence.</div>
+              <div class="trustlens-color-title">Yellow - Mild or Unverified</div>
+              <div class="trustlens-color-desc">Mild toxicity detected, or neutral tone with unverifiable evidence. Exercise caution.</div>
             </div>
           </div>
           <div class="trustlens-color-item">
             <div class="trustlens-color-dot red"></div>
             <div class="trustlens-color-text">
-              <div class="trustlens-color-title">Red - Unverified</div>
-              <div class="trustlens-color-desc">Sources could not be verified or are unreachable. Low credibility with unverified evidence.</div>
+              <div class="trustlens-color-title">Red - Toxic Content</div>
+              <div class="trustlens-color-desc">Toxic language detected (strong language, hostility, or personal attacks) regardless of evidence quality.</div>
             </div>
           </div>
         </div>
@@ -789,7 +789,7 @@
       const trySel = [".md", ".usertext-body", '[data-testid="comment"]'];
       for (const s of trySel) {
         const n = el.querySelector(s);
-        if (n && n.textContent && n.textContent.trim().length > 10) {
+        if (n && n.textContent && n.textContent.trim().length > 0) {
           let text = n.textContent.trim();
 
           const links = n.querySelectorAll("a[href]");
@@ -833,7 +833,7 @@
         }
       });
 
-      return all.length > 10 ? all : null;
+      return all.length > 0 ? all : null;
     }
 
     async testAPI() {
@@ -846,76 +846,91 @@
     }
 
     getPopupContent(level, badgeColor, badgeData = null) {
+      // Helper function to determine tone label based on toxicity color or badge color
+      const getToneLabel = (toxicityColor, fallbackBadgeColor) => {
+        const color = toxicityColor || fallbackBadgeColor;
+        if (color === "red") return "Strong language";
+        if (color === "yellow") return "Slightly strong language";
+        return "Positive tone";
+      };
+
+      // Helper function to determine evidence label
+      const getEvidenceLabel = (status) => {
+        if (status === "Verified") return "Verifiable evidence present";
+        if (status === "Mixed") return "Partially verifiable evidence";
+        if (status === "Unverified" || status === "Evidence present, unverified") return "Unverifiable evidence";
+        return "No evidence";
+      };
+
+      // Helper function to determine source label
+      const getSourceLabel = (status, evidence) => {
+        const results = evidence?.results || [];
+        const urls = evidence?.urls || [];
+
+        if (urls.length === 0) {
+          return "URL is not present";
+        }
+
+        // Check if we have verified URLs
+        const verifiedUrls = results.filter(r => r.verified);
+        if (verifiedUrls.length > 0) {
+          // Show first verified URL
+          const firstUrl = verifiedUrls[0].final_url || verifiedUrls[0].normalized_url || verifiedUrls[0].input_url;
+          return firstUrl;
+        }
+
+        // URLs present but not verified
+        if (status === "Unverified" || status === "Mixed") {
+          return "URL is not verified";
+        }
+
+        return "URL is not present";
+      };
+
       const defaultContent = {
         neutral: {
-          title: "Uses a neutral tone and mentions verifiable evidence.",
+          title: "Content analysis complete",
           sections: [
-            { label: "Tone:", value: "Low toxicity, no hostility detected." },
-            { label: "Evidence:", value: "Evidence present and verified." },
-            { label: "Source:", value: "Includes verified sources." },
+            { label: "Tone:", value: "Positive tone" },
+            { label: "Evidence:", value: "No evidence" },
+            { label: "Source:", value: "URL is not present" },
           ],
         },
         toxic: {
-          title:
-            "This content shows signs of hostility and emotional language.",
+          title: "Content analysis complete",
           sections: [
-            { label: "Tone:", value: "Hostile tone detected." },
-            { label: "Evidence:", value: "Evidence unverified or absent." },
-            { label: "Source:", value: "Source authenticity unclear." }
+            { label: "Tone:", value: "Strong language" },
+            { label: "Evidence:", value: "No evidence" },
+            { label: "Source:", value: "URL is not present" }
           ],
         },
         mild: {
-          title: "Includes subjective language and personal viewpoints.",
+          title: "Content analysis complete",
           sections: [
-            { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Evidence:", value: "Limited or no evidence cited." },
-            { label: "Source:", value: "No credible sources detected." }
+            { label: "Tone:", value: "Slightly strong language" },
+            { label: "Evidence:", value: "No evidence" },
+            { label: "Source:", value: "URL is not present" }
           ],
         },
       };
 
       if (badgeData && badgeData.status) {
         const status = badgeData.status;
-        const tooltip = badgeData.TL2_tooltip || "";
-        const detail = badgeData.TL3_detail || "";
         const evidence = badgeData.evidence || {};
+        const toxicityColor = badgeData.toxicity_color || null;
 
-        let title =
-          tooltip || defaultContent[level]?.title || "Evidence analysis";
-        let sections = [];
+        const toneValue = getToneLabel(toxicityColor, badgeColor);
+        const evidenceValue = getEvidenceLabel(status);
+        const sourceValue = getSourceLabel(status, evidence);
 
-        if (status === "Verified") {
-          title = "Uses a neutral tone and mentions verifiable evidence.";
-          sections = [
-            { label: "Tone:", value: "Low toxicity, no hostility detected." },
-            { label: "Evidence:", value: "Evidence present and verified." },
-            { label: "Source:", value: "Includes verified sources." },
-          ];
-        } else if (status === "Unverified") {
-          title =
-            "This content shows signs of hostility and emotional language.";
-          sections = [
-            { label: "Tone:", value: "Hostile tone detected." },
-            { label: "Evidence:", value: "Evidence unverified or absent." },
-            { label: "Source:", value: "Source authenticity unclear." },
-          ];
-        } else if (status === "Mixed") {
-          title = "Includes subjective language and personal viewpoints.";
-          sections = [
-            { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Evidence:", value: "Limited or no evidence cited." },
-            { label: "Source:", value: "No credible sources detected." },
-          ];
-        } else {
-          title = "Includes subjective language and personal viewpoints.";
-          sections = [
-            { label: "Tone:", value: "Neutral to slightly subjective tone." },
-            { label: "Evidence:", value: "Limited or no evidence cited." },
-            { label: "Source:", value: "No credible sources detected." }
-          ];
-        }
-
-        return { title, sections };
+        return {
+          title: "Content analysis complete",
+          sections: [
+            { label: "Tone:", value: toneValue },
+            { label: "Evidence:", value: evidenceValue },
+            { label: "Source:", value: sourceValue },
+          ]
+        };
       }
 
       return defaultContent[level] || defaultContent.neutral;
@@ -1080,12 +1095,11 @@
         const data = await res.json();
 
         console.log("TrustLens: Evidence API response:", data);
-        console.log("TrustLens: Toxicity level:", data.toxicity_level);
         console.log("TrustLens: Evidence status:", data.status);
-        console.log("TrustLens: TL1 badge:", data.TL1_badge);
+        console.log("TrustLens: Badge color:", data.badge_color);
+        console.log("TrustLens: Toxicity color:", data.toxicity_color);
 
-        // Use the correct level calculated by backend (based on toxicity + evidence)
-        const levelKey = data.level || "mild";
+        const badgeColor = data.badge_color || "yellow";
         const evidenceStatus = (data.status || "None").trim();
         const evidenceData = data.evidence || {};
 
@@ -1094,25 +1108,31 @@
           Unverified: "Unverified",
           Mixed: "Mixed",
           None: "No Evidence",
+          "Evidence present, unverified": "Mixed"
+        };
+
+        // Map badge color from API to level key (API now determines color based on toxicity + evidence)
+        const colorToLevel = {
+          red: "toxic",
+          yellow: "mild",
+          green: "neutral"
         };
 
         const displayText = statusToLabel[evidenceStatus] || "No Evidence";
+        let levelKey = colorToLevel[badgeColor] || "mild";
 
-        console.log("TrustLens: Badge assignment", {
-          toxicity_level: data.toxicity_level,
-          evidence_present: data.evidence_present,
-          evidence_verified: data.evidence_verified,
+        console.log("TrustLens: Badge color mapping", {
           evidenceStatus,
+          badgeColor,
           levelKey,
-          TL1_badge: data.TL1_badge,
           displayText,
+          toxicityColor: data.toxicity_color
         });
 
         const badgeData = {
           status: evidenceStatus,
-          toxicity_level: data.toxicity_level,
-          evidence_present: data.evidence_present,
-          evidence_verified: data.evidence_verified,
+          badgeColor: badgeColor,
+          toxicity_color: data.toxicity_color || badgeColor,
           evidence: evidenceData,
           TL2_tooltip: data.TL2_tooltip || "",
           TL3_detail: data.TL3_detail || "",
@@ -1124,7 +1144,7 @@
           levelKey,
           displayText,
           true,
-          null,  // badgeColor not needed - level determines color
+          badgeColor,
           badgeData
         );
         this.processedCommentIds.add(id);
@@ -1162,16 +1182,17 @@
       badgeColor = null,
       badgeData = null
     ) {
-      // Level is now correctly calculated by backend based on toxicity + evidence
-      // No need to override based on evidence status alone
-
+      // Badge color is now determined by API (toxicity + evidence), so trust the level parameter
       console.log("TrustLens: insertBadge called", {
         id,
         level,
         text,
         replace,
         badgeColor,
-        badgeData: badgeData ? { status: badgeData.status } : null,
+        badgeData: badgeData ? {
+          status: badgeData.status,
+          badgeColor: badgeData.badgeColor
+        } : null,
       });
 
       const allExisting = el.querySelectorAll(
