@@ -1,113 +1,93 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Dict, Any
-import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import numpy as np
 
-# Load pretrained model
-MODEL_NAME = "unitary/toxic-bert"
-LABELS = ["toxic","severe_toxic","obscene","threat","insult","identity_hate"]
-THRESHOLD = 0.5
+from .toxicity_adapter import ToxicityAdapter, LABELS
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME).to(device)
-model.eval()
+
+THRESHOLD = 0.5
 
 app = FastAPI(title="Toxicity API", version="1.0")
 
+
 class Texts(BaseModel):
     texts: List[str]
+
+
+tox_adapter = ToxicityAdapter()
+
+
+@app.on_event("startup")
+def startup_event():
+    tox_adapter.load()
+
 
 @app.get("/")
 def home():
     return {"message": "Toxicity API is running!"}
 
-def normalize_text(text: str) -> str:
-    """
-    Normalize Unicode characters to ASCII equivalents.
-    This prevents misclassification due to special characters like curly quotes.
-    """
-    # Replace smart/curly quotes with regular quotes
-    text = text.replace('\u2018', "'").replace('\u2019', "'")  # single quotes ' '
-    text = text.replace('\u201c', '"').replace('\u201d', '"')  # double quotes " "
-    # Replace various dashes with regular hyphen
-    text = text.replace('\u2013', '-').replace('\u2014', '-')  # en-dash, em-dash
-    text = text.replace('\u2026', '...')  # ellipsis
-    # Replace other common Unicode punctuation
-    text = text.replace('\u00a0', ' ')  # non-breaking space
-    return text
 
-def _badge_color_for_row(row_probs: np.ndarray) -> str:
-    """
-    Determine badge color based on the "toxic" label (index 0) only.
-
-    Per TL1 requirements:
-    - Red (Toxic)   → toxic score ≥ 0.5
-    - Yellow (Mild) → toxic score ∈ [0.3, 0.5)
-    - Green (Neutral) → toxic score < 0.3
-    """
-    toxic_score = float(row_probs[0])  # First label is "toxic"
-
-    if toxic_score >= 0.5:
+def _badge_color_for_row(row_probs: List[float]) -> str:
+    # Red   → if any label has score ≥ 0.5
+    # Yellow→ if none ≥ 0.7 but max score ∈ [0.3, 0.7)
+    # Green → if all scores < 0.3
+    arr = np.array(row_probs, dtype=float)
+    if (arr >= 0.7).any():
         return "red"
-    elif toxic_score >= 0.3:
+    top = float(arr.max(initial=0.0))
+    if top >= 0.3:
         return "yellow"
-    else:
-        return "green"
+    return "green"
+
 
 @app.post("/predict")
-def predict(data: Texts):
-    print("=== PREDICT FUNCTION CALLED - VERSION WITH BADGE_COLORS ===", flush=True)
+def predict(data: Texts) -> Dict[str, Any]:
+    if not data.texts:
+        return {
+            "labels": LABELS,
+            "probabilities": [],
+            "predictions": [],
+            "badge_colors": [],
+            "detailed": [],
+        }
 
-    # Normalize texts to handle Unicode characters (e.g., curly quotes)
-    normalized_texts = [normalize_text(text) for text in data.texts]
+    batch = [{"id": str(i), "text": text} for i, text in enumerate(data.texts)]
+    adapter_results = tox_adapter.infer(batch)
+    # adapter_results is expected to be:
+    # [{"id": "0", "text": "...", "probabilities": [...], "predictions": [...]}, ...]
 
-    enc = tokenizer(
-        normalized_texts,
-        truncation=True,
-        padding=True,
-        max_length=128,
-        return_tensors="pt"
-    ).to(device)
+    probabilities: List[List[float]] = []
+    predictions: List[List[int]] = []
+    badge_colors: List[str] = []
+    detailed: List[Dict[str, Any]] = []
 
-    with torch.no_grad():
-        logits = model(**enc).logits
-        probs = torch.sigmoid(logits).cpu().numpy()  # shape: [N, len(LABELS)]
+    for item in adapter_results:
+        probs = item["probabilities"]
+        preds = item["predictions"]
+        color = _badge_color_for_row(probs)
 
-    # Original binary predictions (kept for backward compatibility)
-    preds = (probs >= THRESHOLD).astype(int).tolist()
+        probabilities.append(probs)
+        predictions.append(preds)
+        badge_colors.append(color)
 
-    # New: badge_color per comment
-    badge_colors = [_badge_color_for_row(row) for row in probs]
-    
-    # Debug: Ensure badge_colors is calculated
-    print(f"DEBUG: badge_colors calculated: {badge_colors}", flush=True)
+        scores_dict = {label: float(p) for label, p in zip(LABELS, probs)}
+        preds_dict = {label: int(v) for label, v in zip(LABELS, preds)}
 
-    # New: detailed per-item objects
-    detailed = []
-    # Use original texts for output, but predictions are based on normalized texts
-    for orig_text, row_probs, row_preds, color in zip(data.texts, probs, preds, badge_colors):
-        scores_dict = {label: float(p) for label, p in zip(LABELS, row_probs)}
-        preds_dict = {label: int(v) for label, v in zip(LABELS, row_preds)}
-        detailed.append({
-            "text": orig_text,  # Keep original text in output
-            "scores": scores_dict,
-            "predictions": preds_dict,
-            "badge_color": color,
-        })
+        detailed.append(
+            {
+                "id": item.get("id"),
+                "text": item.get("text", ""),
+                "scores": scores_dict,
+                "predictions": preds_dict,
+                "badge_color": color,
+            }
+        )
 
-    result = {
+    return {
         "labels": LABELS,
-        "probabilities": probs.tolist(),
-        "predictions": preds,
-        "badge_colors": badge_colors,     # <— new, array aligned with inputs
-        "detailed": detailed              # <— new, rich per-comment view
+        "probabilities": probabilities,
+        "predictions": predictions,
+        "badge_colors": badge_colors,
+        "detailed": detailed,
     }
-    
-    # Debug: Verify badge_colors is in result
-    print(f"DEBUG: result keys: {list(result.keys())}", flush=True)
-    print(f"DEBUG: badge_colors in result: {'badge_colors' in result}", flush=True)
-    
-    return result
