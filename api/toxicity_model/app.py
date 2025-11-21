@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Dict, Any
 import numpy as np
+import threading
 
 from .toxicity_adapter import ToxicityAdapter, LABELS
 
@@ -16,6 +17,16 @@ class Texts(BaseModel):
 
 
 tox_adapter = ToxicityAdapter()
+_adapter_lock = threading.Lock()
+
+
+def _ensure_adapter_loaded():
+    """Ensure the adapter is loaded (thread-safe lazy loading)."""
+    if not tox_adapter._ready:
+        with _adapter_lock:
+            # Double-check after acquiring lock
+            if not tox_adapter._ready:
+                tox_adapter.load()
 
 
 @app.on_event("startup")
@@ -43,6 +54,9 @@ def _badge_color_for_row(row_probs: List[float]) -> str:
 
 @app.post("/predict")
 def predict(data: Texts) -> Dict[str, Any]:
+    # Ensure adapter is loaded before use (lazy loading)
+    _ensure_adapter_loaded()
+    
     if not data.texts:
         return {
             "labels": LABELS,

@@ -324,6 +324,8 @@ def verify_and_classify(url: str) -> Dict[str, Any]:
 # ---------- Per-comment pipeline ----------
 
 def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
+    import sys
+    
     urls = extract_urls_from_text(text)
     link_results = [verify_and_classify(u) for u in urls]
 
@@ -386,7 +388,7 @@ def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
         tl2 = "No evidence"
         tl3 = "URL is not present"
 
-    return {
+    result = {
         "comment_id": comment_id,
         "text": text,
         "urls": urls,
@@ -398,6 +400,8 @@ def analyze_comment(comment_id: str, text: str) -> Dict[str, Any]:
         "TL2_tooltip": tl2,
         "TL3_detail": tl3
     }
+    
+    return result
 
 def analyze_comments(comments: List[Dict[str,str]]) -> List[Dict[str,Any]]:
     return [analyze_comment(c["comment_id"], c["text"]) for c in comments]

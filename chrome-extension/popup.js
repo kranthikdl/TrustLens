@@ -9,7 +9,6 @@ function initializePopup() {
         <div style="width: 300px; padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
             <div style="text-align: center; margin-bottom: 16px;">
                 <h2 style="margin: 0; color: #333; font-size: 18px;">🛡️ TrustLens</h2>
-                <p style="margin: 4px 0 0 0; color: #666; font-size: 12px;">Reddit Toxicity Analyzer</p>
             </div>
             
             <div id="status-section" style="margin-bottom: 16px;">
