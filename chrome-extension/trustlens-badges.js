@@ -51,13 +51,12 @@
          background: white;
          border: 1px solid #e0e0e0;
          border-radius: 8px;
-         padding: 10px 25px 10px 25px;
+         padding: 14px 8px 4px 8px;
          box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-         min-width: 300px;
          max-width: 374px;
          font-family: system-ui, -apple-system, sans-serif;
          font-size: 13px;
-         line-height: 1.5;
+         line-height: 0.5;
          color: #333;
          display: none;
          pointer-events: auto;
@@ -69,9 +68,9 @@
        }
       
        .trustlens-popup-title {
-         font-weight: 600;
-         font-size: 14px;
-         color: #1a1a1a;
+         font-weight: 500;
+         font-size: 10px;
+         color: #07BEB8;
        }
       
        .trustlens-popup-section {
@@ -846,94 +845,46 @@
     }
 
     getPopupContent(level, badgeColor, badgeData = null) {
-      // Helper function to determine tone label based on toxicity color or badge color
-      const getToneLabel = (toxicityColor, fallbackBadgeColor) => {
-        const color = toxicityColor || fallbackBadgeColor;
-        if (color === "red") return "Strong language";
-        if (color === "yellow") return "Slightly strong language";
-        return "Positive tone";
-      };
+      const getToxicityLevel = () => {
+        if (level === "neutral" || badgeColor === "green") return "neutral";
+        if (level === "toxic" || badgeColor === "red") return "toxic";
+        if (level === "mild" || badgeColor === "yellow") return "mild";
 
-      // Helper function to determine evidence label
-      const getEvidenceLabel = (status) => {
-        if (status === "Verified") return "Verifiable evidence present";
-        if (status === "Mixed") return "Partially verifiable evidence";
-        if (status === "Unverified" || status === "Evidence present, unverified") return "Unverifiable evidence";
-        return "No evidence";
-      };
-
-      // Helper function to determine source label
-      const getSourceLabel = (status, evidence) => {
-        const results = evidence?.results || [];
-        const urls = evidence?.urls || [];
-
-        if (urls.length === 0) {
-          return "URL is not present";
+        if (badgeData && badgeData.toxicity_color) {
+          const color = badgeData.toxicity_color;
+          if (color === "green") return "neutral";
+          if (color === "red") return "toxic";
+          if (color === "yellow") return "mild";
         }
-
-        // Check if we have verified URLs
-        const verifiedUrls = results.filter(r => r.verified);
-        if (verifiedUrls.length > 0) {
-          // Show first verified URL
-          const firstUrl = verifiedUrls[0].final_url || verifiedUrls[0].normalized_url || verifiedUrls[0].input_url;
-          return firstUrl;
-        }
-
-        // URLs present but not verified
-        if (status === "Unverified" || status === "Mixed") {
-          return "URL is not verified";
-        }
-
-        return "URL is not present";
+        return "neutral";
       };
 
-      const defaultContent = {
-        neutral: {
-          title: "Content analysis complete",
-          sections: [
-            { label: "Tone:", value: "Positive tone" },
-            { label: "Evidence:", value: "No evidence" },
-            { label: "Source:", value: "URL is not present" },
-          ],
-        },
-        toxic: {
-          title: "Content analysis complete",
-          sections: [
-            { label: "Tone:", value: "Strong language" },
-            { label: "Evidence:", value: "No evidence" },
-            { label: "Source:", value: "URL is not present" }
-          ],
-        },
-        mild: {
-          title: "Content analysis complete",
-          sections: [
-            { label: "Tone:", value: "Slightly strong language" },
-            { label: "Evidence:", value: "No evidence" },
-            { label: "Source:", value: "URL is not present" }
-          ],
-        },
+      const toxicityLevel = getToxicityLevel();
+
+      const toneMessages = {
+        neutral: "Positive tone detected",
+        toxic: "Negative tone detected",
+        mild: "Slightly strong tone detected",
       };
 
-      if (badgeData && badgeData.status) {
-        const status = badgeData.status;
-        const evidence = badgeData.evidence || {};
-        const toxicityColor = badgeData.toxicity_color || null;
+      const backgroundColors = {
+        neutral: "#388E3C",
+        toxic: "#D32F2F",
+        mild: "#EDE246",
+      };
 
-        const toneValue = getToneLabel(toxicityColor, badgeColor);
-        const evidenceValue = getEvidenceLabel(status);
-        const sourceValue = getSourceLabel(status, evidence);
+      const status =
+        (badgeData &&
+          (badgeData.status ||
+            (badgeData.evidence && badgeData.evidence.status))) ||
+        "None";
 
-        return {
-          title: "Content analysis complete",
-          sections: [
-            { label: "Tone:", value: toneValue },
-            { label: "Evidence:", value: evidenceValue },
-            { label: "Source:", value: sourceValue },
-          ]
-        };
-      }
-
-      return defaultContent[level] || defaultContent.neutral;
+      return {
+        title: "TrustLens",
+        toneMessage: toneMessages[toxicityLevel],
+        backgroundColor: backgroundColors[toxicityLevel],
+        status,
+      };
     }
 
     createPopup(badge, level, badgeColor, badgeData = null) {
@@ -955,36 +906,87 @@
 
       const popupData = this.getPopupContent(level, badgeColor, badgeData);
 
-      let sectionsHTML = "";
-      popupData.sections.forEach((section) => {
-        sectionsHTML += `
-        <div class="trustlens-popup-section">
-          <div class="trustlens-popup-label">${section.label}</div>
-          <div class="trustlens-popup-value">${section.value}</div>
-        </div>
-      `;
-      });
+      let statusDisplay = "";
+      const status = popupData.status || "None";
+      console.log("TrustLens Popup Status (from analyze_comment):", status);
+
+      if (
+        status === "Verified" ||
+        status === "Mixed" ||
+        status === "Unverified"
+      ) {
+        let borderColor = "#07BEB8";
+        let bgColor = "#F5FFFE";
+        let textColor = "#07BEB8";
+        let iconColor = "#07BEB8";
+        let iconPath = "";
+        let displayText = "";
+
+        if (status === "Verified") {
+          borderColor = "#07BEB8";
+          bgColor = "#F5FFFE";
+          textColor = "#07BEB8";
+          iconColor = "#07BEB8";
+          displayText = "Valid URL";
+          iconPath = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none">
+<path d="M9.14584 10.7918L7.50001 9.14592C7.37501 9.02092 7.22222 8.95842 7.04168 8.95842C6.86114 8.95842 6.70834 9.02092 6.58334 9.14592C6.45834 9.27092 6.39584 9.42371 6.39584 9.60425C6.39584 9.78479 6.45834 9.93759 6.58334 10.0626L8.64584 12.1459C8.77084 12.2709 8.91668 12.3334 9.08334 12.3334C9.25001 12.3334 9.39584 12.2709 9.52084 12.1459L13.3958 8.27092C13.5208 8.14592 13.5833 7.99663 13.5833 7.823C13.5833 7.64938 13.5208 7.50704 13.3958 7.39592C13.2847 7.28479 13.1389 7.23271 12.9583 7.23967C12.7778 7.24663 12.632 7.30563 12.5208 7.41675L9.14584 10.7918ZM10 18.2501C9.93055 18.2501 9.86459 18.2431 9.80209 18.2293C9.73959 18.2154 9.67363 18.1945 9.60418 18.1668C7.67364 17.514 6.14584 16.3438 5.02084 14.6563C3.89584 12.9688 3.33334 11.1181 3.33334 9.10425V5.02092C3.33334 4.75704 3.40973 4.51746 3.56251 4.30217C3.71529 4.08689 3.90973 3.93064 4.14584 3.83341L9.56251 1.81258C9.7153 1.75703 9.86114 1.72925 10 1.72925C10.1389 1.72925 10.2847 1.75703 10.4375 1.81258L15.8542 3.83341C16.0903 3.93064 16.2847 4.08689 16.4375 4.30217C16.5903 4.51746 16.6667 4.75704 16.6667 5.02092V9.10425C16.6667 11.1181 16.1042 12.9688 14.9792 14.6563C13.8542 16.3438 12.3264 17.514 10.3958 18.1668C10.3264 18.1945 10.2604 18.2154 10.1979 18.2293C10.1354 18.2431 10.0695 18.2501 10 18.2501Z" fill="#07BEB8"/>
+</svg>`;
+        } else if (status === "Unverified" || status === "Mixed") {
+          borderColor = "#DC3545";
+          bgColor = "#FFF5F5";
+          textColor = "#F74343";
+          iconColor = "#DC3545";
+          displayText = "Invalid URL";
+          iconPath = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20" fill="none">
+<path d="M10 10.729L11.5 12.1665C11.625 12.2915 11.7778 12.354 11.9583 12.354C12.1389 12.354 12.2917 12.2915 12.4167 12.1665C12.5556 12.0276 12.625 11.8679 12.625 11.6873C12.625 11.5068 12.5556 11.354 12.4167 11.229L10.9583 9.7915L12.4167 8.33317C12.5556 8.20817 12.625 8.05538 12.625 7.87484C12.625 7.69429 12.5556 7.53454 12.4167 7.39567C12.2917 7.27067 12.1389 7.20817 11.9583 7.20817C11.7778 7.20817 11.625 7.27067 11.5 7.39567L10 8.83317L8.50001 7.39567C8.37501 7.27067 8.22572 7.20471 8.05209 7.19775C7.87847 7.19079 7.72222 7.2568 7.58334 7.39567C7.45834 7.52067 7.39239 7.67692 7.38543 7.86442C7.37847 8.05192 7.44447 8.20817 7.58334 8.33317L9.04168 9.7915L7.58334 11.229C7.44447 11.354 7.37501 11.5068 7.37501 11.6873C7.37501 11.8679 7.44447 12.0276 7.58334 12.1665C7.70834 12.2915 7.86114 12.354 8.04168 12.354C8.22222 12.354 8.37501 12.2915 8.50001 12.1665L10 10.729ZM10 18.2498C9.93055 18.2498 9.86459 18.2429 9.80209 18.229C9.73959 18.2151 9.67364 18.1943 9.60418 18.1665C7.67364 17.5137 6.14584 16.3436 5.02084 14.6561C3.89584 12.9686 3.33334 11.1179 3.33334 9.104V5.02067C3.33334 4.7568 3.40973 4.51721 3.56251 4.30192C3.71529 4.08665 3.90973 3.9304 4.14584 3.83317L9.56251 1.81234C9.7153 1.75678 9.86114 1.729 10 1.729C10.1389 1.729 10.2847 1.75678 10.4375 1.81234L15.8542 3.83317C16.0903 3.9304 16.2847 4.08665 16.4375 4.30192C16.5903 4.51721 16.6667 4.7568 16.6667 5.02067V9.104C16.6667 11.1179 16.1042 12.9686 14.9792 14.6561C13.8542 16.3436 12.3264 17.5137 10.3958 18.1665C10.3264 18.1943 10.2604 18.2151 10.1979 18.229C10.1354 18.2429 10.0695 18.2498 10 18.2498Z" fill="#F74343"/>
+</svg>`;
+        }
+
+        statusDisplay = `
+    <div style="
+      display:inline-flex;
+      align-items:center;
+      gap:2px;
+      padding:3px 4px 3px 6px;
+      font-size:12px;
+      font-weight:500;
+    ">
+      ${iconPath}
+      <span style="color:${textColor};">${displayText}</span>
+    </div>
+  `;
+      }
+
+      const statusDiv = status !== "None" && statusDisplay ? statusDisplay : "";
 
       popup.innerHTML = `
-      <div class="trustlens-popup-title">${popupData.title}</div>
-      <hr style="border: none; border-top: 1px solid #07BEB8; margin: 5px 0;">
-      ${sectionsHTML}
-      <a href="#" class="trustlens-popup-link" data-level="${level}" data-color="${badgeColor}">Learn more</a>
-    `;
+  <div class="trustlens-popup-title">${popupData.title}</div>
+  <div style="display:flex; gap:2px;">
+    <div style="padding: 6px; border-radius: 4px; background-color: ${popupData.backgroundColor}; color: white; text-align: center; font-weight: 500; margin: 8px 0;">
+      <div style="display: flex; align-items: center; gap: 3px; justify-content: center; flex-wrap: wrap;">
+        <!-- icon svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+<g clip-path="url(#clip0_448_1594)">
+<path d="M12 24C15.1826 24 18.2348 22.7357 20.4853 20.4853C22.7357 18.2348 24 15.1826 24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0C8.8174 0 5.76516 1.26428 3.51472 3.51472C1.26428 5.76516 0 8.8174 0 12C0 15.1826 1.26428 18.2348 3.51472 20.4853C5.76516 22.7357 8.8174 24 12 24ZM17.2969 9.79688L11.2969 15.7969C10.8562 16.2375 10.1438 16.2375 9.70781 15.7969L6.70781 12.7969C6.26719 12.3562 6.26719 11.6438 6.70781 11.2078C7.14844 10.7719 7.86094 10.7672 8.29688 11.2078L10.5 13.4109L15.7031 8.20312C16.1437 7.7625 16.8562 7.7625 17.2922 8.20312C17.7281 8.64375 17.7328 9.35625 17.2922 9.79219L17.2969 9.79688Z" fill="#FDFBFB"/>
+</g>
+<defs>
+<clipPath id="clip0_448_1594">
+<rect width="24" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+        <div>${popupData.toneMessage}</div>
+      </div>
+    </div>
+    ${statusDiv}
+  </div>
+`;
 
       document.body.appendChild(popup);
 
       const badgeRect = badge.getBoundingClientRect();
       popup.style.left = `${badgeRect.left}px`;
       popup.style.top = `${badgeRect.bottom + window.scrollY}px`;
-
-      const learnMoreLink = popup.querySelector(".trustlens-popup-link");
-      learnMoreLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.openSidebar(level, badgeColor, badgeData);
-        popup.remove();
-      });
 
       return popup;
     }
@@ -1015,10 +1017,45 @@
         }, 300);
       };
 
-      badge.addEventListener("mouseenter", () => {
+      badge.addEventListener("mouseenter", async () => {
         clearHideTimeout();
 
-        popup = this.createPopup(badge, level, badgeColor, badgeData);
+        let freshBadgeData = badgeData;
+        const commentText = badge.dataset.commentText;
+
+        if (commentText) {
+          try {
+            const res = await fetch(`${API_BASE}/analyze-evidence`, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ text: commentText }),
+            });
+
+            if (res.ok) {
+              const data = await res.json();
+              console.log(
+                "TrustLens: Fresh status fetched on hover:",
+                data.status
+              );
+
+              freshBadgeData = {
+                status: data.status || "None",
+                badgeColor: data.badge_color || badgeColor,
+                toxicity_color: data.toxicity_color || badgeColor,
+                evidence: data.evidence || {},
+                TL2_tooltip: data.TL2_tooltip || "",
+                TL3_detail: data.TL3_detail || "",
+              };
+            }
+          } catch (e) {
+            console.warn(
+              "TrustLens: Failed to fetch fresh status on hover:",
+              e
+            );
+          }
+        }
+
+        popup = this.createPopup(badge, level, badgeColor, freshBadgeData);
 
         popup.addEventListener("mouseenter", () => {
           clearHideTimeout();
@@ -1101,21 +1138,25 @@
 
         const badgeColor = data.badge_color || "yellow";
         const evidenceStatus = (data.status || "None").trim();
-        const evidenceData = data.evidence || {};
+
+        const evidenceData = data.evidence || {
+          urls: data.urls || [],
+          results: data.results || [],
+        };
 
         const statusToLabel = {
           Verified: "Verified",
           Unverified: "Unverified",
           Mixed: "Mixed",
           None: "No Evidence",
-          "Evidence present, unverified": "Mixed"
+          "Evidence present, unverified": "Mixed",
         };
 
         // Map badge color from API to level key (API now determines color based on toxicity + evidence)
         const colorToLevel = {
           red: "toxic",
           yellow: "mild",
-          green: "neutral"
+          green: "neutral",
         };
 
         const displayText = statusToLabel[evidenceStatus] || "No Evidence";
@@ -1126,7 +1167,7 @@
           badgeColor,
           levelKey,
           displayText,
-          toxicityColor: data.toxicity_color
+          toxicityColor: data.toxicity_color,
         });
 
         const badgeData = {
@@ -1189,10 +1230,12 @@
         text,
         replace,
         badgeColor,
-        badgeData: badgeData ? {
-          status: badgeData.status,
-          badgeColor: badgeData.badgeColor
-        } : null,
+        badgeData: badgeData
+          ? {
+              status: badgeData.status,
+              badgeColor: badgeData.badgeColor,
+            }
+          : null,
       });
 
       const allExisting = el.querySelectorAll(
@@ -1225,6 +1268,10 @@
       const badge = document.createElement("span");
       badge.className = `trustlens-badge trustlens-${level}`;
       badge.dataset.commentId = id;
+      const commentText = this.getText(el);
+      if (commentText) {
+        badge.dataset.commentText = commentText;
+      }
       if (badgeData) {
         badge.dataset.evidenceStatus = badgeData.status;
         badge.dataset.evidenceTooltip = badgeData.TL2_tooltip || "";
