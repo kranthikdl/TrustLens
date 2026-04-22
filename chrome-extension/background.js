@@ -1,3 +1,27 @@
+// Single source of truth for the TrustLens API base URL.
+// Override at extension build/load time if pointing at a non-default host.
+const API_BASE = "http://localhost:8000";
+const TRUST_CALCULATE_PATH = "/api/trust/calculate";
+
+async function calculateTrust(payload) {
+  const url = `${API_BASE}${TRUST_CALCULATE_PATH}`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload || {}),
+  });
+
+  if (!response.ok) {
+    const text = await response.text().catch(() => "");
+    const error = new Error(`HTTP ${response.status}`);
+    error.status = response.status;
+    error.body = text;
+    throw error;
+  }
+
+  return response.json();
+}
+
 function sanitizeFilename(name) {
   if (!name) {
     return "reddit_post";
@@ -16,6 +40,16 @@ function sanitizeFilename(name) {
 }
 
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message && message.type === "CALCULATE_TRUST") {
+    calculateTrust(message.payload || {})
+      .then((data) => sendResponse({ data }))
+      .catch((err) => {
+        console.error("TrustLens: CALCULATE_TRUST failed", err);
+        sendResponse({ error: "NETWORK", detail: err && err.message });
+      });
+    return true;
+  }
+
   if (!message || message.type !== "SAVE_POST_JSON") {
     return;
   }
@@ -60,3 +94,13 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
 
   return true;
 });
+
+// Test-only export. Guarded so the extension service worker never sees `module`.
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    API_BASE,
+    TRUST_CALCULATE_PATH,
+    calculateTrust,
+    sanitizeFilename,
+  };
+}

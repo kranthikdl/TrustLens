@@ -30,5 +30,9 @@
       "matches": ["*://*.reddit.com/*"]
     }
   ],
-  "host_permissions": ["*://*.reddit.com/*"]
+  "host_permissions": [
+    "*://*.reddit.com/*",
+    "http://localhost:8000/*",
+    "https://api.trustlens.example/*"
+  ]
 }
