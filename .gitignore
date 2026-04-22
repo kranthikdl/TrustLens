@@ -1,0 +1,9 @@
+.claude/
+.claudeignore
+CLAUDE.md
+.git-credential-helper.sh
+.mcp-config.json
+TICKET-CONTEXT.yaml
+__pycache__/
+*.pyc
+.pytest_cache/
