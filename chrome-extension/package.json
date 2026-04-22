@@ -1,0 +1,13 @@
+{
+  "name": "trustlens-chrome-extension",
+  "version": "0.2.0",
+  "private": true,
+  "description": "TrustLens Chrome extension — tests for the CALCULATE_TRUST message handler and popup rendering.",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
