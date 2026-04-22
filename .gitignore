@@ -1,0 +1,12 @@
+.claude/
+.claudeignore
+CLAUDE.md
+.git-credential-helper.sh
+.mcp-config.json
+TICKET-CONTEXT.yaml
+
+# Node / Jest
+node_modules/
+coverage/
+*.log
+npm-debug.log*
