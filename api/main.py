@@ -1,6 +1,5 @@
 # main.py
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Any, Dict, List
 import sys
@@ -34,22 +33,14 @@ from evidence_monitored import (
 from output_formatter import format_all_results
 
 
-app = FastAPI(title="Reddit Ingest API")
+app = FastAPI(title="TrustLens API")
 
-# Allow extension pages and localhost to call us.
-origins = [
-    "http://localhost",
-    "http://127.0.0.1:8000",
-    "*",  # relax for local dev; tighten in production
-]
+# CORS + request-logging middleware are registered from api/middleware.py so
+# the Chrome extension (chrome-extension://<id>) and localhost dev servers
+# can call us. See middleware.py for the allowed origin regex.
+from middleware import register_middleware  # noqa: E402
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+register_middleware(app)
 
 
 class IngestPayload(BaseModel):
@@ -323,7 +314,7 @@ def analyze_evidence_single(comment: SingleComment):
 
 @app.get("/health")
 async def health():
-    return {"status": "healthy"}
+    return {"status": "ok"}
 
 
 @app.get("/performance")
@@ -345,3 +336,9 @@ async def reset_performance():
         "status": "ok",
         "message": "Performance metrics have been reset"
     }
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("api.main:app", host="0.0.0.0", port=8000, reload=False)
